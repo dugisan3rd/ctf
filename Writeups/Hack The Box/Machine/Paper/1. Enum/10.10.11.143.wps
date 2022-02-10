@@ -1,0 +1,910 @@
+{
+  "banner": {
+    "description": "WordPress Security Scanner by the WPScan Team",
+    "version": "3.8.20",
+    "authors": [
+      "@_WPScan_",
+      "@ethicalhack3r",
+      "@erwan_lr",
+      "@firefart"
+    ],
+    "sponsor": "Sponsored by Automattic - https://automattic.com/"
+  },
+  "start_time": 1644478950,
+  "start_memory": 53854208,
+  "target_url": "http://office.paper/",
+  "target_ip": "10.10.11.143",
+  "effective_url": "http://office.paper/",
+  "interesting_findings": [
+    {
+      "url": "http://office.paper/",
+      "to_s": "Headers",
+      "type": "headers",
+      "found_by": "Headers (Passive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+        "Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_fcgid/2.3.9",
+        "X-Powered-By: PHP/7.2.24",
+        "X-Backend-Server: office.paper"
+      ]
+    },
+    {
+      "url": "http://office.paper/readme.html",
+      "to_s": "WordPress readme found: http://office.paper/readme.html",
+      "type": "readme",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+
+      ]
+    }
+  ],
+  "version": {
+    "number": "5.2.3",
+    "release_date": "2019-09-05",
+    "status": "insecure",
+    "found_by": "Rss Generator (Passive Detection)",
+    "confidence": 100,
+    "interesting_entries": [
+      "http://office.paper/index.php/feed/, <generator>https://wordpress.org/?v=5.2.3</generator>",
+      "http://office.paper/index.php/comments/feed/, <generator>https://wordpress.org/?v=5.2.3</generator>"
+    ],
+    "confirmed_by": {
+
+    },
+    "vulnerabilities": [
+      {
+        "title": "WordPress <= 5.2.3 - Stored XSS in Customizer",
+        "fixed_in": "5.2.4",
+        "references": {
+          "cve": [
+            "2019-17674"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/10/wordpress-5-2-4-security-release/",
+            "https://blog.wpscan.com/wordpress/security/release/2019/10/15/wordpress-524-security-release-breakdown.html"
+          ],
+          "wpvulndb": [
+            "d39a7b84-28b9-4916-a2fc-6192ceb6fa56"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.2.3 - Unauthenticated View Private/Draft Posts",
+        "fixed_in": "5.2.4",
+        "references": {
+          "cve": [
+            "2019-17671"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/10/wordpress-5-2-4-security-release/",
+            "https://blog.wpscan.com/wordpress/security/release/2019/10/15/wordpress-524-security-release-breakdown.html",
+            "https://github.com/WordPress/WordPress/commit/f82ed753cf00329a5e41f2cb6dc521085136f308",
+            "https://0day.work/proof-of-concept-for-wordpress-5-2-3-viewing-unauthenticated-posts/"
+          ],
+          "wpvulndb": [
+            "3413b879-785f-4c9f-aa8a-5a4a1d5e0ba2"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.2.3 - Stored XSS in Style Tags",
+        "fixed_in": "5.2.4",
+        "references": {
+          "cve": [
+            "2019-17672"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/10/wordpress-5-2-4-security-release/",
+            "https://blog.wpscan.com/wordpress/security/release/2019/10/15/wordpress-524-security-release-breakdown.html"
+          ],
+          "wpvulndb": [
+            "d005b1f8-749d-438a-8818-21fba45c6465"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.2.3 - JSON Request Cache Poisoning",
+        "fixed_in": "5.2.4",
+        "references": {
+          "cve": [
+            "2019-17673"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/10/wordpress-5-2-4-security-release/",
+            "https://github.com/WordPress/WordPress/commit/b224c251adfa16a5f84074a3c0886270c9df38de",
+            "https://blog.wpscan.com/wordpress/security/release/2019/10/15/wordpress-524-security-release-breakdown.html"
+          ],
+          "wpvulndb": [
+            "7804d8ed-457a-407e-83a7-345d3bbe07b2"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.2.3 - Server-Side Request Forgery (SSRF) in URL Validation ",
+        "fixed_in": "5.2.4",
+        "references": {
+          "cve": [
+            "2019-17669",
+            "2019-17670"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/10/wordpress-5-2-4-security-release/",
+            "https://github.com/WordPress/WordPress/commit/9db44754b9e4044690a6c32fd74b9d5fe26b07b2",
+            "https://blog.wpscan.com/wordpress/security/release/2019/10/15/wordpress-524-security-release-breakdown.html"
+          ],
+          "wpvulndb": [
+            "26a26de2-d598-405d-b00c-61f71cfacff6"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.2.3 - Admin Referrer Validation",
+        "fixed_in": "5.2.4",
+        "references": {
+          "cve": [
+            "2019-17675"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/10/wordpress-5-2-4-security-release/",
+            "https://github.com/WordPress/WordPress/commit/b183fd1cca0b44a92f0264823dd9f22d2fd8b8d0",
+            "https://blog.wpscan.com/wordpress/security/release/2019/10/15/wordpress-524-security-release-breakdown.html"
+          ],
+          "wpvulndb": [
+            "715c00e3-5302-44ad-b914-131c162c3f71"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.3 - Authenticated Improper Access Controls in REST API",
+        "fixed_in": "5.2.5",
+        "references": {
+          "cve": [
+            "2019-20043",
+            "2019-16788"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/12/wordpress-5-3-1-security-and-maintenance-release/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-g7rg-hchx-c2gw"
+          ],
+          "wpvulndb": [
+            "4a6de154-5fbd-4c80-acd3-8902ee431bd8"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.3 - Authenticated Stored XSS via Crafted Links",
+        "fixed_in": "5.2.5",
+        "references": {
+          "cve": [
+            "2019-20042"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/12/wordpress-5-3-1-security-and-maintenance-release/",
+            "https://hackerone.com/reports/509930",
+            "https://github.com/WordPress/wordpress-develop/commit/1f7f3f1f59567e2504f0fbebd51ccf004b3ccb1d",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-xvg2-m2f4-83m7"
+          ],
+          "wpvulndb": [
+            "23553517-34e3-40a9-a406-f3ffbe9dd265"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.3 - Authenticated Stored XSS via Block Editor Content",
+        "fixed_in": "5.2.5",
+        "references": {
+          "cve": [
+            "2019-16781",
+            "2019-16780"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/12/wordpress-5-3-1-security-and-maintenance-release/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-pg4x-64rh-3c9v"
+          ],
+          "wpvulndb": [
+            "be794159-4486-4ae1-a5cc-5c190e5ddf5f"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.3 - wp_kses_bad_protocol() Colon Bypass",
+        "fixed_in": "5.2.5",
+        "references": {
+          "cve": [
+            "2019-20041"
+          ],
+          "url": [
+            "https://wordpress.org/news/2019/12/wordpress-5-3-1-security-and-maintenance-release/",
+            "https://github.com/WordPress/wordpress-develop/commit/b1975463dd995da19bb40d3fa0786498717e3c53"
+          ],
+          "wpvulndb": [
+            "8fac612b-95d2-477a-a7d6-e5ec0bb9ca52"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.1 - Password Reset Tokens Failed to Be Properly Invalidated",
+        "fixed_in": "5.2.6",
+        "references": {
+          "cve": [
+            "2020-11027"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/04/wordpress-5-4-1/",
+            "https://core.trac.wordpress.org/changeset/47634/",
+            "https://www.wordfence.com/blog/2020/04/unpacking-the-7-vulnerabilities-fixed-in-todays-wordpress-5-4-1-security-update/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ww7v-jg8c-q6jw"
+          ],
+          "wpvulndb": [
+            "7db191c0-d112-4f08-a419-a1cd81928c4e"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.1 - Unauthenticated Users View Private Posts",
+        "fixed_in": "5.2.6",
+        "references": {
+          "cve": [
+            "2020-11028"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/04/wordpress-5-4-1/",
+            "https://core.trac.wordpress.org/changeset/47635/",
+            "https://www.wordfence.com/blog/2020/04/unpacking-the-7-vulnerabilities-fixed-in-todays-wordpress-5-4-1-security-update/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-xhx9-759f-6p2w"
+          ],
+          "wpvulndb": [
+            "d1e1ba25-98c9-4ae7-8027-9632fb825a56"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.1 - Authenticated Cross-Site Scripting (XSS) in Customizer",
+        "fixed_in": "5.2.6",
+        "references": {
+          "cve": [
+            "2020-11025"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/04/wordpress-5-4-1/",
+            "https://core.trac.wordpress.org/changeset/47633/",
+            "https://www.wordfence.com/blog/2020/04/unpacking-the-7-vulnerabilities-fixed-in-todays-wordpress-5-4-1-security-update/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-4mhg-j6fx-5g3c"
+          ],
+          "wpvulndb": [
+            "4eee26bd-a27e-4509-a3a5-8019dd48e429"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.1 - Authenticated Cross-Site Scripting (XSS) in Search Block",
+        "fixed_in": "5.2.6",
+        "references": {
+          "cve": [
+            "2020-11030"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/04/wordpress-5-4-1/",
+            "https://core.trac.wordpress.org/changeset/47636/",
+            "https://www.wordfence.com/blog/2020/04/unpacking-the-7-vulnerabilities-fixed-in-todays-wordpress-5-4-1-security-update/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-vccm-6gmc-qhjh"
+          ],
+          "wpvulndb": [
+            "e4bda91b-067d-45e4-a8be-672ccf8b1a06"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.1 - Cross-Site Scripting (XSS) in wp-object-cache",
+        "fixed_in": "5.2.6",
+        "references": {
+          "cve": [
+            "2020-11029"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/04/wordpress-5-4-1/",
+            "https://core.trac.wordpress.org/changeset/47637/",
+            "https://www.wordfence.com/blog/2020/04/unpacking-the-7-vulnerabilities-fixed-in-todays-wordpress-5-4-1-security-update/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-568w-8m88-8g2c"
+          ],
+          "wpvulndb": [
+            "e721d8b9-a38f-44ac-8520-b4a9ed6a5157"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.1 - Authenticated Cross-Site Scripting (XSS) in File Uploads",
+        "fixed_in": "5.2.6",
+        "references": {
+          "cve": [
+            "2020-11026"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/04/wordpress-5-4-1/",
+            "https://core.trac.wordpress.org/changeset/47638/",
+            "https://www.wordfence.com/blog/2020/04/unpacking-the-7-vulnerabilities-fixed-in-todays-wordpress-5-4-1-security-update/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-3gw2-4656-pfr2",
+            "https://hackerone.com/reports/179695"
+          ],
+          "wpvulndb": [
+            "55438b63-5fc9-4812-afc4-2f1eff800d5f"
+          ]
+        }
+      },
+      {
+        "title": "WordPress <= 5.2.3 - Hardening Bypass",
+        "fixed_in": "5.2.4",
+        "references": {
+          "url": [
+            "https://blog.ripstech.com/2020/wordpress-hardening-bypass/",
+            "https://hackerone.com/reports/436928",
+            "https://wordpress.org/news/2019/11/wordpress-5-2-4-update/"
+          ],
+          "wpvulndb": [
+            "378d7df5-bce2-406a-86b2-ff79cd699920"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.2 - Authenticated XSS in Block Editor",
+        "fixed_in": "5.2.7",
+        "references": {
+          "cve": [
+            "2020-4046"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-rpwf-hrh2-39jf",
+            "https://pentest.co.uk/labs/research/subtle-stored-xss-wordpress-core/"
+          ],
+          "youtube": [
+            "https://www.youtube.com/watch?v=tCh7Y8z8fb4"
+          ],
+          "wpvulndb": [
+            "831e4a94-239c-4061-b66e-f5ca0dbb84fa"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.2 - Authenticated XSS via Media Files",
+        "fixed_in": "5.2.7",
+        "references": {
+          "cve": [
+            "2020-4047"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-8q2w-5m27-wm27"
+          ],
+          "wpvulndb": [
+            "741d07d1-2476-430a-b82f-e1228a9343a4"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.2 - Open Redirection",
+        "fixed_in": "5.2.7",
+        "references": {
+          "cve": [
+            "2020-4048"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/",
+            "https://github.com/WordPress/WordPress/commit/10e2a50c523cf0b9785555a688d7d36a40fbeccf",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-q6pw-gvf4-5fj5"
+          ],
+          "wpvulndb": [
+            "12855f02-432e-4484-af09-7d0fbf596909"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.2 - Authenticated Stored XSS via Theme Upload",
+        "fixed_in": "5.2.7",
+        "references": {
+          "cve": [
+            "2020-4049"
+          ],
+          "exploitdb": [
+            "48770"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-87h4-phjv-rm6p",
+            "https://hackerone.com/reports/406289"
+          ],
+          "wpvulndb": [
+            "d8addb42-e70b-4439-b828-fd0697e5d9d4"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.2 - Misuse of set-screen-option Leading to Privilege Escalation",
+        "fixed_in": "5.2.7",
+        "references": {
+          "cve": [
+            "2020-4050"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/",
+            "https://github.com/WordPress/WordPress/commit/dda0ccdd18f6532481406cabede19ae2ed1f575d",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-4vpv-fgg2-gcqc"
+          ],
+          "wpvulndb": [
+            "b6f69ff1-4c11-48d2-b512-c65168988c45"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.4.2 - Disclosure of Password-Protected Page/Post Comments",
+        "fixed_in": "5.2.7",
+        "references": {
+          "cve": [
+            "2020-25286"
+          ],
+          "url": [
+            "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/",
+            "https://github.com/WordPress/WordPress/commit/c075eec24f2f3214ab0d0fb0120a23082e6b1122"
+          ],
+          "wpvulndb": [
+            "eea6dbf5-e298-44a7-9b0d-f078ad4741f9"
+          ]
+        }
+      },
+      {
+        "title": "WordPress 4.7-5.7 - Authenticated Password Protected Pages Exposure",
+        "fixed_in": "5.2.10",
+        "references": {
+          "cve": [
+            "2021-29450"
+          ],
+          "url": [
+            "https://wordpress.org/news/2021/04/wordpress-5-7-1-security-and-maintenance-release/",
+            "https://blog.wpscan.com/2021/04/15/wordpress-571-security-vulnerability-release.html",
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-pmmh-2f36-wvhq",
+            "https://core.trac.wordpress.org/changeset/50717/"
+          ],
+          "youtube": [
+            "https://www.youtube.com/watch?v=J2GXmxAdNWs"
+          ],
+          "wpvulndb": [
+            "6a3ec618-c79e-4b9c-9020-86b157458ac5"
+          ]
+        }
+      },
+      {
+        "title": "WordPress 3.7 to 5.7.1 - Object Injection in PHPMailer",
+        "fixed_in": "5.2.11",
+        "references": {
+          "cve": [
+            "2020-36326",
+            "2018-19296"
+          ],
+          "url": [
+            "https://github.com/WordPress/WordPress/commit/267061c9595fedd321582d14c21ec9e7da2dcf62",
+            "https://wordpress.org/news/2021/05/wordpress-5-7-2-security-release/",
+            "https://github.com/PHPMailer/PHPMailer/commit/e2e07a355ee8ff36aba21d0242c5950c56e4c6f9",
+            "https://www.wordfence.com/blog/2021/05/wordpress-5-7-2-security-release-what-you-need-to-know/"
+          ],
+          "youtube": [
+            "https://www.youtube.com/watch?v=HaW15aMzBUM"
+          ],
+          "wpvulndb": [
+            "4cd46653-4470-40ff-8aac-318bee2f998d"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.8.2 - Expired DST Root CA X3 Certificate",
+        "fixed_in": "5.2.13",
+        "references": {
+          "url": [
+            "https://wordpress.org/news/2021/11/wordpress-5-8-2-security-and-maintenance-release/",
+            "https://core.trac.wordpress.org/ticket/54207"
+          ],
+          "wpvulndb": [
+            "cc23344a-5c91-414a-91e3-c46db614da8d"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.8 - Plugin Confusion",
+        "fixed_in": "5.8",
+        "references": {
+          "cve": [
+            "2021-44223"
+          ],
+          "url": [
+            "https://vavkamil.cz/2021/11/25/wordpress-plugin-confusion-update-can-get-you-pwned/"
+          ],
+          "wpvulndb": [
+            "95e01006-84e4-4e95-b5d7-68ea7b5aa1a8"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.8.3 - SQL Injection via WP_Query",
+        "fixed_in": "5.2.14",
+        "references": {
+          "cve": [
+            "2022-21661"
+          ],
+          "url": [
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-6676-cqfm-gw84",
+            "https://hackerone.com/reports/1378209"
+          ],
+          "wpvulndb": [
+            "7f768bcf-ed33-4b22-b432-d1e7f95c1317"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.8.3 - Author+ Stored XSS via Post Slugs",
+        "fixed_in": "5.2.14",
+        "references": {
+          "cve": [
+            "2022-21662"
+          ],
+          "url": [
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-699q-3hj9-889w",
+            "https://hackerone.com/reports/425342",
+            "https://blog.sonarsource.com/wordpress-stored-xss-vulnerability"
+          ],
+          "wpvulndb": [
+            "dc6f04c2-7bf2-4a07-92b5-dd197e4d94c8"
+          ]
+        }
+      },
+      {
+        "title": "WordPress 4.1-5.8.2 - SQL Injection via WP_Meta_Query",
+        "fixed_in": "5.2.14",
+        "references": {
+          "cve": [
+            "2022-21664"
+          ],
+          "url": [
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-jp3p-gw8h-6x86"
+          ],
+          "wpvulndb": [
+            "24462ac4-7959-4575-97aa-a6dcceeae722"
+          ]
+        }
+      },
+      {
+        "title": "WordPress < 5.8.3 - Super Admin Object Injection in Multisites",
+        "fixed_in": "5.2.14",
+        "references": {
+          "cve": [
+            "2022-21663"
+          ],
+          "url": [
+            "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-jmmq-m8p8-332h",
+            "https://hackerone.com/reports/541469"
+          ],
+          "wpvulndb": [
+            "008c21ab-3d7e-4d97-b6c3-db9d83f390a7"
+          ]
+        }
+      }
+    ]
+  },
+  "main_theme": {
+    "slug": "construction-techup",
+    "location": "http://office.paper/wp-content/themes/construction-techup/",
+    "latest_version": "1.4",
+    "last_updated": "2021-07-17T00:00:00.000Z",
+    "outdated": true,
+    "readme_url": "http://office.paper/wp-content/themes/construction-techup/readme.txt",
+    "directory_listing": false,
+    "error_log_url": null,
+    "style_url": "http://office.paper/wp-content/themes/construction-techup/style.css?ver=1.1",
+    "style_name": "Construction Techup",
+    "style_uri": null,
+    "description": "Construction Techup is child theme of Techup a Free WordPress Theme useful for Business, corporate and agency and Trade Institutional based websites. Theme has a full screen option. Theme is developed with creative design having multiple sections on Home Page. Theme has powerful features that let you write articles and blog posts with ease. It uses the best clean Construction practices, responsive HTML5, and on top of that, it is fast, simple, and easy to use. Use the Customizer to add your own background, page layout, site width and more. Theme is useful in NGO, Architecture, Builder, Construction, Technology, Health & Science, Religion, Property dealing and any kind of website. Theme has Slider, feature, callout, services, portfolio, testimonial, Team section. Theme support unlimited colors options too. You can customize logo and can add unlimited pages. Theme is responsive and supports all major plugins of WordPress.",
+    "author": "wptexture",
+    "author_uri": "https://testerwp.com/",
+    "template": "techup",
+    "license": "GNU General Public License v3 or later",
+    "license_uri": "https://www.gnu.org/licenses/license-list.html#GNUGPLv3",
+    "tags": "left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-columns, grid-layout, custom-colors, custom-background, custom-logo, custom-menu, custom-header, editor-style, featured-images, footer-widgets, sticky-post, full-width-template, theme-options, translation-ready, threaded-comments, post-formats, rtl-language-support, blog, portfolio, e-commerce",
+    "text_domain": "construction-techup",
+    "found_by": "Css Style In Homepage (Passive Detection)",
+    "confidence": 70,
+    "interesting_entries": [
+
+    ],
+    "confirmed_by": {
+
+    },
+    "vulnerabilities": [
+
+    ],
+    "version": {
+      "number": "1.1",
+      "confidence": 80,
+      "found_by": "Style (Passive Detection)",
+      "interesting_entries": [
+        "http://office.paper/wp-content/themes/construction-techup/style.css?ver=1.1, Match: 'Version: 1.1'"
+      ],
+      "confirmed_by": {
+
+      }
+    },
+    "parents": [
+
+    ]
+  },
+  "plugins": {
+
+  },
+  "themes": {
+    "construction-techup": {
+      "slug": "construction-techup",
+      "location": "http://office.paper/wp-content/themes/construction-techup/",
+      "latest_version": "1.4",
+      "last_updated": "2021-07-17T00:00:00.000Z",
+      "outdated": true,
+      "readme_url": "http://office.paper/wp-content/themes/construction-techup/readme.txt",
+      "directory_listing": false,
+      "error_log_url": null,
+      "style_url": "http://office.paper/wp-content/themes/construction-techup/style.css",
+      "style_name": "Construction Techup",
+      "style_uri": null,
+      "description": "Construction Techup is child theme of Techup a Free WordPress Theme useful for Business, corporate and agency and Trade Institutional based websites. Theme has a full screen option. Theme is developed with creative design having multiple sections on Home Page. Theme has powerful features that let you write articles and blog posts with ease. It uses the best clean Construction practices, responsive HTML5, and on top of that, it is fast, simple, and easy to use. Use the Customizer to add your own background, page layout, site width and more. Theme is useful in NGO, Architecture, Builder, Construction, Technology, Health & Science, Religion, Property dealing and any kind of website. Theme has Slider, feature, callout, services, portfolio, testimonial, Team section. Theme support unlimited colors options too. You can customize logo and can add unlimited pages. Theme is responsive and supports all major plugins of WordPress.",
+      "author": "wptexture",
+      "author_uri": "https://testerwp.com/",
+      "template": "techup",
+      "license": "GNU General Public License v3 or later",
+      "license_uri": "https://www.gnu.org/licenses/license-list.html#GNUGPLv3",
+      "tags": "left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-columns, grid-layout, custom-colors, custom-background, custom-logo, custom-menu, custom-header, editor-style, featured-images, footer-widgets, sticky-post, full-width-template, theme-options, translation-ready, threaded-comments, post-formats, rtl-language-support, blog, portfolio, e-commerce",
+      "text_domain": "construction-techup",
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Known Locations (Aggressive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+            "http://office.paper/wp-content/themes/construction-techup/, status: 403"
+          ]
+        }
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "1.1",
+        "confidence": 80,
+        "found_by": "Style (Passive Detection)",
+        "interesting_entries": [
+          "http://office.paper/wp-content/themes/construction-techup/style.css, Match: 'Version: 1.1'"
+        ],
+        "confirmed_by": {
+
+        }
+      },
+      "parents": [
+
+      ]
+    },
+    "techup": {
+      "slug": "techup",
+      "location": "http://office.paper/wp-content/themes/techup/",
+      "latest_version": "1.34",
+      "last_updated": "2022-01-15T00:00:00.000Z",
+      "outdated": true,
+      "readme_url": "http://office.paper/wp-content/themes/techup/readme.txt",
+      "directory_listing": false,
+      "error_log_url": null,
+      "style_url": "http://office.paper/wp-content/themes/techup/style.css",
+      "style_name": "Techup",
+      "style_uri": "https://testerwp.com/techup-free-theme/",
+      "description": "Techup is a Free WordPress Theme useful for Business, corporate and agency  and Finance Institutional based websites. Theme has a full screen option. Techup is developed with creative design having multiple sections on Home Page. Theme has powerful features that let you write articles and blog posts with ease. It uses the best clean SEO practices, responsive HTML5, and on top of that, it is fast, simple, and easy to use. Use the Customizer to add your own background, page layout, site width and more. Theme is useful in NGO, Architecture, Builder, SEO, Technology, Health & Science, Religion, Property dealing and any kind of website. Theme has Slider, feature, callout, services, portfolio, testimonial, Team section. Theme support unlimited colors options too. You can customize logo and can add unlimited pages. Theme is responsive and supports all major plugins of WordPress.",
+      "author": "wptexture",
+      "author_uri": "https://testerwp.com/",
+      "template": null,
+      "license": "GNU General Public License v3 or later",
+      "license_uri": "http://www.gnu.org/licenses/gpl-3.0.html",
+      "tags": "left-sidebar, right-sidebar, one-column, two-columns, three-columns, four-columns, grid-layout, custom-colors, custom-background, custom-logo, custom-menu, custom-header, editor-style, featured-images, footer-widgets, sticky-post, full-width-template, theme-options, translation-ready, threaded-comments, post-formats, rtl-language-support, blog, portfolio, e-commerce",
+      "text_domain": "techup",
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Known Locations (Aggressive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+            "http://office.paper/wp-content/themes/techup/, status: 500"
+          ]
+        }
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "1.24",
+        "confidence": 80,
+        "found_by": "Style (Passive Detection)",
+        "interesting_entries": [
+          "http://office.paper/wp-content/themes/techup/style.css, Match: 'Version:        1.24'"
+        ],
+        "confirmed_by": {
+
+        }
+      },
+      "parents": [
+
+      ]
+    },
+    "twentynineteen": {
+      "slug": "twentynineteen",
+      "location": "http://office.paper/wp-content/themes/twentynineteen/",
+      "latest_version": "2.2",
+      "last_updated": "2022-01-25T00:00:00.000Z",
+      "outdated": true,
+      "readme_url": "http://office.paper/wp-content/themes/twentynineteen/readme.txt",
+      "directory_listing": false,
+      "error_log_url": null,
+      "style_url": "http://office.paper/wp-content/themes/twentynineteen/style.css",
+      "style_name": "Twenty Nineteen",
+      "style_uri": "https://wordpress.org/themes/twentynineteen/",
+      "description": "Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.",
+      "author": "the WordPress team",
+      "author_uri": "https://wordpress.org/",
+      "template": null,
+      "license": "GNU General Public License v2 or later",
+      "license_uri": "LICENSE",
+      "tags": "one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready",
+      "text_domain": "twentynineteen",
+      "found_by": "Known Locations (Aggressive Detection)",
+      "confidence": 80,
+      "interesting_entries": [
+        "http://office.paper/wp-content/themes/twentynineteen/, status: 500"
+      ],
+      "confirmed_by": {
+
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "1.4",
+        "confidence": 80,
+        "found_by": "Style (Passive Detection)",
+        "interesting_entries": [
+          "http://office.paper/wp-content/themes/twentynineteen/style.css, Match: 'Version: 1.4'"
+        ],
+        "confirmed_by": {
+
+        }
+      },
+      "parents": [
+
+      ]
+    },
+    "twentyseventeen": {
+      "slug": "twentyseventeen",
+      "location": "http://office.paper/wp-content/themes/twentyseventeen/",
+      "latest_version": "2.9",
+      "last_updated": "2022-01-25T00:00:00.000Z",
+      "outdated": true,
+      "readme_url": "http://office.paper/wp-content/themes/twentyseventeen/README.txt",
+      "directory_listing": false,
+      "error_log_url": null,
+      "style_url": "http://office.paper/wp-content/themes/twentyseventeen/style.css",
+      "style_name": "Twenty Seventeen",
+      "style_uri": "https://wordpress.org/themes/twentyseventeen/",
+      "description": "Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.",
+      "author": "the WordPress team",
+      "author_uri": "https://wordpress.org/",
+      "template": null,
+      "license": "GNU General Public License v2 or later",
+      "license_uri": "http://www.gnu.org/licenses/gpl-2.0.html",
+      "tags": "one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready",
+      "text_domain": "twentyseventeen",
+      "found_by": "Known Locations (Aggressive Detection)",
+      "confidence": 80,
+      "interesting_entries": [
+        "http://office.paper/wp-content/themes/twentyseventeen/, status: 500"
+      ],
+      "confirmed_by": {
+
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "2.2",
+        "confidence": 80,
+        "found_by": "Style (Passive Detection)",
+        "interesting_entries": [
+          "http://office.paper/wp-content/themes/twentyseventeen/style.css, Match: 'Version: 2.2'"
+        ],
+        "confirmed_by": {
+
+        }
+      },
+      "parents": [
+
+      ]
+    },
+    "twentysixteen": {
+      "slug": "twentysixteen",
+      "location": "http://office.paper/wp-content/themes/twentysixteen/",
+      "latest_version": "2.6",
+      "last_updated": "2022-01-25T00:00:00.000Z",
+      "outdated": true,
+      "readme_url": "http://office.paper/wp-content/themes/twentysixteen/readme.txt",
+      "directory_listing": false,
+      "error_log_url": null,
+      "style_url": "http://office.paper/wp-content/themes/twentysixteen/style.css",
+      "style_name": "Twenty Sixteen",
+      "style_uri": "https://wordpress.org/themes/twentysixteen/",
+      "description": "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.",
+      "author": "the WordPress team",
+      "author_uri": "https://wordpress.org/",
+      "template": null,
+      "license": "GNU General Public License v2 or later",
+      "license_uri": "http://www.gnu.org/licenses/gpl-2.0.html",
+      "tags": "one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog",
+      "text_domain": "twentysixteen",
+      "found_by": "Known Locations (Aggressive Detection)",
+      "confidence": 80,
+      "interesting_entries": [
+        "http://office.paper/wp-content/themes/twentysixteen/, status: 500"
+      ],
+      "confirmed_by": {
+
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "2.0",
+        "confidence": 80,
+        "found_by": "Style (Passive Detection)",
+        "interesting_entries": [
+          "http://office.paper/wp-content/themes/twentysixteen/style.css, Match: 'Version: 2.0'"
+        ],
+        "confirmed_by": {
+
+        }
+      },
+      "parents": [
+
+      ]
+    }
+  },
+  "vuln_api": {
+    "plan": "free",
+    "requests_done_during_scan": 6,
+    "requests_remaining": 19
+  },
+  "stop_time": 1644479356,
+  "elapsed": 405,
+  "requests_done": 23674,
+  "cached_requests": 23,
+  "data_sent": 6340460,
+  "data_sent_humanised": "6.047 MB",
+  "data_received": 5368900,
+  "data_received_humanised": "5.12 MB",
+  "used_memory": 338735104,
+  "used_memory_humanised": "323.043 MB"
+}

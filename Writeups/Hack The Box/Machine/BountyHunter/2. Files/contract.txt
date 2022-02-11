@@ -1,0 +1,9 @@
+Hey team,
+
+I'll be out of the office this week but please make sure that our contract with Skytrain Inc gets completed.
+
+This has been our first job since the "rm -rf" incident and we can't mess this up. Whenever one of you gets on please have a look at the internal tool they sent over. There have been a handful of tickets submitted that have been failing validation and I need you to figure out why.
+
+I set up the permissions for you to test this. Good luck.
+
+-- John

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Nov 29 20:16:26 2021 as: /usr/bin/nmap -sC -sV -A -Pn -p22,80 -&#45;version-intensity 5 -oA TCP_nmap_10.10.11.105 10.10.11.105 -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -sC -sV -A -Pn -p22,80 -&#45;version-intensity 5 -oA TCP_nmap_10.10.11.105 10.10.11.105" start="1638188186" startstr="Mon Nov 29 20:16:26 2021" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1638188186" endtime="1638188197"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.11.105" addrtype="ipv4"/>
+<hostnames>
+<hostname name="horizontall.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.5" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 ee:77:41:43:d4:82:bd:3e:6e:6e:50:cd:ff:6b:0d:d5 (RSA)&#xa;  256 3a:d5:89:d5:da:95:59:d9:df:01:68:37:ca:d5:10:b0 (ECDSA)&#xa;  256 4a:00:04:b4:9d:29:e7:af:37:16:1b:4f:80:2d:98:94 (ED25519)"><table>
+<elem key="fingerprint">ee774143d482bd3e6e6e50cdff6b0dd5</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDL2qJTqj1aoxBGb8yWIN4UJwFs4/UgDEutp3aiL2/6yV2iE78YjGzfU74VKlTRvJZWBwDmIOosOBNl9nfmEzXerD0g5lD5SporBx06eWX/XP2sQSEKbsqkr7Qb4ncvU8CvDR6yGHxmBT8WGgaQsA2ViVjiqAdlUDmLoT2qA3GeLBQgS41e+TysTpzWlY7z/rf/u0uj/C3kbixSB/upkWoqGyorDtFoaGGvWet/q7j5Tq061MaR6cM2CrYcQxxnPy4LqFE3MouLklBXfmNovryI0qVFMki7Cc3hfXz6BmKppCzMUPs8VgtNgdcGywIU/Nq1aiGQfATneqDD2GBXLjzV</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">3ad589d5da9559d9df016837cad510b0</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIyw6WbPVzY28EbBOZ4zWcikpu/CPcklbTUwvrPou4dCG4koataOo/RDg4MJuQP+sR937/ugmINBJNsYC8F7jN0=</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">4a0004b49d29e7af37161b4f802d9894</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJqmDVbv9RjhlUzOMmw3SrGPaiDBgdZ9QZ2cKM49jzYB</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-title" output="horizontall"><elem key="title">horizontall</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="39438"/>
+<osmatch name="Linux 4.15 - 5.6" accuracy="95" line="67241">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.3 - 5.4" accuracy="95" line="68143">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="95" line="55656">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.3" accuracy="95" line="68085">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="95" line="62920">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="95" line="64667">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61818">
+<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+</osmatch>
+<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8401">
+<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="93" line="64174">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0" accuracy="93" line="68045">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:5.0</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1907345" lastboot="Sun Nov  7 18:27:32 2021"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="73F705E5,78DF3301,A6A91E1C,DD0DCA1,B2D12713,A51158F5"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="71AFBF13,71AFBF77,71AFBFDF,71AFC043,71AFC0A8,71AFC10C"/>
+<trace port="22" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="18.24"/>
+<hop ttl="2" ipaddr="10.10.11.105" rtt="18.32" host="horizontall.htb"/>
+</trace>
+<times srtt="16945" rttvar="1287" to="100000"/>
+</host>
+<runstats><finished time="1638188197" timestr="Mon Nov 29 20:16:37 2021" summary="Nmap done at Mon Nov 29 20:16:37 2021; 1 IP address (1 host up) scanned in 11.18 seconds" elapsed="11.18" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

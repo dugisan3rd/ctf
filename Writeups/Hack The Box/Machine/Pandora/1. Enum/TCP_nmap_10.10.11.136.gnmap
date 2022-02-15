@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Mon Feb 14 19:00:01 2022 as: /usr/bin/nmap -sC -sV -A -Pn -p22,80 --version-intensity 5 -oA TCP_nmap_10.10.11.136 10.10.11.136
+Host: 10.10.11.136 ()	Status: Up
+Host: 10.10.11.136 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Mon Feb 14 19:00:13 2022 -- 1 IP address (1 host up) scanned in 12.11 seconds

@@ -1,0 +1,4017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Feb 14 20:20:20 2022 as: nmap -sU -sC -sV -Pn -oA UDP_nmap_10.10.11.136 -&#45;top-ports 30 10.10.11.136 -->
+<nmaprun scanner="nmap" args="nmap -sU -sC -sV -Pn -oA UDP_nmap_10.10.11.136 -&#45;top-ports 30 10.10.11.136" start="1644841220" startstr="Mon Feb 14 20:20:20 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="30" services="53,67-69,111,123,135,137-139,161-162,445,500,514,520,631,996-999,1434,1701,1900,3283,4500,5353,49152-49154"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1644841220" endtime="1644841315"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.11.136" addrtype="ipv4"/>
+<hostnames>
+<hostname name="panda.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="29">
+<extrareasons reason="port-unreach" count="29" proto="udp" ports="53,67-69,111,123,135,137-139,162,445,500,514,520,631,996-999,1434,1701,1900,3283,4500,5353,49152-49154"/>
+</extraports>
+<port protocol="udp" portid="161"><state state="open" reason="udp-response" reason_ttl="63"/><service name="snmp" product="SNMPv1 server; net-snmp SNMPv3 server" extrainfo="public" hostname="pandora" method="probed" conf="10"/><script id="snmp-processes" output="&#xa;  1: &#xa;    Name: systemd&#xa;    Path: /sbin/init&#xa;    Params: maybe-ubiquity&#xa;  2: &#xa;    Name: kthreadd&#xa;  3: &#xa;    Name: rcu_gp&#xa;  4: &#xa;    Name: rcu_par_gp&#xa;  6: &#xa;    Name: kworker/0:0H-kblockd&#xa;  9: &#xa;    Name: mm_percpu_wq&#xa;  10: &#xa;    Name: ksoftirqd/0&#xa;  11: &#xa;    Name: rcu_sched&#xa;  12: &#xa;    Name: migration/0&#xa;  13: &#xa;    Name: idle_inject/0&#xa;  14: &#xa;    Name: cpuhp/0&#xa;  15: &#xa;    Name: cpuhp/1&#xa;  16: &#xa;    Name: idle_inject/1&#xa;  17: &#xa;    Name: migration/1&#xa;  18: &#xa;    Name: ksoftirqd/1&#xa;  20: &#xa;    Name: kworker/1:0H-kblockd&#xa;  21: &#xa;    Name: kdevtmpfs&#xa;  22: &#xa;    Name: netns&#xa;  23: &#xa;    Name: rcu_tasks_kthre&#xa;  24: &#xa;    Name: kauditd&#xa;  25: &#xa;    Name: khungtaskd&#xa;  26: &#xa;    Name: oom_reaper&#xa;  27: &#xa;    Name: writeback&#xa;  28: &#xa;    Name: kcompactd0&#xa;  29: &#xa;    Name: ksmd&#xa;  30: &#xa;    Name: khugepaged&#xa;  77: &#xa;    Name: kintegrityd&#xa;  78: &#xa;    Name: kblockd&#xa;  79: &#xa;    Name: blkcg_punt_bio&#xa;  80: &#xa;    Name: tpm_dev_wq&#xa;  81: &#xa;    Name: ata_sff&#xa;  82: &#xa;    Name: md&#xa;  83: &#xa;    Name: edac-poller&#xa;  84: &#xa;    Name: devfreq_wq&#xa;  85: &#xa;    Name: watchdogd&#xa;  88: &#xa;    Name: kswapd0&#xa;  89: &#xa;    Name: ecryptfs-kthrea&#xa;  91: &#xa;    Name: kthrotld&#xa;  92: &#xa;    Name: irq/24-pciehp&#xa;  93: &#xa;    Name: irq/25-pciehp&#xa;  94: &#xa;    Name: irq/26-pciehp&#xa;  95: &#xa;    Name: irq/27-pciehp&#xa;  96: &#xa;    Name: irq/28-pciehp&#xa;  97: &#xa;    Name: irq/29-pciehp&#xa;  98: &#xa;    Name: irq/30-pciehp&#xa;  99: &#xa;    Name: irq/31-pciehp&#xa;  100: &#xa;    Name: irq/32-pciehp&#xa;  101: &#xa;    Name: irq/33-pciehp&#xa;  102: &#xa;    Name: irq/34-pciehp&#xa;  103: &#xa;    Name: irq/35-pciehp&#xa;  104: &#xa;    Name: irq/36-pciehp&#xa;  105: &#xa;    Name: irq/37-pciehp&#xa;  106: &#xa;    Name: irq/38-pciehp&#xa;  107: &#xa;    Name: irq/39-pciehp&#xa;  108: &#xa;    Name: irq/40-pciehp&#xa;  109: &#xa;    Name: irq/41-pciehp&#xa;  110: &#xa;    Name: irq/42-pciehp&#xa;  111: &#xa;    Name: irq/43-pciehp&#xa;  112: &#xa;    Name: irq/44-pciehp&#xa;  113: &#xa;    Name: irq/45-pciehp&#xa;  114: &#xa;    Name: irq/46-pciehp&#xa;  115: &#xa;    Name: irq/47-pciehp&#xa;  116: &#xa;    Name: irq/48-pciehp&#xa;  117: &#xa;    Name: irq/49-pciehp&#xa;  118: &#xa;    Name: irq/50-pciehp&#xa;  119: &#xa;    Name: irq/51-pciehp&#xa;  120: &#xa;    Name: irq/52-pciehp&#xa;  121: &#xa;    Name: irq/53-pciehp&#xa;  122: &#xa;    Name: irq/54-pciehp&#xa;  123: &#xa;    Name: irq/55-pciehp&#xa;  124: &#xa;    Name: acpi_thermal_pm&#xa;  125: &#xa;    Name: scsi_eh_0&#xa;  126: &#xa;    Name: scsi_tmf_0&#xa;  127: &#xa;    Name: scsi_eh_1&#xa;  128: &#xa;    Name: scsi_tmf_1&#xa;  130: &#xa;    Name: vfio-irqfd-clea&#xa;  131: &#xa;    Name: ipv6_addrconf&#xa;  141: &#xa;    Name: kstrp&#xa;  144: &#xa;    Name: kworker/u5:0&#xa;  157: &#xa;    Name: charger_manager&#xa;  202: &#xa;    Name: mpt_poll_0&#xa;  203: &#xa;    Name: mpt/0&#xa;  204: &#xa;    Name: scsi_eh_2&#xa;  205: &#xa;    Name: scsi_tmf_2&#xa;  206: &#xa;    Name: scsi_eh_3&#xa;  207: &#xa;    Name: scsi_tmf_3&#xa;  208: &#xa;    Name: scsi_eh_4&#xa;  209: &#xa;    Name: scsi_tmf_4&#xa;  210: &#xa;    Name: scsi_eh_5&#xa;  211: &#xa;    Name: irq/16-vmwgfx&#xa;  212: &#xa;    Name: ttm_swap&#xa;  213: &#xa;    Name: scsi_tmf_5&#xa;  214: &#xa;    Name: cryptd&#xa;  215: &#xa;    Name: scsi_eh_6&#xa;  216: &#xa;    Name: scsi_tmf_6&#xa;  217: &#xa;    Name: scsi_eh_7&#xa;  234: &#xa;    Name: scsi_tmf_7&#xa;  240: &#xa;    Name: scsi_eh_8&#xa;  243: &#xa;    Name: scsi_tmf_8&#xa;  245: &#xa;    Name: scsi_eh_9&#xa;  247: &#xa;    Name: scsi_tmf_9&#xa;  253: &#xa;    Name: scsi_eh_10&#xa;  256: &#xa;    Name: scsi_tmf_10&#xa;  258: &#xa;    Name: scsi_eh_11&#xa;  259: &#xa;    Name: scsi_tmf_11&#xa;  261: &#xa;    Name: scsi_eh_12&#xa;  262: &#xa;    Name: scsi_tmf_12&#xa;  263: &#xa;    Name: scsi_eh_13&#xa;  264: &#xa;    Name: scsi_tmf_13&#xa;  265: &#xa;    Name: scsi_eh_14&#xa;  266: &#xa;    Name: scsi_tmf_14&#xa;  267: &#xa;    Name: scsi_eh_15&#xa;  268: &#xa;    Name: scsi_tmf_15&#xa;  269: &#xa;    Name: scsi_eh_16&#xa;  270: &#xa;    Name: scsi_tmf_16&#xa;  271: &#xa;    Name: scsi_eh_17&#xa;  272: &#xa;    Name: scsi_tmf_17&#xa;  273: &#xa;    Name: scsi_eh_18&#xa;  274: &#xa;    Name: scsi_tmf_18&#xa;  275: &#xa;    Name: scsi_eh_19&#xa;  276: &#xa;    Name: scsi_tmf_19&#xa;  277: &#xa;    Name: scsi_eh_20&#xa;  278: &#xa;    Name: scsi_tmf_20&#xa;  279: &#xa;    Name: scsi_eh_21&#xa;  280: &#xa;    Name: scsi_tmf_21&#xa;  281: &#xa;    Name: scsi_eh_22&#xa;  282: &#xa;    Name: scsi_tmf_22&#xa;  283: &#xa;    Name: scsi_eh_23&#xa;  284: &#xa;    Name: scsi_tmf_23&#xa;  285: &#xa;    Name: scsi_eh_24&#xa;  286: &#xa;    Name: scsi_tmf_24&#xa;  287: &#xa;    Name: scsi_eh_25&#xa;  288: &#xa;    Name: scsi_tmf_25&#xa;  289: &#xa;    Name: scsi_eh_26&#xa;  290: &#xa;    Name: scsi_tmf_26&#xa;  291: &#xa;    Name: scsi_eh_27&#xa;  292: &#xa;    Name: scsi_tmf_27&#xa;  293: &#xa;    Name: scsi_eh_28&#xa;  294: &#xa;    Name: scsi_tmf_28&#xa;  295: &#xa;    Name: scsi_eh_29&#xa;  296: &#xa;    Name: scsi_tmf_29&#xa;  297: &#xa;    Name: scsi_eh_30&#xa;  298: &#xa;    Name: scsi_tmf_30&#xa;  299: &#xa;    Name: scsi_eh_31&#xa;  300: &#xa;    Name: scsi_tmf_31&#xa;  329: &#xa;    Name: scsi_eh_32&#xa;  330: &#xa;    Name: scsi_tmf_32&#xa;  331: &#xa;    Name: kworker/1:1H-kblockd&#xa;  342: &#xa;    Name: kdmflush&#xa;  344: &#xa;    Name: kdmflush&#xa;  375: &#xa;    Name: raid5wq&#xa;  429: &#xa;    Name: jbd2/dm-0-8&#xa;  430: &#xa;    Name: ext4-rsv-conver&#xa;  431: &#xa;    Name: kworker/0:1H-kblockd&#xa;  488: &#xa;    Name: systemd-journal&#xa;    Path: /lib/systemd/systemd-journald&#xa;  516: &#xa;    Name: systemd-udevd&#xa;    Path: /lib/systemd/systemd-udevd&#xa;  517: &#xa;    Name: systemd-network&#xa;    Path: /lib/systemd/systemd-networkd&#xa;  658: &#xa;    Name: kaluad&#xa;  659: &#xa;    Name: kmpath_rdacd&#xa;  660: &#xa;    Name: kmpathd&#xa;  661: &#xa;    Name: kmpath_handlerd&#xa;  662: &#xa;    Name: multipathd&#xa;    Path: /sbin/multipathd&#xa;    Params: -d -s&#xa;  670: &#xa;    Name: jbd2/sda2-8&#xa;  671: &#xa;    Name: ext4-rsv-conver&#xa;  683: &#xa;    Name: systemd-resolve&#xa;    Path: /lib/systemd/systemd-resolved&#xa;  686: &#xa;    Name: systemd-timesyn&#xa;    Path: /lib/systemd/systemd-timesyncd&#xa;  712: &#xa;    Name: VGAuthService&#xa;    Path: /usr/bin/VGAuthService&#xa;  720: &#xa;    Name: vmtoolsd&#xa;    Path: /usr/bin/vmtoolsd&#xa;  758: &#xa;    Name: accounts-daemon&#xa;    Path: /usr/lib/accountsservice/accounts-daemon&#xa;  759: &#xa;    Name: dbus-daemon&#xa;    Path: /usr/bin/dbus-daemon&#xa;    Params: -&#45;system -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only&#xa;  768: &#xa;    Name: irqbalance&#xa;    Path: /usr/sbin/irqbalance&#xa;    Params: -&#45;foreground&#xa;  769: &#xa;    Name: networkd-dispat&#xa;    Path: /usr/bin/python3&#xa;    Params: /usr/bin/networkd-dispatcher -&#45;run-startup-triggers&#xa;  770: &#xa;    Name: rsyslogd&#xa;    Path: /usr/sbin/rsyslogd&#xa;    Params: -n -iNONE&#xa;  775: &#xa;    Name: systemd-logind&#xa;    Path: /lib/systemd/systemd-logind&#xa;  776: &#xa;    Name: udisksd&#xa;    Path: /usr/lib/udisks2/udisksd&#xa;  803: &#xa;    Name: cron&#xa;    Path: /usr/sbin/cron&#xa;    Params: -f&#xa;  804: &#xa;    Name: cron&#xa;    Path: /usr/sbin/CRON&#xa;    Params: -f&#xa;  808: &#xa;    Name: sh&#xa;    Path: /bin/sh&#xa;    Params: -c sleep 30; /bin/bash -c &apos;/usr/bin/host_check -u daniel -p HotelBabylon23&apos;&#xa;  829: &#xa;    Name: atd&#xa;    Path: /usr/sbin/atd&#xa;    Params: -f&#xa;  830: &#xa;    Name: snmpd&#xa;    Path: /usr/sbin/snmpd&#xa;    Params: -LOw -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf -f -p /run/snmpd.pid&#xa;  831: &#xa;    Name: sshd&#xa;    Path: sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups&#xa;  841: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  924: &#xa;    Name: agetty&#xa;    Path: /sbin/agetty&#xa;    Params: -o -p -&#45; \u -&#45;noclear tty1 linux&#xa;  934: &#xa;    Name: polkitd&#xa;    Path: /usr/lib/policykit-1/polkitd&#xa;    Params: -&#45;no-debug&#xa;  942: &#xa;    Name: mysqld&#xa;    Path: /usr/sbin/mysqld&#xa;  1133: &#xa;    Name: host_check&#xa;    Path: /usr/bin/host_check&#xa;    Params: -u daniel -p HotelBabylon23&#xa;  1568: &#xa;    Name: systemd&#xa;    Path: /lib/systemd/systemd&#xa;    Params: -&#45;user&#xa;  1572: &#xa;    Name: (sd-pam)&#xa;    Path: (sd-pam)&#xa;  8365: &#xa;    Name: gpg-agent&#xa;    Path: /usr/bin/gpg-agent&#xa;    Params: -&#45;supervised&#xa;  29089: &#xa;    Name: kworker/0:2-events&#xa;  29117: &#xa;    Name: sshd&#xa;    Path: sshd: daniel [priv]&#xa;  29290: &#xa;    Name: sshd&#xa;    Path: sshd: daniel@pts/0&#xa;  29293: &#xa;    Name: bash&#xa;    Path: -bash&#xa;  39145: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  48673: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  66181: &#xa;    Name: dbus-daemon&#xa;    Path: /usr/bin/dbus-daemon&#xa;    Params: -&#45;session -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only&#xa;  66183: &#xa;    Name: dirmngr&#xa;    Path: /usr/bin/dirmngr&#xa;    Params: -&#45;supervised -&#45;honor-http-proxy&#xa;  66246: &#xa;    Name: uuidd&#xa;    Path: /usr/sbin/uuidd&#xa;    Params: -&#45;socket-activation&#xa;  80955: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  81280: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  81290: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  81298: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  82678: &#xa;    Name: kworker/1:1-events&#xa;  84449: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  85281: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  86028: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  90001: &#xa;    Name: apache2&#xa;    Path: /usr/sbin/apache2&#xa;    Params: -k start&#xa;  108742: &#xa;    Name: kworker/1:0-events&#xa;  131956: &#xa;    Name: kworker/u4:1-events_power_efficient&#xa;  134984: &#xa;    Name: kworker/0:1-events&#xa;  134990: &#xa;    Name: kworker/u4:0-events_power_efficient"><table key="1">
+<elem key="Name">systemd</elem>
+<elem key="Path">/sbin/init</elem>
+<elem key="Params">maybe-ubiquity</elem>
+</table>
+<table key="2">
+<elem key="Name">kthreadd</elem>
+</table>
+<table key="3">
+<elem key="Name">rcu_gp</elem>
+</table>
+<table key="4">
+<elem key="Name">rcu_par_gp</elem>
+</table>
+<table key="6">
+<elem key="Name">kworker/0:0H-kblockd</elem>
+</table>
+<table key="9">
+<elem key="Name">mm_percpu_wq</elem>
+</table>
+<table key="10">
+<elem key="Name">ksoftirqd/0</elem>
+</table>
+<table key="11">
+<elem key="Name">rcu_sched</elem>
+</table>
+<table key="12">
+<elem key="Name">migration/0</elem>
+</table>
+<table key="13">
+<elem key="Name">idle_inject/0</elem>
+</table>
+<table key="14">
+<elem key="Name">cpuhp/0</elem>
+</table>
+<table key="15">
+<elem key="Name">cpuhp/1</elem>
+</table>
+<table key="16">
+<elem key="Name">idle_inject/1</elem>
+</table>
+<table key="17">
+<elem key="Name">migration/1</elem>
+</table>
+<table key="18">
+<elem key="Name">ksoftirqd/1</elem>
+</table>
+<table key="20">
+<elem key="Name">kworker/1:0H-kblockd</elem>
+</table>
+<table key="21">
+<elem key="Name">kdevtmpfs</elem>
+</table>
+<table key="22">
+<elem key="Name">netns</elem>
+</table>
+<table key="23">
+<elem key="Name">rcu_tasks_kthre</elem>
+</table>
+<table key="24">
+<elem key="Name">kauditd</elem>
+</table>
+<table key="25">
+<elem key="Name">khungtaskd</elem>
+</table>
+<table key="26">
+<elem key="Name">oom_reaper</elem>
+</table>
+<table key="27">
+<elem key="Name">writeback</elem>
+</table>
+<table key="28">
+<elem key="Name">kcompactd0</elem>
+</table>
+<table key="29">
+<elem key="Name">ksmd</elem>
+</table>
+<table key="30">
+<elem key="Name">khugepaged</elem>
+</table>
+<table key="77">
+<elem key="Name">kintegrityd</elem>
+</table>
+<table key="78">
+<elem key="Name">kblockd</elem>
+</table>
+<table key="79">
+<elem key="Name">blkcg_punt_bio</elem>
+</table>
+<table key="80">
+<elem key="Name">tpm_dev_wq</elem>
+</table>
+<table key="81">
+<elem key="Name">ata_sff</elem>
+</table>
+<table key="82">
+<elem key="Name">md</elem>
+</table>
+<table key="83">
+<elem key="Name">edac-poller</elem>
+</table>
+<table key="84">
+<elem key="Name">devfreq_wq</elem>
+</table>
+<table key="85">
+<elem key="Name">watchdogd</elem>
+</table>
+<table key="88">
+<elem key="Name">kswapd0</elem>
+</table>
+<table key="89">
+<elem key="Name">ecryptfs-kthrea</elem>
+</table>
+<table key="91">
+<elem key="Name">kthrotld</elem>
+</table>
+<table key="92">
+<elem key="Name">irq/24-pciehp</elem>
+</table>
+<table key="93">
+<elem key="Name">irq/25-pciehp</elem>
+</table>
+<table key="94">
+<elem key="Name">irq/26-pciehp</elem>
+</table>
+<table key="95">
+<elem key="Name">irq/27-pciehp</elem>
+</table>
+<table key="96">
+<elem key="Name">irq/28-pciehp</elem>
+</table>
+<table key="97">
+<elem key="Name">irq/29-pciehp</elem>
+</table>
+<table key="98">
+<elem key="Name">irq/30-pciehp</elem>
+</table>
+<table key="99">
+<elem key="Name">irq/31-pciehp</elem>
+</table>
+<table key="100">
+<elem key="Name">irq/32-pciehp</elem>
+</table>
+<table key="101">
+<elem key="Name">irq/33-pciehp</elem>
+</table>
+<table key="102">
+<elem key="Name">irq/34-pciehp</elem>
+</table>
+<table key="103">
+<elem key="Name">irq/35-pciehp</elem>
+</table>
+<table key="104">
+<elem key="Name">irq/36-pciehp</elem>
+</table>
+<table key="105">
+<elem key="Name">irq/37-pciehp</elem>
+</table>
+<table key="106">
+<elem key="Name">irq/38-pciehp</elem>
+</table>
+<table key="107">
+<elem key="Name">irq/39-pciehp</elem>
+</table>
+<table key="108">
+<elem key="Name">irq/40-pciehp</elem>
+</table>
+<table key="109">
+<elem key="Name">irq/41-pciehp</elem>
+</table>
+<table key="110">
+<elem key="Name">irq/42-pciehp</elem>
+</table>
+<table key="111">
+<elem key="Name">irq/43-pciehp</elem>
+</table>
+<table key="112">
+<elem key="Name">irq/44-pciehp</elem>
+</table>
+<table key="113">
+<elem key="Name">irq/45-pciehp</elem>
+</table>
+<table key="114">
+<elem key="Name">irq/46-pciehp</elem>
+</table>
+<table key="115">
+<elem key="Name">irq/47-pciehp</elem>
+</table>
+<table key="116">
+<elem key="Name">irq/48-pciehp</elem>
+</table>
+<table key="117">
+<elem key="Name">irq/49-pciehp</elem>
+</table>
+<table key="118">
+<elem key="Name">irq/50-pciehp</elem>
+</table>
+<table key="119">
+<elem key="Name">irq/51-pciehp</elem>
+</table>
+<table key="120">
+<elem key="Name">irq/52-pciehp</elem>
+</table>
+<table key="121">
+<elem key="Name">irq/53-pciehp</elem>
+</table>
+<table key="122">
+<elem key="Name">irq/54-pciehp</elem>
+</table>
+<table key="123">
+<elem key="Name">irq/55-pciehp</elem>
+</table>
+<table key="124">
+<elem key="Name">acpi_thermal_pm</elem>
+</table>
+<table key="125">
+<elem key="Name">scsi_eh_0</elem>
+</table>
+<table key="126">
+<elem key="Name">scsi_tmf_0</elem>
+</table>
+<table key="127">
+<elem key="Name">scsi_eh_1</elem>
+</table>
+<table key="128">
+<elem key="Name">scsi_tmf_1</elem>
+</table>
+<table key="130">
+<elem key="Name">vfio-irqfd-clea</elem>
+</table>
+<table key="131">
+<elem key="Name">ipv6_addrconf</elem>
+</table>
+<table key="141">
+<elem key="Name">kstrp</elem>
+</table>
+<table key="144">
+<elem key="Name">kworker/u5:0</elem>
+</table>
+<table key="157">
+<elem key="Name">charger_manager</elem>
+</table>
+<table key="202">
+<elem key="Name">mpt_poll_0</elem>
+</table>
+<table key="203">
+<elem key="Name">mpt/0</elem>
+</table>
+<table key="204">
+<elem key="Name">scsi_eh_2</elem>
+</table>
+<table key="205">
+<elem key="Name">scsi_tmf_2</elem>
+</table>
+<table key="206">
+<elem key="Name">scsi_eh_3</elem>
+</table>
+<table key="207">
+<elem key="Name">scsi_tmf_3</elem>
+</table>
+<table key="208">
+<elem key="Name">scsi_eh_4</elem>
+</table>
+<table key="209">
+<elem key="Name">scsi_tmf_4</elem>
+</table>
+<table key="210">
+<elem key="Name">scsi_eh_5</elem>
+</table>
+<table key="211">
+<elem key="Name">irq/16-vmwgfx</elem>
+</table>
+<table key="212">
+<elem key="Name">ttm_swap</elem>
+</table>
+<table key="213">
+<elem key="Name">scsi_tmf_5</elem>
+</table>
+<table key="214">
+<elem key="Name">cryptd</elem>
+</table>
+<table key="215">
+<elem key="Name">scsi_eh_6</elem>
+</table>
+<table key="216">
+<elem key="Name">scsi_tmf_6</elem>
+</table>
+<table key="217">
+<elem key="Name">scsi_eh_7</elem>
+</table>
+<table key="234">
+<elem key="Name">scsi_tmf_7</elem>
+</table>
+<table key="240">
+<elem key="Name">scsi_eh_8</elem>
+</table>
+<table key="243">
+<elem key="Name">scsi_tmf_8</elem>
+</table>
+<table key="245">
+<elem key="Name">scsi_eh_9</elem>
+</table>
+<table key="247">
+<elem key="Name">scsi_tmf_9</elem>
+</table>
+<table key="253">
+<elem key="Name">scsi_eh_10</elem>
+</table>
+<table key="256">
+<elem key="Name">scsi_tmf_10</elem>
+</table>
+<table key="258">
+<elem key="Name">scsi_eh_11</elem>
+</table>
+<table key="259">
+<elem key="Name">scsi_tmf_11</elem>
+</table>
+<table key="261">
+<elem key="Name">scsi_eh_12</elem>
+</table>
+<table key="262">
+<elem key="Name">scsi_tmf_12</elem>
+</table>
+<table key="263">
+<elem key="Name">scsi_eh_13</elem>
+</table>
+<table key="264">
+<elem key="Name">scsi_tmf_13</elem>
+</table>
+<table key="265">
+<elem key="Name">scsi_eh_14</elem>
+</table>
+<table key="266">
+<elem key="Name">scsi_tmf_14</elem>
+</table>
+<table key="267">
+<elem key="Name">scsi_eh_15</elem>
+</table>
+<table key="268">
+<elem key="Name">scsi_tmf_15</elem>
+</table>
+<table key="269">
+<elem key="Name">scsi_eh_16</elem>
+</table>
+<table key="270">
+<elem key="Name">scsi_tmf_16</elem>
+</table>
+<table key="271">
+<elem key="Name">scsi_eh_17</elem>
+</table>
+<table key="272">
+<elem key="Name">scsi_tmf_17</elem>
+</table>
+<table key="273">
+<elem key="Name">scsi_eh_18</elem>
+</table>
+<table key="274">
+<elem key="Name">scsi_tmf_18</elem>
+</table>
+<table key="275">
+<elem key="Name">scsi_eh_19</elem>
+</table>
+<table key="276">
+<elem key="Name">scsi_tmf_19</elem>
+</table>
+<table key="277">
+<elem key="Name">scsi_eh_20</elem>
+</table>
+<table key="278">
+<elem key="Name">scsi_tmf_20</elem>
+</table>
+<table key="279">
+<elem key="Name">scsi_eh_21</elem>
+</table>
+<table key="280">
+<elem key="Name">scsi_tmf_21</elem>
+</table>
+<table key="281">
+<elem key="Name">scsi_eh_22</elem>
+</table>
+<table key="282">
+<elem key="Name">scsi_tmf_22</elem>
+</table>
+<table key="283">
+<elem key="Name">scsi_eh_23</elem>
+</table>
+<table key="284">
+<elem key="Name">scsi_tmf_23</elem>
+</table>
+<table key="285">
+<elem key="Name">scsi_eh_24</elem>
+</table>
+<table key="286">
+<elem key="Name">scsi_tmf_24</elem>
+</table>
+<table key="287">
+<elem key="Name">scsi_eh_25</elem>
+</table>
+<table key="288">
+<elem key="Name">scsi_tmf_25</elem>
+</table>
+<table key="289">
+<elem key="Name">scsi_eh_26</elem>
+</table>
+<table key="290">
+<elem key="Name">scsi_tmf_26</elem>
+</table>
+<table key="291">
+<elem key="Name">scsi_eh_27</elem>
+</table>
+<table key="292">
+<elem key="Name">scsi_tmf_27</elem>
+</table>
+<table key="293">
+<elem key="Name">scsi_eh_28</elem>
+</table>
+<table key="294">
+<elem key="Name">scsi_tmf_28</elem>
+</table>
+<table key="295">
+<elem key="Name">scsi_eh_29</elem>
+</table>
+<table key="296">
+<elem key="Name">scsi_tmf_29</elem>
+</table>
+<table key="297">
+<elem key="Name">scsi_eh_30</elem>
+</table>
+<table key="298">
+<elem key="Name">scsi_tmf_30</elem>
+</table>
+<table key="299">
+<elem key="Name">scsi_eh_31</elem>
+</table>
+<table key="300">
+<elem key="Name">scsi_tmf_31</elem>
+</table>
+<table key="329">
+<elem key="Name">scsi_eh_32</elem>
+</table>
+<table key="330">
+<elem key="Name">scsi_tmf_32</elem>
+</table>
+<table key="331">
+<elem key="Name">kworker/1:1H-kblockd</elem>
+</table>
+<table key="342">
+<elem key="Name">kdmflush</elem>
+</table>
+<table key="344">
+<elem key="Name">kdmflush</elem>
+</table>
+<table key="375">
+<elem key="Name">raid5wq</elem>
+</table>
+<table key="429">
+<elem key="Name">jbd2/dm-0-8</elem>
+</table>
+<table key="430">
+<elem key="Name">ext4-rsv-conver</elem>
+</table>
+<table key="431">
+<elem key="Name">kworker/0:1H-kblockd</elem>
+</table>
+<table key="488">
+<elem key="Name">systemd-journal</elem>
+<elem key="Path">/lib/systemd/systemd-journald</elem>
+</table>
+<table key="516">
+<elem key="Name">systemd-udevd</elem>
+<elem key="Path">/lib/systemd/systemd-udevd</elem>
+</table>
+<table key="517">
+<elem key="Name">systemd-network</elem>
+<elem key="Path">/lib/systemd/systemd-networkd</elem>
+</table>
+<table key="658">
+<elem key="Name">kaluad</elem>
+</table>
+<table key="659">
+<elem key="Name">kmpath_rdacd</elem>
+</table>
+<table key="660">
+<elem key="Name">kmpathd</elem>
+</table>
+<table key="661">
+<elem key="Name">kmpath_handlerd</elem>
+</table>
+<table key="662">
+<elem key="Name">multipathd</elem>
+<elem key="Path">/sbin/multipathd</elem>
+<elem key="Params">-d -s</elem>
+</table>
+<table key="670">
+<elem key="Name">jbd2/sda2-8</elem>
+</table>
+<table key="671">
+<elem key="Name">ext4-rsv-conver</elem>
+</table>
+<table key="683">
+<elem key="Name">systemd-resolve</elem>
+<elem key="Path">/lib/systemd/systemd-resolved</elem>
+</table>
+<table key="686">
+<elem key="Name">systemd-timesyn</elem>
+<elem key="Path">/lib/systemd/systemd-timesyncd</elem>
+</table>
+<table key="712">
+<elem key="Name">VGAuthService</elem>
+<elem key="Path">/usr/bin/VGAuthService</elem>
+</table>
+<table key="720">
+<elem key="Name">vmtoolsd</elem>
+<elem key="Path">/usr/bin/vmtoolsd</elem>
+</table>
+<table key="758">
+<elem key="Name">accounts-daemon</elem>
+<elem key="Path">/usr/lib/accountsservice/accounts-daemon</elem>
+</table>
+<table key="759">
+<elem key="Name">dbus-daemon</elem>
+<elem key="Path">/usr/bin/dbus-daemon</elem>
+<elem key="Params">-&#45;system -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only</elem>
+</table>
+<table key="768">
+<elem key="Name">irqbalance</elem>
+<elem key="Path">/usr/sbin/irqbalance</elem>
+<elem key="Params">-&#45;foreground</elem>
+</table>
+<table key="769">
+<elem key="Name">networkd-dispat</elem>
+<elem key="Path">/usr/bin/python3</elem>
+<elem key="Params">/usr/bin/networkd-dispatcher -&#45;run-startup-triggers</elem>
+</table>
+<table key="770">
+<elem key="Name">rsyslogd</elem>
+<elem key="Path">/usr/sbin/rsyslogd</elem>
+<elem key="Params">-n -iNONE</elem>
+</table>
+<table key="775">
+<elem key="Name">systemd-logind</elem>
+<elem key="Path">/lib/systemd/systemd-logind</elem>
+</table>
+<table key="776">
+<elem key="Name">udisksd</elem>
+<elem key="Path">/usr/lib/udisks2/udisksd</elem>
+</table>
+<table key="803">
+<elem key="Name">cron</elem>
+<elem key="Path">/usr/sbin/cron</elem>
+<elem key="Params">-f</elem>
+</table>
+<table key="804">
+<elem key="Name">cron</elem>
+<elem key="Path">/usr/sbin/CRON</elem>
+<elem key="Params">-f</elem>
+</table>
+<table key="808">
+<elem key="Name">sh</elem>
+<elem key="Path">/bin/sh</elem>
+<elem key="Params">-c sleep 30; /bin/bash -c &apos;/usr/bin/host_check -u daniel -p HotelBabylon23&apos;</elem>
+</table>
+<table key="829">
+<elem key="Name">atd</elem>
+<elem key="Path">/usr/sbin/atd</elem>
+<elem key="Params">-f</elem>
+</table>
+<table key="830">
+<elem key="Name">snmpd</elem>
+<elem key="Path">/usr/sbin/snmpd</elem>
+<elem key="Params">-LOw -u Debian-snmp -g Debian-snmp -I -smux mteTrigger mteTriggerConf -f -p /run/snmpd.pid</elem>
+</table>
+<table key="831">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups</elem>
+</table>
+<table key="841">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="924">
+<elem key="Name">agetty</elem>
+<elem key="Path">/sbin/agetty</elem>
+<elem key="Params">-o -p -&#45; \u -&#45;noclear tty1 linux</elem>
+</table>
+<table key="934">
+<elem key="Name">polkitd</elem>
+<elem key="Path">/usr/lib/policykit-1/polkitd</elem>
+<elem key="Params">-&#45;no-debug</elem>
+</table>
+<table key="942">
+<elem key="Name">mysqld</elem>
+<elem key="Path">/usr/sbin/mysqld</elem>
+</table>
+<table key="1133">
+<elem key="Name">host_check</elem>
+<elem key="Path">/usr/bin/host_check</elem>
+<elem key="Params">-u daniel -p HotelBabylon23</elem>
+</table>
+<table key="1568">
+<elem key="Name">systemd</elem>
+<elem key="Path">/lib/systemd/systemd</elem>
+<elem key="Params">-&#45;user</elem>
+</table>
+<table key="1572">
+<elem key="Name">(sd-pam)</elem>
+<elem key="Path">(sd-pam)</elem>
+</table>
+<table key="8365">
+<elem key="Name">gpg-agent</elem>
+<elem key="Path">/usr/bin/gpg-agent</elem>
+<elem key="Params">-&#45;supervised</elem>
+</table>
+<table key="29089">
+<elem key="Name">kworker/0:2-events</elem>
+</table>
+<table key="29117">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel [priv]</elem>
+</table>
+<table key="29290">
+<elem key="Name">sshd</elem>
+<elem key="Path">sshd: daniel@pts/0</elem>
+</table>
+<table key="29293">
+<elem key="Name">bash</elem>
+<elem key="Path">-bash</elem>
+</table>
+<table key="39145">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="48673">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="66181">
+<elem key="Name">dbus-daemon</elem>
+<elem key="Path">/usr/bin/dbus-daemon</elem>
+<elem key="Params">-&#45;session -&#45;address=systemd: -&#45;nofork -&#45;nopidfile -&#45;systemd-activation -&#45;syslog-only</elem>
+</table>
+<table key="66183">
+<elem key="Name">dirmngr</elem>
+<elem key="Path">/usr/bin/dirmngr</elem>
+<elem key="Params">-&#45;supervised -&#45;honor-http-proxy</elem>
+</table>
+<table key="66246">
+<elem key="Name">uuidd</elem>
+<elem key="Path">/usr/sbin/uuidd</elem>
+<elem key="Params">-&#45;socket-activation</elem>
+</table>
+<table key="80955">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="81280">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="81290">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="81298">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="82678">
+<elem key="Name">kworker/1:1-events</elem>
+</table>
+<table key="84449">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="85281">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="86028">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="90001">
+<elem key="Name">apache2</elem>
+<elem key="Path">/usr/sbin/apache2</elem>
+<elem key="Params">-k start</elem>
+</table>
+<table key="108742">
+<elem key="Name">kworker/1:0-events</elem>
+</table>
+<table key="131956">
+<elem key="Name">kworker/u4:1-events_power_efficient</elem>
+</table>
+<table key="134984">
+<elem key="Name">kworker/0:1-events</elem>
+</table>
+<table key="134990">
+<elem key="Name">kworker/u4:0-events_power_efficient</elem>
+</table>
+</script><script id="snmp-win32-software" output="&#xa;  accountsservice_0.6.55-0ubuntu12~20.04.5_amd64; 2021-12-07T12:57:21&#xa;  adduser_3.118ubuntu2_all; 2021-02-01T17:21:32&#xa;  alsa-topology-conf_1.2.2-1_all; 2021-02-01T17:25:18&#xa;  alsa-ucm-conf_1.2.2-1ubuntu0.11_all; 2021-12-07T12:57:25&#xa;  amd64-microcode_3.20191218.1ubuntu1_amd64; 2021-06-11T12:44:07&#xa;  apache2-bin_2.4.41-4ubuntu3.8_amd64; 2021-12-07T12:57:07&#xa;  apache2-data_2.4.41-4ubuntu3.8_all; 2021-12-07T12:57:07&#xa;  apache2-utils_2.4.41-4ubuntu3.8_amd64; 2021-12-07T12:57:07&#xa;  apache2_2.4.41-4ubuntu3.8_amd64; 2021-12-07T12:57:06&#xa;  apparmor_2.13.3-7ubuntu5.1_amd64; 2021-02-01T17:25:03&#xa;  apport-symptoms_0.23_all; 2021-02-01T17:25:23&#xa;  apport_2.20.11-0ubuntu27.21_all; 2021-12-07T12:57:29&#xa;  apt-transport-https_2.0.6_all; 2021-12-07T12:57:29&#xa;  apt-utils_2.0.6_amd64; 2021-12-07T12:57:00&#xa;  apt_2.0.6_amd64; 2021-12-07T12:56:59&#xa;  at_3.1.23-1ubuntu1_amd64; 2021-02-01T17:25:23&#xa;  base-files_11ubuntu5.4_amd64; 2021-12-07T12:56:49&#xa;  base-passwd_3.5.47_amd64; 2021-02-01T17:20:55&#xa;  bash-completion_1:2.10-1ubuntu1_all; 2021-02-01T17:25:05&#xa;  bash_5.0-6ubuntu1.1_amd64; 2021-02-01T17:23:38&#xa;  bc_1.07.1-2build1_amd64; 2021-02-01T17:25:23&#xa;  bcache-tools_1.0.8-3ubuntu0.1_amd64; 2021-02-01T17:25:23&#xa;  bind9-dnsutils_1:9.16.1-0ubuntu2.9_amd64; 2021-12-07T12:57:22&#xa;  bind9-host_1:9.16.1-0ubuntu2.9_amd64; 2021-12-07T12:57:22&#xa;  bind9-libs_1:9.16.1-0ubuntu2.9_amd64; 2021-12-07T12:57:22&#xa;  bolt_0.8-4ubuntu1_amd64; 2021-02-01T17:25:23&#xa;  bsdmainutils_11.1.2ubuntu3_amd64; 2021-02-01T17:24:50&#xa;  bsdutils_1:2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:38&#xa;  btrfs-progs_5.4.1-2_amd64; 2021-02-01T17:25:24&#xa;  busybox-initramfs_1:1.30.1-4ubuntu6.4_amd64; 2022-01-03T07:47:22&#xa;  busybox-static_1:1.30.1-4ubuntu6.4_amd64; 2022-01-03T07:47:22&#xa;  byobu_5.133-0ubuntu1_all; 2021-02-01T17:25:25&#xa;  bzip2_1.0.8-2_amd64; 2021-02-01T17:21:58&#xa;  ca-certificates_20210119~20.04.2_all; 2021-12-07T12:57:16&#xa;  cloud-guest-utils_0.31-7-gd99b2d76-0ubuntu1_all; 2021-02-01T17:26:16&#xa;  cloud-initramfs-copymods_0.45ubuntu2_all; 2021-12-07T12:58:00&#xa;  cloud-initramfs-dyn-netconf_0.45ubuntu2_all; 2021-12-07T12:58:00&#xa;  command-not-found_20.04.4_all; 2021-02-01T17:25:08&#xa;  console-setup-linux_1.194ubuntu3_all; 2021-02-01T17:21:59&#xa;  console-setup_1.194ubuntu3_all; 2021-02-01T17:21:58&#xa;  coreutils_8.30-3ubuntu2_amd64; 2021-02-01T17:20:56&#xa;  cpio_2.13+dfsg-2ubuntu0.3_amd64; 2021-12-07T12:57:22&#xa;  crda_3.18-1build1_amd64; 2021-06-11T12:43:36&#xa;  cron_3.0pl1-136ubuntu1_amd64; 2021-02-01T17:22:00&#xa;  cryptsetup-bin_2:2.2.2-3ubuntu2.3_amd64; 2021-02-01T17:25:25&#xa;  cryptsetup-initramfs_2:2.2.2-3ubuntu2.3_all; 2021-02-01T17:25:27&#xa;  cryptsetup-run_2:2.2.2-3ubuntu2.3_all; 2021-02-01T17:25:28&#xa;  cryptsetup_2:2.2.2-3ubuntu2.3_amd64; 2021-02-01T17:25:26&#xa;  curl_7.68.0-1ubuntu2.7_amd64; 2021-12-07T12:57:03&#xa;  dash_0.5.10.2-6_amd64; 2021-02-01T17:20:57&#xa;  dbconfig-common_2.0.13_all; 2021-06-11T13:33:36&#xa;  dbus-user-session_1.12.16-2ubuntu2.1_amd64; 2021-02-01T17:25:31&#xa;  dbus_1.12.16-2ubuntu2.1_amd64; 2021-02-01T17:23:54&#xa;  dconf-gsettings-backend_0.36.0-1_amd64; 2021-02-01T17:25:32&#xa;  dconf-service_0.36.0-1_amd64; 2021-02-01T17:25:32&#xa;  debconf-i18n_1.5.73_all; 2021-02-01T17:22:01&#xa;  debconf_1.5.73_all; 2021-02-01T17:20:58&#xa;  debianutils_4.9.1_amd64; 2021-02-01T17:20:58&#xa;  diffutils_1:3.7-3_amd64; 2021-02-01T17:20:59&#xa;  dirmngr_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  distro-info-data_0.43ubuntu1.9_all; 2021-12-07T12:57:16&#xa;  distro-info_0.23ubuntu1_amd64; 2022-01-03T07:47:21&#xa;  dmeventd_2:1.02.167-1ubuntu1_amd64; 2021-02-01T17:25:33&#xa;  dmidecode_3.2-3_amd64; 2021-02-01T17:25:08&#xa;  dmsetup_2:1.02.167-1ubuntu1_amd64; 2021-02-01T17:22:01&#xa;  dosfstools_4.1-2_amd64; 2021-02-01T17:25:08&#xa;  dpkg_1.19.7ubuntu3_amd64; 2021-02-01T17:21:00&#xa;  e2fsprogs_1.45.5-2ubuntu1_amd64; 2021-02-01T17:21:00&#xa;  ed_1.16-1_amd64; 2021-02-01T17:25:08&#xa;  eject_2.1.5+deb1+cvs20081104-14_amd64; 2021-02-01T17:22:01&#xa;  ethtool_1:5.4-1_amd64; 2021-02-01T17:25:34&#xa;  fdisk_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:42&#xa;  file_1:5.38-4_amd64; 2021-02-01T17:22:01&#xa;  finalrd_6~ubuntu20.04.1_all; 2021-02-01T17:25:34&#xa;  findutils_4.7.0-1ubuntu1_amd64; 2021-02-01T17:21:00&#xa;  fontconfig-config_2.13.1-2ubuntu3_all; 2021-06-11T13:33:36&#xa;  fontconfig_2.13.1-2ubuntu3_amd64; 2021-06-11T13:33:37&#xa;  fonts-dejavu-core_2.37-1_all; 2021-06-11T13:33:36&#xa;  fonts-liberation_1:1.07.4-11_all; 2021-06-11T13:33:36&#xa;  fonts-ubuntu-console_0.83-4ubuntu1_all; 2021-02-01T17:25:34&#xa;  friendly-recovery_0.2.41ubuntu0.20.04.1_all; 2021-06-11T13:05:08&#xa;  ftp_0.17-34.1_amd64; 2021-02-01T17:25:09&#xa;  fuse_2.9.9-3_amd64; 2021-02-01T17:24:52&#xa;  fwupd-signed_1.27.1ubuntu5+1.5.11-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:22&#xa;  fwupd_1.5.11-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:23&#xa;  galera-3_25.3.29-1_amd64; 2021-06-11T13:33:31&#xa;  gawk_1:5.0.1+dfsg-1_amd64; 2021-02-01T17:24:54&#xa;  gcc-10-base_10.3.0-1ubuntu1~20.04_amd64; 2021-12-07T12:56:51&#xa;  gdisk_1.0.5-1_amd64; 2021-02-01T17:26:24&#xa;  geoip-database_20191224-2_all; 2021-06-11T13:30:13&#xa;  gettext-base_0.19.8.1-10build1_amd64; 2021-02-01T17:25:09&#xa;  gir1.2-glib-2.0_1.64.1-1~ubuntu20.04.1_amd64; 2021-02-01T17:24:09&#xa;  gir1.2-packagekitglib-1.0_1.1.13-2ubuntu1.1_amd64; 2021-02-01T17:25:41&#xa;  git-man_1:2.25.1-1ubuntu3.2_all; 2021-12-07T12:57:23&#xa;  git_1:2.25.1-1ubuntu3.2_amd64; 2021-12-07T12:57:25&#xa;  glib-networking-common_2.64.2-1ubuntu0.1_all; 2021-02-01T17:25:34&#xa;  glib-networking-services_2.64.2-1ubuntu0.1_amd64; 2021-02-01T17:25:35&#xa;  glib-networking_2.64.2-1ubuntu0.1_amd64; 2021-02-01T17:25:35&#xa;  gnupg-l10n_2.2.19-3ubuntu2.1_all; 2021-06-11T13:05:03&#xa;  gnupg-utils_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  gnupg_2.2.19-3ubuntu2.1_all; 2021-06-11T13:05:03&#xa;  gpg-agent_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  gpg-wks-client_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  gpg-wks-server_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  gpg_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  gpgconf_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:02&#xa;  gpgsm_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:03&#xa;  gpgv_2.2.19-3ubuntu2.1_amd64; 2021-06-11T13:05:03&#xa;  graphviz_2.42.2-3build2_amd64; 2021-06-11T13:33:40&#xa;  grep_3.4-1_amd64; 2021-02-01T17:21:01&#xa;  groff-base_1.22.4-4build1_amd64; 2021-02-01T17:24:51&#xa;  grub-common_2.04-1ubuntu26.13_amd64; 2021-12-07T12:57:27&#xa;  grub-gfxpayload-lists_0.7_amd64; 2021-06-11T12:43:37&#xa;  grub-pc-bin_2.04-1ubuntu26.13_amd64; 2021-12-07T12:57:26&#xa;  grub-pc_2.04-1ubuntu26.13_amd64; 2021-12-07T12:57:26&#xa;  grub2-common_2.04-1ubuntu26.13_amd64; 2021-12-07T12:57:26&#xa;  gsettings-desktop-schemas_3.36.0-1ubuntu1_all; 2021-02-01T17:25:35&#xa;  gzip_1.10-0ubuntu4_amd64; 2021-02-01T17:21:01&#xa;  hdparm_9.58+ds-4_amd64; 2021-02-01T17:25:09&#xa;  hostname_3.23_amd64; 2021-02-01T17:21:02&#xa;  htop_2.2.0-2build1_amd64; 2021-02-01T17:25:45&#xa;  ifupdown_0.8.35ubuntu1_amd64; 2021-11-23T11:48:05&#xa;  info_6.7.0.dfsg.2-5_amd64; 2021-02-01T17:25:09&#xa;  init-system-helpers_1.57_all; 2021-02-01T17:21:02&#xa;  init_1.57_amd64; 2021-02-01T17:22:02&#xa;  initramfs-tools-bin_0.136ubuntu6.6_amd64; 2021-12-07T12:57:29&#xa;  initramfs-tools-core_0.136ubuntu6.6_all; 2021-12-07T12:57:29&#xa;  initramfs-tools_0.136ubuntu6.6_all; 2021-12-07T12:57:29&#xa;  install-info_6.7.0.dfsg.2-5_amd64; 2021-02-01T17:24:47&#xa;  intel-microcode_3.20210608.0ubuntu0.20.04.1_amd64; 2021-06-11T12:44:07&#xa;  iproute2_5.5.0-1ubuntu1_amd64; 2021-02-01T17:22:03&#xa;  iptables_1.8.4-3ubuntu2_amd64; 2021-02-01T17:25:10&#xa;  iputils-ping_3:20190709-3_amd64; 2021-02-01T17:22:03&#xa;  iputils-tracepath_3:20190709-3_amd64; 2021-02-01T17:25:10&#xa;  irqbalance_1.6.0-3ubuntu1_amd64; 2021-02-01T17:24:47&#xa;  isc-dhcp-client_4.4.1-2.1ubuntu5.20.04.2_amd64; 2021-06-11T12:48:18&#xa;  isc-dhcp-common_4.4.1-2.1ubuntu5.20.04.2_amd64; 2021-06-11T12:46:47&#xa;  iso-codes_4.4-1_all; 2021-02-01T17:24:49&#xa;  iucode-tool_2.3.1-1_amd64; 2021-06-11T12:43:37&#xa;  iw_5.4-1_amd64; 2021-06-11T12:43:36&#xa;  kbd_2.0.4-4ubuntu2_amd64; 2021-02-01T17:22:05&#xa;  keyboard-configuration_1.194ubuntu3_all; 2021-02-01T17:22:05&#xa;  klibc-utils_2.0.7-1ubuntu5_amd64; 2021-02-01T17:25:26&#xa;  kmod_27-1ubuntu2_amd64; 2021-02-01T17:22:06&#xa;  kpartx_0.8.3-1ubuntu2_amd64; 2021-02-01T17:26:16&#xa;  krb5-locales_1.17-6ubuntu4.1_all; 2021-02-01T17:25:10&#xa;  landscape-common_19.12-0ubuntu4.2_amd64; 2021-06-11T13:05:12&#xa;  language-selector-common_0.204.2_all; 2021-02-01T17:24:50&#xa;  less_551-1ubuntu0.1_amd64; 2021-02-01T17:24:09&#xa;  libaccountsservice0_0.6.55-0ubuntu12~20.04.5_amd64; 2021-12-07T12:57:22&#xa;  libacl1_2.2.53-6_amd64; 2021-02-01T17:21:02&#xa;  libaio1_0.3.112-5_amd64; 2021-02-01T17:25:33&#xa;  libalgorithm-c3-perl_0.10-1_all; 2021-06-11T13:30:13&#xa;  libann0_1.1.2+doc-7build1_amd64; 2021-06-11T13:33:37&#xa;  libapache2-mod-php7.4_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:26&#xa;  libapache2-mpm-itk_2.4.7-04-1_amd64; 2021-06-11T14:07:07&#xa;  libapparmor1_2.13.3-7ubuntu5.1_amd64; 2021-02-01T17:23:54&#xa;  libappstream4_0.12.10-2_amd64; 2021-02-01T17:25:49&#xa;  libapr1_1.6.5-1ubuntu1_amd64; 2021-06-11T13:31:27&#xa;  libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2_amd64; 2021-06-11T13:31:27&#xa;  libaprutil1-ldap_1.6.1-4ubuntu2_amd64; 2021-06-11T13:31:27&#xa;  libaprutil1_1.6.1-4ubuntu2_amd64; 2021-06-11T13:31:27&#xa;  libapt-pkg6.0_2.0.6_amd64; 2021-12-07T12:56:57&#xa;  libarchive13_3.4.0-2ubuntu1_amd64; 2021-02-01T17:25:35&#xa;  libargon2-1_0~20171227-0.2_amd64; 2021-02-01T17:21:32&#xa;  libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:28&#xa;  libasound2-data_1.2.2-2.1ubuntu2.5_all; 2021-12-07T12:57:25&#xa;  libasound2_1.2.2-2.1ubuntu2.5_amd64; 2021-12-07T12:57:25&#xa;  libassuan0_2.5.3-7ubuntu2_amd64; 2021-02-01T17:25:32&#xa;  libatasmart4_0.19-5_amd64; 2022-01-03T07:47:28&#xa;  libatm1_1:2.5.1-4_amd64; 2021-02-01T17:22:07&#xa;  libattr1_1:2.4.48-5_amd64; 2021-02-01T17:21:02&#xa;  libaudit-common_1:2.8.5-2ubuntu6_all; 2021-02-01T17:21:02&#xa;  libaudit1_1:2.8.5-2ubuntu6_amd64; 2021-02-01T17:21:03&#xa;  libauthen-sasl-perl_2.1600-1_all; 2021-06-11T13:30:18&#xa;  libb-hooks-endofscope-perl_0.24-1_all; 2021-06-11T13:30:14&#xa;  libb-hooks-op-check-perl_0.22-1build2_amd64; 2021-06-11T13:30:13&#xa;  libblas3_3.9.0-1build1_amd64; 2021-06-11T13:30:11&#xa;  libblkid1_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:41&#xa;  libblockdev-crypto2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev-fs2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev-loop2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev-part-err2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev-part2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev-swap2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev-utils2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libblockdev2_2.23-2ubuntu3_amd64; 2022-01-03T07:47:29&#xa;  libbrotli1_1.0.7-6ubuntu0.1_amd64; 2021-02-01T17:25:28&#xa;  libbsd0_0.10.0-1_amd64; 2021-02-01T17:22:07&#xa;  libbz2-1.0_1.0.8-2_amd64; 2021-02-01T17:21:03&#xa;  libc-bin_2.31-0ubuntu9.2_amd64; 2021-02-01T17:23:46&#xa;  libc6_2.31-0ubuntu9.2_amd64; 2021-02-01T17:23:36&#xa;  libcairo2_1.16.0-4ubuntu1_amd64; 2021-06-11T13:33:38&#xa;  libcanberra0_0.30-7ubuntu1_amd64; 2021-02-01T17:25:51&#xa;  libcap-ng0_0.7.9-2.1build1_amd64; 2021-02-01T17:21:06&#xa;  libcap2-bin_1:2.32-1_amd64; 2021-02-01T17:22:07&#xa;  libcap2_1:2.32-1_amd64; 2021-02-01T17:21:33&#xa;  libcbor0.6_0.6.0-0ubuntu1_amd64; 2021-02-01T17:25:10&#xa;  libcdt5_2.42.2-3build2_amd64; 2021-06-11T13:33:37&#xa;  libcgi-fast-perl_1:2.15-1_all; 2021-06-11T13:33:41&#xa;  libcgi-pm-perl_4.46-1_all; 2021-06-11T13:33:41&#xa;  libcgraph6_2.42.2-3build2_amd64; 2021-06-11T13:33:37&#xa;  libclass-c3-perl_0.34-1_all; 2021-06-11T13:30:14&#xa;  libclass-c3-xs-perl_0.14-1build5_amd64; 2021-06-11T13:30:14&#xa;  libclass-data-inheritable-perl_0.08-3_all; 2021-06-11T13:30:14&#xa;  libclass-inspector-perl_1.36-1_all; 2021-06-11T13:30:14&#xa;  libclass-method-modifiers-perl_2.13-1_all; 2021-06-11T13:30:14&#xa;  libclass-singleton-perl_1.5-1_all; 2021-06-11T13:30:14&#xa;  libclass-xsaccessor-perl_1.19-3build3_amd64; 2021-06-11T13:30:14&#xa;  libcom-err2_1.45.5-2ubuntu1_amd64; 2021-02-01T17:21:06&#xa;  libcommon-sense-perl_3.74-2build6_amd64; 2021-06-11T13:30:14&#xa;  libconfig-inifiles-perl_3.000002-1_all; 2021-06-11T13:33:31&#xa;  libcrypt1_1:4.4.10-10ubuntu4_amd64; 2021-02-01T17:21:06&#xa;  libcryptsetup12_2:2.2.2-3ubuntu2.3_amd64; 2021-02-01T17:23:56&#xa;  libcurl3-gnutls_7.68.0-1ubuntu2.7_amd64; 2021-12-07T12:57:23&#xa;  libcurl4_7.68.0-1ubuntu2.7_amd64; 2021-12-07T12:57:03&#xa;  libdata-dump-perl_1.23-1_all; 2021-06-11T13:30:14&#xa;  libdata-optlist-perl_0.110-1_all; 2021-06-11T13:30:14&#xa;  libdate-manip-perl_6.79-1_all; 2021-06-11T13:30:15&#xa;  libdatetime-locale-perl_1:1.25-1_all; 2021-06-11T13:30:19&#xa;  libdatetime-perl_2:1.51-1build1_amd64; 2021-06-11T13:30:20&#xa;  libdatetime-timezone-perl_1:2.38-1+2019c_all; 2021-06-11T13:30:20&#xa;  libdatrie1_0.2.12-3_amd64; 2021-06-11T13:33:38&#xa;  libdb5.3_5.3.28+dfsg1-0.6ubuntu2_amd64; 2021-02-01T17:21:07&#xa;  libdbd-mysql-perl_4.050-3_amd64; 2021-06-11T13:30:07&#xa;  libdbi-perl_1.643-1ubuntu0.1_amd64; 2021-12-07T12:57:09&#xa;  libdbus-1-3_1.12.16-2ubuntu2.1_amd64; 2021-02-01T17:23:54&#xa;  libdbus-glib-1-2_0.110-5fakssync1_amd64; 2021-06-11T12:43:37&#xa;  libdconf1_0.36.0-1_amd64; 2021-02-01T17:25:31&#xa;  libdebconfclient0_0.251ubuntu1_amd64; 2021-02-01T17:21:07&#xa;  libdevel-callchecker-perl_0.008-1ubuntu1_amd64; 2021-06-11T13:30:13&#xa;  libdevel-caller-perl_2.06-2build2_amd64; 2021-06-11T13:30:15&#xa;  libdevel-lexalias-perl_0.05-2build2_amd64; 2021-06-11T13:30:15&#xa;  libdevel-stacktrace-perl_2.0400-1_all; 2021-06-11T13:30:16&#xa;  libdevmapper-event1.02.1_2:1.02.167-1ubuntu1_amd64; 2021-02-01T17:25:33&#xa;  libdevmapper1.02.1_2:1.02.167-1ubuntu1_amd64; 2021-02-01T17:21:33&#xa;  libdns-export1109_1:9.11.16+dfsg-3~ubuntu1_amd64; 2021-02-01T17:24:10&#xa;  libdrm-common_2.4.105-3~20.04.2_all; 2021-12-07T12:57:16&#xa;  libdrm2_2.4.105-3~20.04.2_amd64; 2021-12-07T12:57:16&#xa;  libdynaloader-functions-perl_0.003-1_all; 2021-06-11T13:30:13&#xa;  libedit2_3.1-20191231-1_amd64; 2021-02-01T17:25:07&#xa;  libefiboot1_37-2ubuntu2.2_amd64; 2021-02-01T17:25:34&#xa;  libefivar1_37-2ubuntu2.2_amd64; 2021-02-01T17:25:34&#xa;  libelf1_0.176-1.1build1_amd64; 2021-02-01T17:22:08&#xa;  libencode-locale-perl_1.05-1_all; 2021-06-11T13:30:08&#xa;  liberror-perl_0.17029-1_all; 2021-02-01T17:25:42&#xa;  libestr0_0.1.10-2.1_amd64; 2021-02-01T17:22:08&#xa;  libeval-closure-perl_0.14-1_all; 2021-06-11T13:30:16&#xa;  libevdev2_1.9.0+dfsg-1ubuntu0.1_amd64; 2021-06-11T12:44:22&#xa;  libevent-2.1-7_2.1.11-stable-1_amd64; 2021-02-01T17:25:24&#xa;  libexception-class-perl_1.44-1_all; 2021-06-11T13:30:16&#xa;  libexpat1_2.2.9-1build1_amd64; 2021-02-01T17:21:50&#xa;  libext2fs2_1.45.5-2ubuntu1_amd64; 2021-02-01T17:21:08&#xa;  libfastjson4_0.99.8-2_amd64; 2021-02-01T17:22:09&#xa;  libfcgi-perl_0.79-1_amd64; 2021-06-11T13:33:41&#xa;  libfdisk1_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:41&#xa;  libffi7_3.3-4_amd64; 2021-02-01T17:21:33&#xa;  libfido2-1_1.3.1-1ubuntu2_amd64; 2021-02-01T17:25:11&#xa;  libfile-listing-perl_6.04-1_all; 2021-06-11T13:30:08&#xa;  libfile-sharedir-perl_1.116-2_all; 2021-06-11T13:30:16&#xa;  libfl2_2.6.4-6.2_amd64; 2021-02-01T17:25:23&#xa;  libfont-afm-perl_1.20-2_all; 2021-06-11T13:30:16&#xa;  libfontconfig1_2.13.1-2ubuntu3_amd64; 2021-06-11T13:33:37&#xa;  libfreetype6_2.10.1-2ubuntu0.1_amd64; 2021-06-11T12:43:36&#xa;  libfribidi0_1.0.8-2_amd64; 2021-02-01T17:22:09&#xa;  libfuse2_2.9.9-3_amd64; 2021-02-01T17:24:52&#xa;  libfwupd2_1.5.11-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:22&#xa;  libfwupdplugin1_1.5.11-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:22&#xa;  libgcab-1.0-0_1.4-1_amd64; 2021-02-01T17:25:36&#xa;  libgcc-s1_10.3.0-1ubuntu1~20.04_amd64; 2021-12-07T12:56:51&#xa;  libgcrypt20_1.8.5-5ubuntu1.1_amd64; 2021-12-07T12:56:51&#xa;  libgd3_2.2.5-5.2ubuntu2.1_amd64; 2021-12-07T12:57:32&#xa;  libgdbm-compat4_1.18.1-5_amd64; 2021-02-01T17:24:58&#xa;  libgdbm6_1.18.1-5_amd64; 2021-02-01T17:24:51&#xa;  libgeo-ip-perl_1.51-2_amd64; 2021-06-11T13:30:12&#xa;  libgeoip1_1.6.12-6build1_amd64; 2021-06-11T13:30:12&#xa;  libgirepository-1.0-1_1.64.1-1~ubuntu20.04.1_amd64; 2021-02-01T17:24:09&#xa;  libglib2.0-0_2.64.6-1~ubuntu20.04.4_amd64; 2021-12-07T12:57:16&#xa;  libglib2.0-bin_2.64.6-1~ubuntu20.04.4_amd64; 2021-12-07T12:57:16&#xa;  libglib2.0-data_2.64.6-1~ubuntu20.04.4_all; 2021-12-07T12:57:16&#xa;  libgmp10_2:6.2.0+dfsg-4_amd64; 2021-02-01T17:21:34&#xa;  libgnutls30_3.6.13-2ubuntu1.6_amd64; 2021-12-07T12:56:55&#xa;  libgpg-error0_1.37-1_amd64; 2021-02-01T17:21:09&#xa;  libgpgme11_1.13.1-7ubuntu2_amd64; 2021-02-01T17:25:39&#xa;  libgpm2_1.20.7-5_amd64; 2021-02-01T17:25:51&#xa;  libgraphite2-3_1.3.13-11build1_amd64; 2021-06-11T13:33:38&#xa;  libgssapi-krb5-2_1.17-6ubuntu4.1_amd64; 2021-02-01T17:25:06&#xa;  libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:30&#xa;  libgstreamer1.0-0_1.16.2-2_amd64; 2021-02-01T17:25:52&#xa;  libgts-0.7-5_0.7.6+darcs121130-4_amd64; 2021-06-11T13:33:38&#xa;  libgts-bin_0.7.6+darcs121130-4_amd64; 2021-06-11T13:33:41&#xa;  libgudev-1.0-0_1:233-1_amd64; 2021-02-01T17:25:36&#xa;  libgusb2_0.3.4-0.1_amd64; 2021-02-01T17:25:36&#xa;  libgvc6_2.42.2-3build2_amd64; 2021-06-11T13:33:39&#xa;  libgvpr2_2.42.2-3build2_amd64; 2021-06-11T13:33:39&#xa;  libharfbuzz0b_2.6.4-1ubuntu4_amd64; 2021-06-11T13:33:38&#xa;  libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:29&#xa;  libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:28&#xa;  libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:29&#xa;  libhogweed5_3.5.1+really3.5.1-2ubuntu0.2_amd64; 2021-12-07T12:56:55&#xa;  libhtml-form-perl_6.07-1_all; 2021-06-11T13:30:16&#xa;  libhtml-format-perl_2.12-1_all; 2021-06-11T13:30:16&#xa;  libhtml-parser-perl_3.72-5_amd64; 2021-06-11T13:30:08&#xa;  libhtml-tagset-perl_3.20-4_all; 2021-06-11T13:30:08&#xa;  libhtml-template-perl_2.97-1_all; 2021-06-11T13:33:41&#xa;  libhtml-tree-perl_5.07-2_all; 2021-06-11T13:30:08&#xa;  libhttp-cookies-perl_6.08-1_all; 2021-06-11T13:30:08&#xa;  libhttp-daemon-perl_6.06-1_all; 2021-06-11T13:30:16&#xa;  libhttp-date-perl_6.05-1_all; 2021-06-11T13:30:08&#xa;  libhttp-message-perl_6.22-1_all; 2021-06-11T13:30:08&#xa;  libhttp-negotiate-perl_6.01-1_all; 2021-06-11T13:30:08&#xa;  libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:29&#xa;  libice6_2:1.0.10-0ubuntu1_amd64; 2021-06-11T13:33:39&#xa;  libicu66_66.1-2ubuntu2.1_amd64; 2021-12-07T12:57:06&#xa;  libidn2-0_2.2.0-2_amd64; 2021-02-01T17:21:35&#xa;  libimobiledevice6_1.2.1~git20191129.9f79242-1build1_amd64; 2021-06-11T12:43:37&#xa;  libio-html-perl_1.001-1_all; 2021-06-11T13:30:08&#xa;  libio-interface-perl_1.09-1build5_amd64; 2021-06-11T13:33:13&#xa;  libio-socket-inet6-perl_2.72-2_all; 2021-06-11T13:30:12&#xa;  libio-socket-multicast-perl_1.12-2build6_amd64; 2021-06-11T13:33:13&#xa;  libio-socket-ssl-perl_2.067-1_all; 2021-06-11T13:30:08&#xa;  libip4tc2_1.8.4-3ubuntu2_amd64; 2021-02-01T17:21:35&#xa;  libip6tc2_1.8.4-3ubuntu2_amd64; 2021-02-01T17:25:09&#xa;  libisc-export1105_1:9.11.16+dfsg-3~ubuntu1_amd64; 2021-02-01T17:24:10&#xa;  libisns0_0.97-3_amd64; 2021-02-01T17:24:55&#xa;  libjansson4_2.12-1build1_amd64; 2021-06-11T13:31:27&#xa;  libjbig0_2.1-3.1build1_amd64; 2021-06-11T13:33:37&#xa;  libjcat1_0.1.3-2~ubuntu20.04.1_amd64; 2022-01-03T07:47:22&#xa;  libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64; 2021-06-11T13:33:37&#xa;  libjpeg8_8c-2ubuntu8_amd64; 2021-06-11T13:33:37&#xa;  libjson-c4_0.13.1+dfsg-7ubuntu0.3_amd64; 2021-02-01T17:23:55&#xa;  libjson-glib-1.0-0_1.4.4-2ubuntu2_amd64; 2021-02-01T17:25:34&#xa;  libjson-glib-1.0-common_1.4.4-2ubuntu2_all; 2021-02-01T17:25:34&#xa;  libjson-perl_4.02000-2_all; 2021-06-11T13:30:12&#xa;  libjson-xs-perl_4.020-1build1_amd64; 2021-06-11T13:30:16&#xa;  libk5crypto3_1.17-6ubuntu4.1_amd64; 2021-02-01T17:25:05&#xa;  libkeyutils1_1.6-6ubuntu1_amd64; 2021-02-01T17:25:06&#xa;  libklibc_2.0.7-1ubuntu5_amd64; 2021-02-01T17:25:26&#xa;  libkmod2_27-1ubuntu2_amd64; 2021-02-01T17:21:35&#xa;  libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:29&#xa;  libkrb5-3_1.17-6ubuntu4.1_amd64; 2021-02-01T17:25:06&#xa;  libkrb5support0_1.17-6ubuntu4.1_amd64; 2021-02-01T17:25:05&#xa;  libksba8_1.3.5-2_amd64; 2021-02-01T17:25:32&#xa;  liblab-gamut1_2.42.2-3build2_amd64; 2021-06-11T13:33:39&#xa;  libldap-2.4-2_2.4.49+dfsg-2ubuntu1.8_amd64; 2021-06-11T13:05:03&#xa;  libldap-common_2.4.49+dfsg-2ubuntu1.8_all; 2021-06-11T13:05:03&#xa;  liblinear4_2.3.0+dfsg-3build1_amd64; 2021-06-11T13:30:11&#xa;  liblmdb0_0.9.24-1_amd64; 2021-02-01T17:25:06&#xa;  liblocale-gettext-perl_1.07-4_amd64; 2021-02-01T17:22:14&#xa;  libltdl7_2.4.6-14_amd64; 2021-02-01T17:25:50&#xa;  liblua5.2-0_5.2.4-1.1build3_amd64; 2021-06-11T13:31:27&#xa;  liblua5.3-0_5.3.3-1.1ubuntu2_amd64; 2021-06-11T13:30:11&#xa;  liblvm2cmd2.03_2.03.07-1ubuntu1_amd64; 2021-02-01T17:25:33&#xa;  liblwp-mediatypes-perl_6.04-1_all; 2021-06-11T13:30:08&#xa;  liblwp-protocol-https-perl_6.07-2ubuntu2_all; 2021-06-11T13:30:09&#xa;  liblz4-1_1.9.2-2ubuntu0.20.04.1_amd64; 2021-06-11T12:47:35&#xa;  liblzma5_5.2.4-1ubuntu1_amd64; 2021-02-01T17:23:47&#xa;  liblzo2-2_2.10-2_amd64; 2021-02-01T17:25:23&#xa;  libmagic-mgc_1:5.38-4_amd64; 2021-02-01T17:22:14&#xa;  libmagic1_1:5.38-4_amd64; 2021-02-01T17:22:15&#xa;  libmail-sendmail-perl_0.80-1_all; 2021-06-11T13:33:13&#xa;  libmailtools-perl_2.21-1_all; 2021-06-11T13:30:17&#xa;  libmaxminddb0_1.4.2-0ubuntu1.20.04.1_amd64; 2021-02-01T17:25:06&#xa;  libmnl0_1.0.4-2_amd64; 2021-02-01T17:22:15&#xa;  libmodule-implementation-perl_0.09-1_all; 2021-06-11T13:30:13&#xa;  libmodule-runtime-perl_0.016-1_all; 2021-06-11T13:30:13&#xa;  libmount1_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:42&#xa;  libmpdec2_2.4.2-3_amd64; 2021-02-01T17:22:15&#xa;  libmpfr6_4.0.2-1_amd64; 2021-02-01T17:24:54&#xa;  libmro-compat-perl_0.13-1_all; 2021-06-11T13:30:17&#xa;  libmspack0_0.10.1-2_amd64; 2021-02-01T17:25:52&#xa;  libmysqlclient21_8.0.27-0ubuntu0.20.04.1_amd64; 2021-12-07T12:57:35&#xa;  libnamespace-autoclean-perl_0.29-1_all; 2021-06-11T13:30:17&#xa;  libnamespace-clean-perl_0.27-1_all; 2021-06-11T13:30:17&#xa;  libncurses6_6.2-0ubuntu2_amd64; 2021-02-01T17:21:10&#xa;  libncursesw6_6.2-0ubuntu2_amd64; 2021-02-01T17:21:11&#xa;  libnet-http-perl_6.19-1_all; 2021-06-11T13:30:08&#xa;  libnet-smtp-ssl-perl_1.04-1_all; 2021-06-11T13:30:16&#xa;  libnet-ssleay-perl_1.88-2ubuntu1_amd64; 2021-06-11T13:30:08&#xa;  libnet-telnet-perl_3.04-1_all; 2021-06-11T13:30:12&#xa;  libnetaddr-ip-perl_4.079+dfsg-1build4_amd64; 2021-06-11T13:30:07&#xa;  libnetfilter-conntrack3_1.0.7-2_amd64; 2021-02-01T17:25:10&#xa;  libnettle7_3.5.1+really3.5.1-2ubuntu0.2_amd64; 2021-12-07T12:56:55&#xa;  libnewt0.52_0.52.21-4ubuntu2_amd64; 2021-02-01T17:22:15&#xa;  libnfnetlink0_1.0.1-3build1_amd64; 2021-02-01T17:25:09&#xa;  libnftnl11_1.1.5-1_amd64; 2021-02-01T17:25:10&#xa;  libnghttp2-14_1.40.0-1build1_amd64; 2021-02-01T17:25:30&#xa;  libnl-3-200_3.4.0-1_amd64; 2021-06-11T12:43:36&#xa;  libnl-genl-3-200_3.4.0-1_amd64; 2021-06-11T12:43:36&#xa;  libnpth0_1.6-1_amd64; 2021-02-01T17:25:32&#xa;  libnspr4_2:4.25-1_amd64; 2022-01-03T07:47:29&#xa;  libnss-systemd_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:52&#xa;  libnss3_2:3.49.1-1ubuntu1.6_amd64; 2022-01-03T07:47:29&#xa;  libntfs-3g883_1:2017.3.23AR.3-3ubuntu1.1_amd64; 2021-12-07T12:57:03&#xa;  libnuma1_2.0.12-1_amd64; 2021-02-01T17:24:47&#xa;  libogg0_1.3.4-0ubuntu1_amd64; 2021-02-01T17:25:50&#xa;  libonig5_6.9.4-1_amd64; 2021-06-11T13:33:41&#xa;  libp11-kit0_0.23.20-1ubuntu0.1_amd64; 2021-02-01T17:23:56&#xa;  libpackage-stash-perl_0.38-1_all; 2021-06-11T13:30:17&#xa;  libpackage-stash-xs-perl_0.29-1build1_amd64; 2021-06-11T13:30:17&#xa;  libpackagekit-glib2-18_1.1.13-2ubuntu1.1_amd64; 2021-02-01T17:25:41&#xa;  libpadwalker-perl_2.3-1build2_amd64; 2021-06-11T13:30:15&#xa;  libpam-cap_1:2.32-1_amd64; 2021-02-01T17:22:16&#xa;  libpam-modules-bin_1.3.1-5ubuntu4.3_amd64; 2021-12-07T12:56:53&#xa;  libpam-modules_1.3.1-5ubuntu4.3_amd64; 2021-12-07T12:56:54&#xa;  libpam-runtime_1.3.1-5ubuntu4.3_all; 2021-12-07T12:56:54&#xa;  libpam-systemd_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:55&#xa;  libpam0g_1.3.1-5ubuntu4.3_amd64; 2021-12-07T12:56:53&#xa;  libpango-1.0-0_1.44.7-2ubuntu4_amd64; 2021-06-11T13:33:39&#xa;  libpangocairo-1.0-0_1.44.7-2ubuntu4_amd64; 2021-06-11T13:33:39&#xa;  libpangoft2-1.0-0_1.44.7-2ubuntu4_amd64; 2021-06-11T13:33:39&#xa;  libparams-classify-perl_0.015-1build2_amd64; 2021-06-11T13:30:13&#xa;  libparams-util-perl_1.07-3build5_amd64; 2021-06-11T13:30:14&#xa;  libparams-validationcompiler-perl_0.30-1_all; 2021-06-11T13:30:17&#xa;  libparted-fs-resize0_3.3-4ubuntu0.20.04.1_amd64; 2022-01-03T07:47:29&#xa;  libparted2_3.3-4ubuntu0.20.04.1_amd64; 2021-02-01T17:25:11&#xa;  libpathplan4_2.42.2-3build2_amd64; 2021-06-11T13:33:39&#xa;  libpcap0.8_1.9.1-3_amd64; 2021-02-01T17:25:11&#xa;  libpci3_1:3.6.4-1ubuntu0.20.04.1_amd64; 2021-06-11T13:05:09&#xa;  libpcre2-8-0_10.34-7_amd64; 2021-02-01T17:21:13&#xa;  libpcre3_2:8.39-12build1_amd64; 2021-02-01T17:21:13&#xa;  libperl5.30_5.30.0-9ubuntu0.2_amd64; 2021-02-01T17:25:00&#xa;  libpipeline1_1.5.2-2build1_amd64; 2021-02-01T17:24:51&#xa;  libpixman-1-0_0.38.4-0ubuntu1_amd64; 2021-06-11T13:33:38&#xa;  libplist3_2.1.0-4build2_amd64; 2021-06-11T12:43:37&#xa;  libplymouth5_0.9.4git20200323-0ubuntu6.2_amd64; 2021-02-01T17:25:12&#xa;  libpng16-16_1.6.37-2_amd64; 2021-02-01T17:25:11&#xa;  libpolkit-agent-1-0_0.105-26ubuntu1.1_amd64; 2021-06-11T12:48:24&#xa;  libpolkit-gobject-1-0_0.105-26ubuntu1.1_amd64; 2021-06-11T12:48:24&#xa;  libpopt0_1.16-14_amd64; 2021-02-01T17:22:16&#xa;  libprocps8_2:3.3.16-1ubuntu2.3_amd64; 2021-12-07T12:57:07&#xa;  libproxy1v5_0.4.15-10ubuntu1.2_amd64; 2021-02-01T17:25:34&#xa;  libpsl5_0.21.0-1ubuntu1_amd64; 2021-02-01T17:25:12&#xa;  libpython3-stdlib_3.8.2-0ubuntu2_amd64; 2021-02-01T17:22:16&#xa;  libpython3.8-minimal_3.8.10-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:21&#xa;  libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:21&#xa;  libpython3.8_3.8.10-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:20&#xa;  libreadline5_5.2+dfsg-3build3_amd64; 2021-02-01T17:25:53&#xa;  libreadline8_8.0-4_amd64; 2021-02-01T17:22:17&#xa;  libreadonly-perl_2.050-2_all; 2021-06-11T13:30:17&#xa;  libref-util-perl_0.204-1_all; 2021-06-11T13:30:17&#xa;  libref-util-xs-perl_0.117-1build2_amd64; 2021-06-11T13:30:17&#xa;  libroken18-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:28&#xa;  librole-tiny-perl_2.001004-1_all; 2021-06-11T13:30:17&#xa;  librtmp1_2.4+20151223.gitfa8646d.1-2build1_amd64; 2021-02-01T17:25:30&#xa;  libsasl2-2_2.1.27+dfsg-2_amd64; 2021-02-01T17:25:30&#xa;  libsasl2-modules-db_2.1.27+dfsg-2_amd64; 2021-02-01T17:25:30&#xa;  libsasl2-modules_2.1.27+dfsg-2_amd64; 2021-02-01T17:25:53&#xa;  libseccomp2_2.5.1-1ubuntu1~20.04.2_amd64; 2022-01-03T07:47:21&#xa;  libselinux1_3.0-1build2_amd64; 2021-02-01T17:21:14&#xa;  libsemanage-common_3.0-1build2_all; 2021-02-01T17:21:14&#xa;  libsemanage1_3.0-1build2_amd64; 2021-02-01T17:21:14&#xa;  libsensors-config_1:3.6.0-2ubuntu1_all; 2021-06-11T13:30:09&#xa;  libsensors5_1:3.6.0-2ubuntu1_amd64; 2021-06-11T13:30:09&#xa;  libsepol1_3.0-1_amd64; 2021-02-01T17:21:14&#xa;  libsgutils2-2_1.44-1ubuntu2_amd64; 2021-02-01T17:25:54&#xa;  libsigsegv2_2.12-2_amd64; 2021-02-01T17:24:54&#xa;  libslang2_2.3.2-4_amd64; 2021-02-01T17:22:17&#xa;  libsm6_2:1.2.3-1_amd64; 2021-06-11T13:33:39&#xa;  libsmartcols1_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:42&#xa;  libsmbios-c2_2.4.3-1_amd64; 2021-02-01T17:25:39&#xa;  libsnappy1v5_1.1.8-1build1_amd64; 2021-06-11T13:33:31&#xa;  libsnmp-base_5.8+dfsg-2ubuntu2.3_all; 2021-06-11T13:30:10&#xa;  libsnmp-perl_5.8+dfsg-2ubuntu2.3_amd64; 2021-06-11T13:33:13&#xa;  libsnmp35_5.8+dfsg-2ubuntu2.3_amd64; 2021-06-11T13:30:10&#xa;  libsocket6-perl_0.29-1build1_amd64; 2021-06-11T13:30:12&#xa;  libsodium23_1.0.18-1_amd64; 2021-02-01T17:22:17&#xa;  libsoup2.4-1_2.70.0-1_amd64; 2021-02-01T17:25:35&#xa;  libspecio-perl_0.45-1_all; 2021-06-11T13:30:17&#xa;  libsqlite3-0_3.31.1-4ubuntu0.2_amd64; 2021-02-01T17:24:06&#xa;  libss2_1.45.5-2ubuntu1_amd64; 2021-02-01T17:21:14&#xa;  libssh-4_0.9.3-2ubuntu2.2_amd64; 2021-12-07T12:57:03&#xa;  libssl1.1_1.1.1f-1ubuntu2.10_amd64; 2022-01-03T07:47:20&#xa;  libstdc++6_10.3.0-1ubuntu1~20.04_amd64; 2021-12-07T12:56:51&#xa;  libstemmer0d_0+svn585-2_amd64; 2021-02-01T17:25:49&#xa;  libsub-exporter-perl_0.987-1_all; 2021-06-11T13:30:16&#xa;  libsub-exporter-progressive-perl_0.001013-1_all; 2021-06-11T13:30:13&#xa;  libsub-identify-perl_0.14-1build2_amd64; 2021-06-11T13:30:17&#xa;  libsub-install-perl_0.928-1_all; 2021-06-11T13:30:14&#xa;  libsub-name-perl_0.26-1_amd64; 2021-06-11T13:30:17&#xa;  libsub-quote-perl_2.006006-1_all; 2021-06-11T13:30:17&#xa;  libsys-hostname-long-perl_1.5-1_all; 2021-06-11T13:33:13&#xa;  libsystemd0_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:57&#xa;  libtasn1-6_4.16.0-2_amd64; 2021-02-01T17:21:36&#xa;  libtdb1_1.4.3-0ubuntu0.20.04.1_amd64; 2021-12-07T12:57:35&#xa;  libterm-readkey-perl_2.38-1build1_amd64; 2021-06-11T13:33:41&#xa;  libtext-charwidth-perl_0.04-10_amd64; 2021-02-01T17:22:17&#xa;  libtext-iconv-perl_1.7-7_amd64; 2021-02-01T17:22:17&#xa;  libtext-wrapi18n-perl_0.06-9_all; 2021-02-01T17:22:18&#xa;  libthai-data_0.1.28-3_all; 2021-06-11T13:33:38&#xa;  libthai0_0.1.28-3_amd64; 2021-06-11T13:33:39&#xa;  libtie-ixhash-perl_1.23-2_all; 2021-06-11T13:30:17&#xa;  libtiff5_4.1.0+git191117-2ubuntu0.20.04.2_amd64; 2021-12-07T12:57:31&#xa;  libtime-format-perl_1.16-1_all; 2021-06-11T13:30:07&#xa;  libtimedate-perl_2.3200-1_all; 2021-06-11T13:30:08&#xa;  libtinfo6_6.2-0ubuntu2_amd64; 2021-02-01T17:21:15&#xa;  libtry-tiny-perl_0.30-1_all; 2021-06-11T13:30:09&#xa;  libtss2-esys0_2.3.2-1_amd64; 2021-02-01T17:25:40&#xa;  libtypes-serialiser-perl_1.0-1_all; 2021-06-11T13:30:16&#xa;  libuchardet0_0.0.6-3build1_amd64; 2021-02-01T17:24:50&#xa;  libudev1_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:52&#xa;  libudisks2-0_2.8.4-1ubuntu2_amd64; 2022-01-03T07:47:30&#xa;  libunistring2_0.9.10-2_amd64; 2021-02-01T17:21:36&#xa;  libunwind8_1.2.1-9build1_amd64; 2021-02-01T17:25:16&#xa;  libupower-glib3_0.99.11-1build2_amd64; 2021-06-11T12:43:37&#xa;  liburcu6_0.11.1-2_amd64; 2021-02-01T17:26:16&#xa;  liburi-perl_1.76-2_all; 2021-06-11T13:30:08&#xa;  libusb-1.0-0_2:1.0.23-2build1_amd64; 2021-02-01T17:25:12&#xa;  libusbmuxd6_2.0.1-2_amd64; 2021-06-11T12:43:37&#xa;  libutempter0_1.1.6-4_amd64; 2021-02-01T17:25:25&#xa;  libuuid1_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:41&#xa;  libuv1_1.34.2-1ubuntu1.3_amd64; 2021-12-07T12:57:22&#xa;  libvariable-magic-perl_0.62-1build2_amd64; 2021-06-11T13:30:14&#xa;  libvolume-key1_0.3.12-3.1_amd64; 2022-01-03T07:47:29&#xa;  libvorbis0a_1.3.6-2ubuntu1_amd64; 2021-02-01T17:25:50&#xa;  libvorbisfile3_1.3.6-2ubuntu1_amd64; 2021-02-01T17:25:50&#xa;  libwebp6_0.6.1-2ubuntu0.20.04.1_amd64; 2021-06-11T13:33:37&#xa;  libwind0-heimdal_7.7.0+dfsg-1ubuntu1_amd64; 2021-02-01T17:25:29&#xa;  libwrap0_7.6.q-30_amd64; 2021-06-11T12:45:35&#xa;  libwww-perl_6.43-1_all; 2021-06-11T13:30:09&#xa;  libwww-robotrules-perl_6.02-1_all; 2021-06-11T13:30:09&#xa;  libx11-6_2:1.6.9-2ubuntu1.2_amd64; 2021-06-11T12:47:06&#xa;  libx11-data_2:1.6.9-2ubuntu1.2_all; 2021-06-11T12:48:31&#xa;  libxau6_1:1.0.9-0ubuntu1_amd64; 2021-02-01T17:25:12&#xa;  libxaw7_2:1.0.13-1_amd64; 2021-06-11T13:33:40&#xa;  libxcb-render0_1.14-2_amd64; 2021-06-11T13:33:38&#xa;  libxcb-shm0_1.14-2_amd64; 2021-06-11T13:33:38&#xa;  libxcb1_1.14-2_amd64; 2021-02-01T17:25:12&#xa;  libxdmcp6_1:1.1.3-0ubuntu1_amd64; 2021-02-01T17:25:12&#xa;  libxext6_2:1.3.4-0ubuntu1_amd64; 2021-02-01T17:25:13&#xa;  libxml-libxml-perl_2.0134+dfsg-1build1_amd64; 2021-06-11T13:30:07&#xa;  libxml-namespacesupport-perl_1.12-1_all; 2021-06-11T13:30:07&#xa;  libxml-parser-perl_2.46-1_amd64; 2021-06-11T13:30:09&#xa;  libxml-sax-base-perl_1.09-1_all; 2021-06-11T13:30:07&#xa;  libxml-sax-expat-perl_0.51-1_all; 2021-06-11T13:30:09&#xa;  libxml-sax-perl_1.02+dfsg-1_all; 2021-06-11T13:30:07&#xa;  libxml-simple-perl_2.25-1_all; 2021-06-11T13:30:09&#xa;  libxml-twig-perl_1:3.50-2_all; 2021-06-11T13:30:09&#xa;  libxml-xpathengine-perl_0.14-1_all; 2021-06-11T13:30:18&#xa;  libxml2_2.9.10+dfsg-5ubuntu0.20.04.1_amd64; 2021-12-07T12:57:06&#xa;  libxmlb1_0.1.15-2ubuntu1~20.04.1_amd64; 2021-06-11T13:05:12&#xa;  libxmlrpc-epi0_0.54.2-1.2_amd64; 2021-06-11T13:33:43&#xa;  libxmlsec1-openssl_1.2.28-2_amd64; 2021-02-01T17:25:55&#xa;  libxmlsec1_1.2.28-2_amd64; 2021-02-01T17:25:55&#xa;  libxmu6_2:1.1.3-0ubuntu1_amd64; 2021-06-11T13:33:40&#xa;  libxmuu1_2:1.1.3-0ubuntu1_amd64; 2021-02-01T17:25:13&#xa;  libxpm4_1:3.5.12-1_amd64; 2021-06-11T13:33:37&#xa;  libxrender1_1:0.9.10-1_amd64; 2021-06-11T13:33:38&#xa;  libxslt1.1_1.1.34-4_amd64; 2021-02-01T17:25:54&#xa;  libxstring-perl_0.002-2_amd64; 2021-06-11T13:30:17&#xa;  libxt6_1:1.1.5-1_amd64; 2021-06-11T13:33:39&#xa;  libxtables12_1.8.4-3ubuntu2_amd64; 2021-02-01T17:22:18&#xa;  libyaml-0-2_0.2.2-1_amd64; 2021-02-01T17:22:18&#xa;  libzip5_1.5.1-0ubuntu1_amd64; 2021-06-11T13:33:41&#xa;  libzstd1_1.4.4+dfsg-3ubuntu0.1_amd64; 2021-06-11T12:49:39&#xa;  linux-base_4.5ubuntu3.7_all; 2021-12-07T12:57:29&#xa;  linux-firmware_1.187.23_all; 2022-01-03T07:47:52&#xa;  linux-generic_5.4.0.91.95_amd64; 2022-01-03T07:48:08&#xa;  linux-headers-5.4.0-74-generic_5.4.0-74.83_amd64; 2021-06-11T12:44:21&#xa;  linux-headers-5.4.0-74_5.4.0-74.83_all; 2021-06-11T12:44:19&#xa;  linux-headers-5.4.0-91-generic_5.4.0-91.102_amd64; 2022-01-03T07:48:17&#xa;  linux-headers-5.4.0-91_5.4.0-91.102_all; 2022-01-03T07:48:15&#xa;  linux-headers-generic_5.4.0.91.95_amd64; 2022-01-03T07:48:17&#xa;  linux-image-5.4.0-74-generic_5.4.0-74.83_amd64; 2021-06-11T12:43:57&#xa;  linux-image-5.4.0-91-generic_5.4.0-91.102_amd64; 2022-01-03T07:47:58&#xa;  linux-image-generic_5.4.0.91.95_amd64; 2022-01-03T07:48:08&#xa;  linux-modules-5.4.0-74-generic_5.4.0-74.83_amd64; 2021-06-11T12:43:56&#xa;  linux-modules-5.4.0-91-generic_5.4.0-91.102_amd64; 2022-01-03T07:47:56&#xa;  linux-modules-extra-5.4.0-74-generic_5.4.0-74.83_amd64; 2021-06-11T12:44:06&#xa;  linux-modules-extra-5.4.0-91-generic_5.4.0-91.102_amd64; 2022-01-03T07:48:08&#xa;  locales_2.31-0ubuntu9.2_all; 2021-02-01T17:23:45&#xa;  login_1:4.8.1-1ubuntu5.20.04.1_amd64; 2021-12-07T12:56:50&#xa;  logrotate_3.14.0-4ubuntu3_amd64; 2021-02-01T17:22:20&#xa;  logsave_1.45.5-2ubuntu1_amd64; 2021-02-01T17:21:15&#xa;  lsb-base_11.1.0ubuntu2_all; 2021-02-01T17:21:15&#xa;  lsb-release_11.1.0ubuntu2_all; 2021-02-01T17:22:20&#xa;  lshw_02.18.85-0.3ubuntu2.20.04.1_amd64; 2021-02-01T17:25:13&#xa;  lsof_4.93.2+dfsg-1ubuntu0.20.04.1_amd64; 2021-02-01T17:25:13&#xa;  ltrace_0.7.3-6.1ubuntu1_amd64; 2021-02-01T17:25:13&#xa;  lua-lpeg_1.0.2-1_amd64; 2021-06-11T13:30:11&#xa;  lvm2_2.03.07-1ubuntu1_amd64; 2021-02-01T17:25:55&#xa;  lxd-agent-loader_0.4_all; 2021-02-01T17:25:55&#xa;  lz4_1.9.2-2ubuntu0.20.04.1_amd64; 2021-06-11T12:47:35&#xa;  man-db_2.9.1-1_amd64; 2021-02-01T17:24:52&#xa;  manpages_5.05-1_all; 2021-02-01T17:25:14&#xa;  mariadb-client-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64; 2021-12-07T12:57:11&#xa;  mariadb-client-core-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64; 2021-12-07T12:57:10&#xa;  mariadb-common_1:10.3.32-0ubuntu0.20.04.1_all; 2021-12-07T12:57:07&#xa;  mariadb-server-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64; 2021-12-07T12:57:14&#xa;  mariadb-server-core-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64; 2021-12-07T12:57:09&#xa;  mariadb-server_1:10.3.32-0ubuntu0.20.04.1_all; 2021-12-07T12:57:58&#xa;  mawk_1.3.4.20200120-2_amd64; 2021-02-01T17:21:15&#xa;  mdadm_4.1-5ubuntu1.2_amd64; 2021-02-01T17:25:56&#xa;  mime-support_3.64ubuntu1_all; 2021-02-01T17:22:20&#xa;  motd-news-config_11ubuntu5.4_all; 2021-12-07T12:56:49&#xa;  mount_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:57&#xa;  mtr-tiny_0.93-1_amd64; 2021-02-01T17:25:14&#xa;  multipath-tools_0.8.3-1ubuntu2_amd64; 2021-02-01T17:26:17&#xa;  mysql-common_5.8+1.0.5ubuntu2_all; 2021-06-11T13:30:07&#xa;  nano_4.8-1ubuntu1_amd64; 2021-02-01T17:25:14&#xa;  ncurses-base_6.2-0ubuntu2_all; 2021-02-01T17:21:16&#xa;  ncurses-bin_6.2-0ubuntu2_amd64; 2021-02-01T17:21:16&#xa;  ncurses-term_6.2-0ubuntu2_all; 2021-06-11T12:45:36&#xa;  net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64; 2021-11-23T11:48:05&#xa;  netbase_6.1_all; 2021-02-01T17:22:20&#xa;  netcat-openbsd_1.206-1ubuntu1_amd64; 2021-02-01T17:22:20&#xa;  networkd-dispatcher_2.1-2~ubuntu20.04.1_all; 2021-12-07T12:57:18&#xa;  nmap-common_7.80+dfsg1-2build1_all; 2021-06-11T13:30:11&#xa;  nmap_7.80+dfsg1-2build1_amd64; 2021-06-11T13:30:11&#xa;  ntfs-3g_1:2017.3.23AR.3-3ubuntu1.1_amd64; 2021-12-07T12:57:03&#xa;  open-iscsi_2.0.874-7.1ubuntu6.2_amd64; 2021-06-11T13:05:04&#xa;  open-vm-tools_2:11.3.0-2ubuntu0~ubuntu20.04.2_amd64; 2021-12-07T12:57:18&#xa;  openssh-client_1:8.2p1-4ubuntu0.3_amd64; 2021-12-07T12:57:25&#xa;  openssh-server_1:8.2p1-4ubuntu0.3_amd64; 2021-12-07T12:57:23&#xa;  openssh-sftp-server_1:8.2p1-4ubuntu0.3_amd64; 2021-12-07T12:57:22&#xa;  openssl_1.1.1f-1ubuntu2.10_amd64; 2022-01-03T07:47:21&#xa;  os-prober_1.74ubuntu2_amd64; 2021-06-11T12:44:22&#xa;  overlayroot_0.45ubuntu2_all; 2021-12-07T12:58:00&#xa;  packagekit-tools_1.1.13-2ubuntu1.1_amd64; 2021-02-01T17:25:57&#xa;  packagekit_1.1.13-2ubuntu1.1_amd64; 2021-02-01T17:25:57&#xa;  packages-microsoft-prod_1.0-ubuntu20.04.1_all; 2021-06-11T20:06:04&#xa;  parted_3.3-4ubuntu0.20.04.1_amd64; 2021-02-01T17:25:15&#xa;  passwd_1:4.8.1-1ubuntu5.20.04.1_amd64; 2021-12-07T12:57:11&#xa;  pastebinit_1.5.1-1_all; 2021-02-01T17:25:57&#xa;  patch_2.7.6-6_amd64; 2021-02-01T17:25:02&#xa;  pci.ids_0.0~2020.03.20-1_all; 2021-02-01T17:25:11&#xa;  pciutils_1:3.6.4-1ubuntu0.20.04.1_amd64; 2021-06-11T13:05:09&#xa;  perl-base_5.30.0-9ubuntu0.2_amd64; 2021-02-01T17:23:40&#xa;  perl-modules-5.30_5.30.0-9ubuntu0.2_all; 2021-02-01T17:24:58&#xa;  perl-openssl-defaults_4_amd64; 2021-06-11T13:30:08&#xa;  perl_5.30.0-9ubuntu0.2_amd64; 2021-02-01T17:25:01&#xa;  php-bcmath_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-cli_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-common_2:75_all; 2021-06-11T13:33:40&#xa;  php-curl_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-db_1.9.3-1build1_all; 2021-06-11T13:33:42&#xa;  php-gd_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-gmp_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-ldap_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-mbstring_2:7.4+75_all; 2021-06-11T13:33:43&#xa;  php-mysql_2:7.4+75_all; 2021-06-11T13:33:43&#xa;  php-pear_1:1.10.9+submodules+notgz-1ubuntu0.20.04.3_all; 2021-12-07T12:57:58&#xa;  php-snmp_2:7.4+75_all; 2021-06-11T13:33:43&#xa;  php-sqlite3_2:7.4+75_all; 2021-06-11T13:33:43&#xa;  php-xml_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  php-xmlrpc_2:7.4+75_all; 2021-06-11T13:33:43&#xa;  php-zip_2:7.4+75_all; 2021-06-11T13:33:44&#xa;  php7.4-bcmath_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:23&#xa;  php7.4-cli_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:27&#xa;  php7.4-common_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:28&#xa;  php7.4-curl_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:26&#xa;  php7.4-gd_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:26&#xa;  php7.4-gmp_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:25&#xa;  php7.4-json_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:25&#xa;  php7.4-ldap_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:25&#xa;  php7.4-mbstring_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:23&#xa;  php7.4-mysql_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:25&#xa;  php7.4-opcache_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:25&#xa;  php7.4-readline_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:24&#xa;  php7.4-snmp_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:24&#xa;  php7.4-sqlite3_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:24&#xa;  php7.4-xml_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:24&#xa;  php7.4-xmlrpc_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:23&#xa;  php7.4-zip_7.4.3-4ubuntu2.8_amd64; 2022-01-03T07:47:23&#xa;  php7.4_7.4.3-4ubuntu2.8_all; 2022-01-03T07:48:17&#xa;  php_2:7.4+75_all; 2021-06-11T13:33:42&#xa;  pinentry-curses_1.1.0-3build1_amd64; 2021-02-01T17:25:37&#xa;  plymouth-theme-ubuntu-text_0.9.4git20200323-0ubuntu6.2_amd64; 2021-02-01T17:25:15&#xa;  plymouth_0.9.4git20200323-0ubuntu6.2_amd64; 2021-02-01T17:25:15&#xa;  policykit-1_0.105-26ubuntu1.1_amd64; 2021-06-11T12:48:24&#xa;  pollinate_4.33-3ubuntu1.20.04.1_all; 2021-06-11T13:05:12&#xa;  popularity-contest_1.69ubuntu1_all; 2021-02-01T17:24:53&#xa;  powermgmt-base_1.36_all; 2021-02-01T17:25:15&#xa;  powershell_7.1.3-1.ubuntu.20.04_amd64; 2021-06-11T20:25:49&#xa;  procps_2:3.3.16-1ubuntu2.3_amd64; 2021-12-07T12:57:07&#xa;  psmisc_23.3-1_amd64; 2021-02-01T17:25:16&#xa;  publicsuffix_20200303.0012-1_all; 2021-02-01T17:25:16&#xa;  python-apt-common_2.0.0ubuntu0.20.04.6_all; 2021-12-07T12:57:14&#xa;  python3-apport_2.20.11-0ubuntu27.21_all; 2021-12-07T12:57:28&#xa;  python3-apt_2.0.0ubuntu0.20.04.6_amd64; 2021-12-07T12:57:15&#xa;  python3-attr_19.3.0-2_all; 2021-02-01T17:25:45&#xa;  python3-automat_0.8.0-1ubuntu1_all; 2021-02-01T17:25:45&#xa;  python3-blinker_1.4+dfsg1-0.3ubuntu1_all; 2021-02-01T17:25:22&#xa;  python3-certifi_2019.11.28-1_all; 2021-02-01T17:25:19&#xa;  python3-cffi-backend_1.14.0-1build1_amd64; 2021-02-01T17:22:21&#xa;  python3-chardet_3.0.4-4build1_all; 2021-02-01T17:25:01&#xa;  python3-click_7.0-3_all; 2021-02-01T17:25:58&#xa;  python3-colorama_0.4.3-1build1_all; 2021-02-01T17:25:57&#xa;  python3-commandnotfound_20.04.4_all; 2021-02-01T17:25:08&#xa;  python3-configobj_5.0.6-4_all; 2021-02-01T17:25:48&#xa;  python3-constantly_15.1.0-1build1_all; 2021-02-01T17:25:45&#xa;  python3-cryptography_2.8-3ubuntu0.1_amd64; 2021-02-01T17:25:21&#xa;  python3-dbus_1.2.16-1build1_amd64; 2021-02-01T17:22:22&#xa;  python3-debconf_1.5.73_all; 2021-02-01T17:25:01&#xa;  python3-debian_0.1.36ubuntu1_all; 2021-02-01T17:25:01&#xa;  python3-distro-info_0.23ubuntu1_all; 2021-02-01T17:25:02&#xa;  python3-distro_1.4.0-1_all; 2021-02-01T17:25:22&#xa;  python3-distupgrade_1:20.04.36_all; 2021-12-07T12:57:15&#xa;  python3-distutils_3.8.10-0ubuntu1~20.04_all; 2021-06-11T12:47:48&#xa;  python3-entrypoints_0.3-2ubuntu1_all; 2021-02-01T17:25:21&#xa;  python3-gdbm_3.8.10-0ubuntu1~20.04_amd64; 2021-06-11T12:46:35&#xa;  python3-gi_3.36.0-1_amd64; 2021-02-01T17:22:22&#xa;  python3-hamcrest_1.9.0-3_all; 2021-02-01T17:25:47&#xa;  python3-httplib2_0.14.0-1ubuntu1_all; 2021-02-01T17:25:19&#xa;  python3-hyperlink_19.0.0-1_all; 2021-02-01T17:25:46&#xa;  python3-idna_2.8-1_all; 2021-02-01T17:25:20&#xa;  python3-incremental_16.10.1-3.2_all; 2021-02-01T17:25:46&#xa;  python3-json-pointer_2.0-0ubuntu1_all; 2021-12-07T13:01:23&#xa;  python3-jsonpatch_1.23-3_all; 2021-12-07T13:01:23&#xa;  python3-jsonschema_3.2.0-0ubuntu2_all; 2021-12-07T13:01:23&#xa;  python3-jwt_1.7.1-2ubuntu2_all; 2021-02-01T17:25:22&#xa;  python3-keyring_18.0.1-2ubuntu1_all; 2021-02-01T17:25:21&#xa;  python3-launchpadlib_1.10.13-1_all; 2021-02-01T17:25:22&#xa;  python3-lazr.restfulclient_0.14.2-2build1_all; 2021-02-01T17:25:22&#xa;  python3-lazr.uri_1.0.3-4build1_all; 2021-02-01T17:25:21&#xa;  python3-lib2to3_3.8.10-0ubuntu1~20.04_all; 2021-06-11T12:47:48&#xa;  python3-minimal_3.8.2-0ubuntu2_amd64; 2021-02-01T17:21:56&#xa;  python3-nacl_1.3.0-5_amd64; 2021-02-01T17:22:22&#xa;  python3-netifaces_0.10.4-1ubuntu4_amd64; 2021-02-01T17:22:22&#xa;  python3-newt_0.52.21-4ubuntu2_amd64; 2021-02-01T17:25:24&#xa;  python3-oauthlib_3.1.0-1ubuntu2_all; 2021-02-01T17:25:22&#xa;  python3-openssl_19.0.0-1build1_all; 2021-02-01T17:25:46&#xa;  python3-pexpect_4.6.0-1build1_all; 2021-02-01T17:26:01&#xa;  python3-pkg-resources_45.2.0-1_all; 2021-02-01T17:22:22&#xa;  python3-problem-report_2.20.11-0ubuntu27.21_all; 2021-12-07T12:57:27&#xa;  python3-ptyprocess_0.6.0-1ubuntu1_all; 2021-02-01T17:26:01&#xa;  python3-pyasn1-modules_0.2.1-0.2build1_all; 2021-02-01T17:25:46&#xa;  python3-pyasn1_0.4.2-3build1_all; 2021-02-01T17:25:46&#xa;  python3-pymacaroons_0.13.0-3_all; 2021-02-01T17:22:23&#xa;  python3-requests-unixsocket_0.2.0-2_all; 2021-02-01T17:25:20&#xa;  python3-requests_2.22.0-2ubuntu1_all; 2021-02-01T17:25:20&#xa;  python3-secretstorage_2.3.1-2ubuntu1_all; 2021-02-01T17:25:21&#xa;  python3-serial_3.4-5.1_all; 2021-02-01T17:26:01&#xa;  python3-service-identity_18.1.0-5build1_all; 2021-02-01T17:25:47&#xa;  python3-setuptools_45.2.0-1_all; 2021-02-01T17:26:00&#xa;  python3-simplejson_3.16.0-2ubuntu2_amd64; 2021-02-01T17:25:21&#xa;  python3-six_1.14.0-2_all; 2021-02-01T17:22:23&#xa;  python3-software-properties_0.99.9.8_all; 2021-12-07T12:57:59&#xa;  python3-systemd_234-3build2_amd64; 2021-02-01T17:26:02&#xa;  python3-twisted-bin_18.9.0-11ubuntu0.20.04.1_amd64; 2021-06-11T13:05:09&#xa;  python3-twisted_18.9.0-11ubuntu0.20.04.1_all; 2021-06-11T13:05:11&#xa;  python3-update-manager_1:20.04.10.9_all; 2021-12-07T12:57:15&#xa;  python3-urllib3_1.25.8-2ubuntu0.1_all; 2021-02-01T17:25:20&#xa;  python3-wadllib_1.3.3-3build1_all; 2021-02-01T17:25:21&#xa;  python3-yaml_5.3.1-1ubuntu0.1_amd64; 2021-06-11T12:48:37&#xa;  python3-zope.interface_4.7.1-1_amd64; 2021-02-01T17:25:46&#xa;  python3.8-minimal_3.8.10-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:21&#xa;  python3.8_3.8.10-0ubuntu1~20.04.2_amd64; 2022-01-03T07:47:20&#xa;  python3_3.8.2-0ubuntu2_amd64; 2021-02-01T17:22:21&#xa;  readline-common_8.0-4_all; 2021-02-01T17:22:24&#xa;  rsync_3.1.3-8ubuntu0.1_amd64; 2021-12-07T12:57:03&#xa;  rsyslog_8.2001.0-1ubuntu1.1_amd64; 2021-02-01T17:24:06&#xa;  run-one_1.17-0ubuntu1_all; 2021-02-01T17:26:02&#xa;  sbsigntool_0.9.2-2ubuntu1_amd64; 2021-02-01T17:26:02&#xa;  screen_4.8.0-1ubuntu0.1_amd64; 2021-06-11T12:47:28&#xa;  secureboot-db_1.5_amd64; 2021-02-01T17:26:03&#xa;  sed_4.7-1_amd64; 2021-02-01T17:21:19&#xa;  sensible-utils_0.0.12+nmu1_all; 2021-02-01T17:21:19&#xa;  sg3-utils-udev_1.44-1ubuntu2_all; 2021-02-01T17:26:04&#xa;  sg3-utils_1.44-1ubuntu2_amd64; 2021-02-01T17:26:03&#xa;  shared-mime-info_1.15-1_amd64; 2021-02-01T17:22:24&#xa;  snmp-mibs-downloader_1.2_all; 2021-06-11T19:44:19&#xa;  snmp_5.8+dfsg-2ubuntu2.3_amd64; 2021-06-11T13:30:10&#xa;  snmpd_5.8+dfsg-2ubuntu2.3_amd64; 2021-06-11T13:30:10&#xa;  socat_1.7.3.3-2_amd64; 2021-06-11T13:33:34&#xa;  software-properties-common_0.99.9.8_all; 2021-12-07T12:57:58&#xa;  sosreport_4.1-1ubuntu0.20.04.3_amd64; 2021-12-07T12:57:59&#xa;  sound-theme-freedesktop_0.8-2ubuntu1_all; 2021-02-01T17:25:51&#xa;  ssh-import-id_5.10-0ubuntu1_all; 2021-06-11T19:44:20&#xa;  ssl-cert_1.0.39_all; 2021-06-11T13:31:28&#xa;  strace_5.5-3ubuntu1_amd64; 2021-02-01T17:25:17&#xa;  sudo_1.8.31-1ubuntu1.2_amd64; 2021-02-01T17:24:12&#xa;  systemd-sysv_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:52&#xa;  systemd-timesyncd_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:53&#xa;  systemd_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:57&#xa;  sysvinit-utils_2.96-2.1ubuntu1_amd64; 2021-02-01T17:21:20&#xa;  tar_1.30+dfsg-7ubuntu0.20.04.1_amd64; 2021-02-01T17:23:40&#xa;  tcpdump_4.9.3-4_amd64; 2021-02-01T17:25:17&#xa;  telnet_0.17-41.2build1_amd64; 2021-02-01T17:25:17&#xa;  thermald_1.9.1-1ubuntu0.6_amd64; 2021-12-07T12:58:00&#xa;  thin-provisioning-tools_0.8.5-4build1_amd64; 2021-02-01T17:26:16&#xa;  time_1.7-25.1build1_amd64; 2021-02-01T17:25:17&#xa;  tmux_3.0a-2ubuntu0.3_amd64; 2021-06-11T13:05:19&#xa;  tpm-udev_0.4_all; 2021-02-01T17:25:39&#xa;  traceroute_1:2.1.0-2_amd64; 2021-06-11T13:30:10&#xa;  tzdata_2021e-0ubuntu0.20.04_all; 2021-12-07T12:57:04&#xa;  ubuntu-advantage-tools_27.4.2~20.04.1_amd64; 2022-01-03T07:47:22&#xa;  ubuntu-keyring_2020.02.11.4_all; 2021-06-11T13:05:03&#xa;  ubuntu-release-upgrader-core_1:20.04.36_all; 2021-12-07T12:57:15&#xa;  ubuntu-server_1.450.2_amd64; 2021-02-01T17:26:22&#xa;  ucf_3.0038+nmu1_all; 2021-02-01T17:22:27&#xa;  udev_245.4-4ubuntu3.13_amd64; 2021-12-07T12:56:52&#xa;  udisks2_2.8.4-1ubuntu2_amd64; 2022-01-03T07:48:17&#xa;  unzip_6.0-25ubuntu1_amd64; 2021-06-11T13:33:44&#xa;  update-manager-core_1:20.04.10.9_all; 2021-12-07T12:57:15&#xa;  update-notifier-common_3.192.30.10_all; 2022-01-03T07:47:21&#xa;  upower_0.99.11-1build2_amd64; 2021-06-11T12:44:22&#xa;  usb.ids_2020.03.19-1_all; 2021-02-01T17:25:17&#xa;  usbmuxd_1.1.1~git20191130.9af2b12-1_amd64; 2021-06-11T12:44:22&#xa;  usbutils_1:012-2_amd64; 2021-02-01T17:25:17&#xa;  util-linux_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:23:43&#xa;  uuid-runtime_2.34-0.1ubuntu9.1_amd64; 2021-02-01T17:24:54&#xa;  vim-common_2:8.1.2269-1ubuntu5.4_all; 2021-12-07T12:57:21&#xa;  vim-runtime_2:8.1.2269-1ubuntu5.4_all; 2021-12-07T12:57:21&#xa;  vim-tiny_2:8.1.2269-1ubuntu5.4_amd64; 2021-12-07T12:57:19&#xa;  vim_2:8.1.2269-1ubuntu5.4_amd64; 2021-12-07T12:57:19&#xa;  wget_1.20.3-1ubuntu2_amd64; 2021-12-07T12:57:25&#xa;  whiptail_0.52.21-4ubuntu2_amd64; 2021-02-01T17:22:28&#xa;  wireless-regdb_2021.08.28-0ubuntu1~20.04.1_all; 2021-12-07T12:58:00&#xa;  x11-common_1:7.7+19ubuntu14_all; 2021-06-11T13:33:39&#xa;  xauth_1:1.1-0ubuntu1_amd64; 2021-02-01T17:25:18&#xa;  xdg-user-dirs_0.17-2ubuntu1_amd64; 2021-02-01T17:22:29&#xa;  xfsprogs_5.3.0-1ubuntu2_amd64; 2021-02-01T17:26:22&#xa;  xkb-data_2.29-2_all; 2021-02-01T17:22:29&#xa;  xprobe_0.3-4build1_amd64; 2021-06-11T13:30:10&#xa;  xxd_2:8.1.2269-1ubuntu5.4_amd64; 2021-12-07T12:57:18&#xa;  xz-utils_5.2.4-1ubuntu1_amd64; 2021-02-01T17:24:13&#xa;  zerofree_1.1.1-1_amd64; 2021-02-01T17:26:25&#xa;  zip_3.0-11build1_amd64; 2021-06-11T13:55:09&#xa;  zlib1g_1:1.2.11.dfsg-2ubuntu1.2_amd64; 2021-02-01T17:24:00"><table>
+<elem key="name">accountsservice_0.6.55-0ubuntu12~20.04.5_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:21</elem>
+</table>
+<table>
+<elem key="name">adduser_3.118ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:21:32</elem>
+</table>
+<table>
+<elem key="name">alsa-topology-conf_1.2.2-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:18</elem>
+</table>
+<table>
+<elem key="name">alsa-ucm-conf_1.2.2-1ubuntu0.11_all</elem>
+<elem key="install_date">2021-12-07T12:57:25</elem>
+</table>
+<table>
+<elem key="name">amd64-microcode_3.20191218.1ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:07</elem>
+</table>
+<table>
+<elem key="name">apache2-bin_2.4.41-4ubuntu3.8_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:07</elem>
+</table>
+<table>
+<elem key="name">apache2-data_2.4.41-4ubuntu3.8_all</elem>
+<elem key="install_date">2021-12-07T12:57:07</elem>
+</table>
+<table>
+<elem key="name">apache2-utils_2.4.41-4ubuntu3.8_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:07</elem>
+</table>
+<table>
+<elem key="name">apache2_2.4.41-4ubuntu3.8_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:06</elem>
+</table>
+<table>
+<elem key="name">apparmor_2.13.3-7ubuntu5.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:03</elem>
+</table>
+<table>
+<elem key="name">apport-symptoms_0.23_all</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">apport_2.20.11-0ubuntu27.21_all</elem>
+<elem key="install_date">2021-12-07T12:57:29</elem>
+</table>
+<table>
+<elem key="name">apt-transport-https_2.0.6_all</elem>
+<elem key="install_date">2021-12-07T12:57:29</elem>
+</table>
+<table>
+<elem key="name">apt-utils_2.0.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:00</elem>
+</table>
+<table>
+<elem key="name">apt_2.0.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:59</elem>
+</table>
+<table>
+<elem key="name">at_3.1.23-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">base-files_11ubuntu5.4_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:49</elem>
+</table>
+<table>
+<elem key="name">base-passwd_3.5.47_amd64</elem>
+<elem key="install_date">2021-02-01T17:20:55</elem>
+</table>
+<table>
+<elem key="name">bash-completion_1:2.10-1ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:05</elem>
+</table>
+<table>
+<elem key="name">bash_5.0-6ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:38</elem>
+</table>
+<table>
+<elem key="name">bc_1.07.1-2build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">bcache-tools_1.0.8-3ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">bind9-dnsutils_1:9.16.1-0ubuntu2.9_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">bind9-host_1:9.16.1-0ubuntu2.9_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">bind9-libs_1:9.16.1-0ubuntu2.9_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">bolt_0.8-4ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">bsdmainutils_11.1.2ubuntu3_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:50</elem>
+</table>
+<table>
+<elem key="name">bsdutils_1:2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:38</elem>
+</table>
+<table>
+<elem key="name">btrfs-progs_5.4.1-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:24</elem>
+</table>
+<table>
+<elem key="name">busybox-initramfs_1:1.30.1-4ubuntu6.4_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">busybox-static_1:1.30.1-4ubuntu6.4_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">byobu_5.133-0ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:25</elem>
+</table>
+<table>
+<elem key="name">bzip2_1.0.8-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:58</elem>
+</table>
+<table>
+<elem key="name">ca-certificates_20210119~20.04.2_all</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">cloud-guest-utils_0.31-7-gd99b2d76-0ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:26:16</elem>
+</table>
+<table>
+<elem key="name">cloud-initramfs-copymods_0.45ubuntu2_all</elem>
+<elem key="install_date">2021-12-07T12:58:00</elem>
+</table>
+<table>
+<elem key="name">cloud-initramfs-dyn-netconf_0.45ubuntu2_all</elem>
+<elem key="install_date">2021-12-07T12:58:00</elem>
+</table>
+<table>
+<elem key="name">command-not-found_20.04.4_all</elem>
+<elem key="install_date">2021-02-01T17:25:08</elem>
+</table>
+<table>
+<elem key="name">console-setup-linux_1.194ubuntu3_all</elem>
+<elem key="install_date">2021-02-01T17:21:59</elem>
+</table>
+<table>
+<elem key="name">console-setup_1.194ubuntu3_all</elem>
+<elem key="install_date">2021-02-01T17:21:58</elem>
+</table>
+<table>
+<elem key="name">coreutils_8.30-3ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:20:56</elem>
+</table>
+<table>
+<elem key="name">cpio_2.13+dfsg-2ubuntu0.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">crda_3.18-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:36</elem>
+</table>
+<table>
+<elem key="name">cron_3.0pl1-136ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:00</elem>
+</table>
+<table>
+<elem key="name">cryptsetup-bin_2:2.2.2-3ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:25</elem>
+</table>
+<table>
+<elem key="name">cryptsetup-initramfs_2:2.2.2-3ubuntu2.3_all</elem>
+<elem key="install_date">2021-02-01T17:25:27</elem>
+</table>
+<table>
+<elem key="name">cryptsetup-run_2:2.2.2-3ubuntu2.3_all</elem>
+<elem key="install_date">2021-02-01T17:25:28</elem>
+</table>
+<table>
+<elem key="name">cryptsetup_2:2.2.2-3ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:26</elem>
+</table>
+<table>
+<elem key="name">curl_7.68.0-1ubuntu2.7_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:03</elem>
+</table>
+<table>
+<elem key="name">dash_0.5.10.2-6_amd64</elem>
+<elem key="install_date">2021-02-01T17:20:57</elem>
+</table>
+<table>
+<elem key="name">dbconfig-common_2.0.13_all</elem>
+<elem key="install_date">2021-06-11T13:33:36</elem>
+</table>
+<table>
+<elem key="name">dbus-user-session_1.12.16-2ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:31</elem>
+</table>
+<table>
+<elem key="name">dbus_1.12.16-2ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:54</elem>
+</table>
+<table>
+<elem key="name">dconf-gsettings-backend_0.36.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:32</elem>
+</table>
+<table>
+<elem key="name">dconf-service_0.36.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:32</elem>
+</table>
+<table>
+<elem key="name">debconf-i18n_1.5.73_all</elem>
+<elem key="install_date">2021-02-01T17:22:01</elem>
+</table>
+<table>
+<elem key="name">debconf_1.5.73_all</elem>
+<elem key="install_date">2021-02-01T17:20:58</elem>
+</table>
+<table>
+<elem key="name">debianutils_4.9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:20:58</elem>
+</table>
+<table>
+<elem key="name">diffutils_1:3.7-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:20:59</elem>
+</table>
+<table>
+<elem key="name">dirmngr_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">distro-info-data_0.43ubuntu1.9_all</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">distro-info_0.23ubuntu1_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">dmeventd_2:1.02.167-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:33</elem>
+</table>
+<table>
+<elem key="name">dmidecode_3.2-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:08</elem>
+</table>
+<table>
+<elem key="name">dmsetup_2:1.02.167-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:01</elem>
+</table>
+<table>
+<elem key="name">dosfstools_4.1-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:08</elem>
+</table>
+<table>
+<elem key="name">dpkg_1.19.7ubuntu3_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:00</elem>
+</table>
+<table>
+<elem key="name">e2fsprogs_1.45.5-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:00</elem>
+</table>
+<table>
+<elem key="name">ed_1.16-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:08</elem>
+</table>
+<table>
+<elem key="name">eject_2.1.5+deb1+cvs20081104-14_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:01</elem>
+</table>
+<table>
+<elem key="name">ethtool_1:5.4-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">fdisk_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:42</elem>
+</table>
+<table>
+<elem key="name">file_1:5.38-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:01</elem>
+</table>
+<table>
+<elem key="name">finalrd_6~ubuntu20.04.1_all</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">findutils_4.7.0-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:00</elem>
+</table>
+<table>
+<elem key="name">fontconfig-config_2.13.1-2ubuntu3_all</elem>
+<elem key="install_date">2021-06-11T13:33:36</elem>
+</table>
+<table>
+<elem key="name">fontconfig_2.13.1-2ubuntu3_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">fonts-dejavu-core_2.37-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:36</elem>
+</table>
+<table>
+<elem key="name">fonts-liberation_1:1.07.4-11_all</elem>
+<elem key="install_date">2021-06-11T13:33:36</elem>
+</table>
+<table>
+<elem key="name">fonts-ubuntu-console_0.83-4ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">friendly-recovery_0.2.41ubuntu0.20.04.1_all</elem>
+<elem key="install_date">2021-06-11T13:05:08</elem>
+</table>
+<table>
+<elem key="name">ftp_0.17-34.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:09</elem>
+</table>
+<table>
+<elem key="name">fuse_2.9.9-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:52</elem>
+</table>
+<table>
+<elem key="name">fwupd-signed_1.27.1ubuntu5+1.5.11-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">fwupd_1.5.11-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:23</elem>
+</table>
+<table>
+<elem key="name">galera-3_25.3.29-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:31</elem>
+</table>
+<table>
+<elem key="name">gawk_1:5.0.1+dfsg-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:54</elem>
+</table>
+<table>
+<elem key="name">gcc-10-base_10.3.0-1ubuntu1~20.04_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:51</elem>
+</table>
+<table>
+<elem key="name">gdisk_1.0.5-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:24</elem>
+</table>
+<table>
+<elem key="name">geoip-database_20191224-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">gettext-base_0.19.8.1-10build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:09</elem>
+</table>
+<table>
+<elem key="name">gir1.2-glib-2.0_1.64.1-1~ubuntu20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:09</elem>
+</table>
+<table>
+<elem key="name">gir1.2-packagekitglib-1.0_1.1.13-2ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:41</elem>
+</table>
+<table>
+<elem key="name">git-man_1:2.25.1-1ubuntu3.2_all</elem>
+<elem key="install_date">2021-12-07T12:57:23</elem>
+</table>
+<table>
+<elem key="name">git_1:2.25.1-1ubuntu3.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:25</elem>
+</table>
+<table>
+<elem key="name">glib-networking-common_2.64.2-1ubuntu0.1_all</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">glib-networking-services_2.64.2-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:35</elem>
+</table>
+<table>
+<elem key="name">glib-networking_2.64.2-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:35</elem>
+</table>
+<table>
+<elem key="name">gnupg-l10n_2.2.19-3ubuntu2.1_all</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">gnupg-utils_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">gnupg_2.2.19-3ubuntu2.1_all</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">gpg-agent_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">gpg-wks-client_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">gpg-wks-server_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">gpg_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">gpgconf_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:02</elem>
+</table>
+<table>
+<elem key="name">gpgsm_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">gpgv_2.2.19-3ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">graphviz_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:40</elem>
+</table>
+<table>
+<elem key="name">grep_3.4-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:01</elem>
+</table>
+<table>
+<elem key="name">groff-base_1.22.4-4build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:51</elem>
+</table>
+<table>
+<elem key="name">grub-common_2.04-1ubuntu26.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:27</elem>
+</table>
+<table>
+<elem key="name">grub-gfxpayload-lists_0.7_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">grub-pc-bin_2.04-1ubuntu26.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:26</elem>
+</table>
+<table>
+<elem key="name">grub-pc_2.04-1ubuntu26.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:26</elem>
+</table>
+<table>
+<elem key="name">grub2-common_2.04-1ubuntu26.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:26</elem>
+</table>
+<table>
+<elem key="name">gsettings-desktop-schemas_3.36.0-1ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:35</elem>
+</table>
+<table>
+<elem key="name">gzip_1.10-0ubuntu4_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:01</elem>
+</table>
+<table>
+<elem key="name">hdparm_9.58+ds-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:09</elem>
+</table>
+<table>
+<elem key="name">hostname_3.23_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:02</elem>
+</table>
+<table>
+<elem key="name">htop_2.2.0-2build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:45</elem>
+</table>
+<table>
+<elem key="name">ifupdown_0.8.35ubuntu1_amd64</elem>
+<elem key="install_date">2021-11-23T11:48:05</elem>
+</table>
+<table>
+<elem key="name">info_6.7.0.dfsg.2-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:09</elem>
+</table>
+<table>
+<elem key="name">init-system-helpers_1.57_all</elem>
+<elem key="install_date">2021-02-01T17:21:02</elem>
+</table>
+<table>
+<elem key="name">init_1.57_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:02</elem>
+</table>
+<table>
+<elem key="name">initramfs-tools-bin_0.136ubuntu6.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:29</elem>
+</table>
+<table>
+<elem key="name">initramfs-tools-core_0.136ubuntu6.6_all</elem>
+<elem key="install_date">2021-12-07T12:57:29</elem>
+</table>
+<table>
+<elem key="name">initramfs-tools_0.136ubuntu6.6_all</elem>
+<elem key="install_date">2021-12-07T12:57:29</elem>
+</table>
+<table>
+<elem key="name">install-info_6.7.0.dfsg.2-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:47</elem>
+</table>
+<table>
+<elem key="name">intel-microcode_3.20210608.0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:07</elem>
+</table>
+<table>
+<elem key="name">iproute2_5.5.0-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:03</elem>
+</table>
+<table>
+<elem key="name">iptables_1.8.4-3ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:10</elem>
+</table>
+<table>
+<elem key="name">iputils-ping_3:20190709-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:03</elem>
+</table>
+<table>
+<elem key="name">iputils-tracepath_3:20190709-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:10</elem>
+</table>
+<table>
+<elem key="name">irqbalance_1.6.0-3ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:47</elem>
+</table>
+<table>
+<elem key="name">isc-dhcp-client_4.4.1-2.1ubuntu5.20.04.2_amd64</elem>
+<elem key="install_date">2021-06-11T12:48:18</elem>
+</table>
+<table>
+<elem key="name">isc-dhcp-common_4.4.1-2.1ubuntu5.20.04.2_amd64</elem>
+<elem key="install_date">2021-06-11T12:46:47</elem>
+</table>
+<table>
+<elem key="name">iso-codes_4.4-1_all</elem>
+<elem key="install_date">2021-02-01T17:24:49</elem>
+</table>
+<table>
+<elem key="name">iucode-tool_2.3.1-1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">iw_5.4-1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:36</elem>
+</table>
+<table>
+<elem key="name">kbd_2.0.4-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:05</elem>
+</table>
+<table>
+<elem key="name">keyboard-configuration_1.194ubuntu3_all</elem>
+<elem key="install_date">2021-02-01T17:22:05</elem>
+</table>
+<table>
+<elem key="name">klibc-utils_2.0.7-1ubuntu5_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:26</elem>
+</table>
+<table>
+<elem key="name">kmod_27-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:06</elem>
+</table>
+<table>
+<elem key="name">kpartx_0.8.3-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:16</elem>
+</table>
+<table>
+<elem key="name">krb5-locales_1.17-6ubuntu4.1_all</elem>
+<elem key="install_date">2021-02-01T17:25:10</elem>
+</table>
+<table>
+<elem key="name">landscape-common_19.12-0ubuntu4.2_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:12</elem>
+</table>
+<table>
+<elem key="name">language-selector-common_0.204.2_all</elem>
+<elem key="install_date">2021-02-01T17:24:50</elem>
+</table>
+<table>
+<elem key="name">less_551-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:09</elem>
+</table>
+<table>
+<elem key="name">libaccountsservice0_0.6.55-0ubuntu12~20.04.5_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">libacl1_2.2.53-6_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:02</elem>
+</table>
+<table>
+<elem key="name">libaio1_0.3.112-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:33</elem>
+</table>
+<table>
+<elem key="name">libalgorithm-c3-perl_0.10-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libann0_1.1.2+doc-7build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libapache2-mod-php7.4_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:26</elem>
+</table>
+<table>
+<elem key="name">libapache2-mpm-itk_2.4.7-04-1_amd64</elem>
+<elem key="install_date">2021-06-11T14:07:07</elem>
+</table>
+<table>
+<elem key="name">libapparmor1_2.13.3-7ubuntu5.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:54</elem>
+</table>
+<table>
+<elem key="name">libappstream4_0.12.10-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:49</elem>
+</table>
+<table>
+<elem key="name">libapr1_1.6.5-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:31:27</elem>
+</table>
+<table>
+<elem key="name">libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-06-11T13:31:27</elem>
+</table>
+<table>
+<elem key="name">libaprutil1-ldap_1.6.1-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-06-11T13:31:27</elem>
+</table>
+<table>
+<elem key="name">libaprutil1_1.6.1-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-06-11T13:31:27</elem>
+</table>
+<table>
+<elem key="name">libapt-pkg6.0_2.0.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:57</elem>
+</table>
+<table>
+<elem key="name">libarchive13_3.4.0-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:35</elem>
+</table>
+<table>
+<elem key="name">libargon2-1_0~20171227-0.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:32</elem>
+</table>
+<table>
+<elem key="name">libasn1-8-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:28</elem>
+</table>
+<table>
+<elem key="name">libasound2-data_1.2.2-2.1ubuntu2.5_all</elem>
+<elem key="install_date">2021-12-07T12:57:25</elem>
+</table>
+<table>
+<elem key="name">libasound2_1.2.2-2.1ubuntu2.5_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:25</elem>
+</table>
+<table>
+<elem key="name">libassuan0_2.5.3-7ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:32</elem>
+</table>
+<table>
+<elem key="name">libatasmart4_0.19-5_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:28</elem>
+</table>
+<table>
+<elem key="name">libatm1_1:2.5.1-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:07</elem>
+</table>
+<table>
+<elem key="name">libattr1_1:2.4.48-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:02</elem>
+</table>
+<table>
+<elem key="name">libaudit-common_1:2.8.5-2ubuntu6_all</elem>
+<elem key="install_date">2021-02-01T17:21:02</elem>
+</table>
+<table>
+<elem key="name">libaudit1_1:2.8.5-2ubuntu6_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:03</elem>
+</table>
+<table>
+<elem key="name">libauthen-sasl-perl_2.1600-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:18</elem>
+</table>
+<table>
+<elem key="name">libb-hooks-endofscope-perl_0.24-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libb-hooks-op-check-perl_0.22-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libblas3_3.9.0-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:11</elem>
+</table>
+<table>
+<elem key="name">libblkid1_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:41</elem>
+</table>
+<table>
+<elem key="name">libblockdev-crypto2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev-fs2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev-loop2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev-part-err2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev-part2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev-swap2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev-utils2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libblockdev2_2.23-2ubuntu3_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libbrotli1_1.0.7-6ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:28</elem>
+</table>
+<table>
+<elem key="name">libbsd0_0.10.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:07</elem>
+</table>
+<table>
+<elem key="name">libbz2-1.0_1.0.8-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:03</elem>
+</table>
+<table>
+<elem key="name">libc-bin_2.31-0ubuntu9.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:46</elem>
+</table>
+<table>
+<elem key="name">libc6_2.31-0ubuntu9.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:36</elem>
+</table>
+<table>
+<elem key="name">libcairo2_1.16.0-4ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libcanberra0_0.30-7ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:51</elem>
+</table>
+<table>
+<elem key="name">libcap-ng0_0.7.9-2.1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:06</elem>
+</table>
+<table>
+<elem key="name">libcap2-bin_1:2.32-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:07</elem>
+</table>
+<table>
+<elem key="name">libcap2_1:2.32-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:33</elem>
+</table>
+<table>
+<elem key="name">libcbor0.6_0.6.0-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:10</elem>
+</table>
+<table>
+<elem key="name">libcdt5_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libcgi-fast-perl_1:2.15-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libcgi-pm-perl_4.46-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libcgraph6_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libclass-c3-perl_0.34-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libclass-c3-xs-perl_0.14-1build5_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libclass-data-inheritable-perl_0.08-3_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libclass-inspector-perl_1.36-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libclass-method-modifiers-perl_2.13-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libclass-singleton-perl_1.5-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libclass-xsaccessor-perl_1.19-3build3_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libcom-err2_1.45.5-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:06</elem>
+</table>
+<table>
+<elem key="name">libcommon-sense-perl_3.74-2build6_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libconfig-inifiles-perl_3.000002-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:31</elem>
+</table>
+<table>
+<elem key="name">libcrypt1_1:4.4.10-10ubuntu4_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:06</elem>
+</table>
+<table>
+<elem key="name">libcryptsetup12_2:2.2.2-3ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:56</elem>
+</table>
+<table>
+<elem key="name">libcurl3-gnutls_7.68.0-1ubuntu2.7_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:23</elem>
+</table>
+<table>
+<elem key="name">libcurl4_7.68.0-1ubuntu2.7_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:03</elem>
+</table>
+<table>
+<elem key="name">libdata-dump-perl_1.23-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libdata-optlist-perl_0.110-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libdate-manip-perl_6.79-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:15</elem>
+</table>
+<table>
+<elem key="name">libdatetime-locale-perl_1:1.25-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:19</elem>
+</table>
+<table>
+<elem key="name">libdatetime-perl_2:1.51-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:20</elem>
+</table>
+<table>
+<elem key="name">libdatetime-timezone-perl_1:2.38-1+2019c_all</elem>
+<elem key="install_date">2021-06-11T13:30:20</elem>
+</table>
+<table>
+<elem key="name">libdatrie1_0.2.12-3_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libdb5.3_5.3.28+dfsg1-0.6ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:07</elem>
+</table>
+<table>
+<elem key="name">libdbd-mysql-perl_4.050-3_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libdbi-perl_1.643-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:09</elem>
+</table>
+<table>
+<elem key="name">libdbus-1-3_1.12.16-2ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:54</elem>
+</table>
+<table>
+<elem key="name">libdbus-glib-1-2_0.110-5fakssync1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">libdconf1_0.36.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:31</elem>
+</table>
+<table>
+<elem key="name">libdebconfclient0_0.251ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:07</elem>
+</table>
+<table>
+<elem key="name">libdevel-callchecker-perl_0.008-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libdevel-caller-perl_2.06-2build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:15</elem>
+</table>
+<table>
+<elem key="name">libdevel-lexalias-perl_0.05-2build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:15</elem>
+</table>
+<table>
+<elem key="name">libdevel-stacktrace-perl_2.0400-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libdevmapper-event1.02.1_2:1.02.167-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:33</elem>
+</table>
+<table>
+<elem key="name">libdevmapper1.02.1_2:1.02.167-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:33</elem>
+</table>
+<table>
+<elem key="name">libdns-export1109_1:9.11.16+dfsg-3~ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:10</elem>
+</table>
+<table>
+<elem key="name">libdrm-common_2.4.105-3~20.04.2_all</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">libdrm2_2.4.105-3~20.04.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">libdynaloader-functions-perl_0.003-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libedit2_3.1-20191231-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:07</elem>
+</table>
+<table>
+<elem key="name">libefiboot1_37-2ubuntu2.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">libefivar1_37-2ubuntu2.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">libelf1_0.176-1.1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:08</elem>
+</table>
+<table>
+<elem key="name">libencode-locale-perl_1.05-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">liberror-perl_0.17029-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:42</elem>
+</table>
+<table>
+<elem key="name">libestr0_0.1.10-2.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:08</elem>
+</table>
+<table>
+<elem key="name">libeval-closure-perl_0.14-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libevdev2_1.9.0+dfsg-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:22</elem>
+</table>
+<table>
+<elem key="name">libevent-2.1-7_2.1.11-stable-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:24</elem>
+</table>
+<table>
+<elem key="name">libexception-class-perl_1.44-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libexpat1_2.2.9-1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:50</elem>
+</table>
+<table>
+<elem key="name">libext2fs2_1.45.5-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:08</elem>
+</table>
+<table>
+<elem key="name">libfastjson4_0.99.8-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:09</elem>
+</table>
+<table>
+<elem key="name">libfcgi-perl_0.79-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libfdisk1_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:41</elem>
+</table>
+<table>
+<elem key="name">libffi7_3.3-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:33</elem>
+</table>
+<table>
+<elem key="name">libfido2-1_1.3.1-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:11</elem>
+</table>
+<table>
+<elem key="name">libfile-listing-perl_6.04-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libfile-sharedir-perl_1.116-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libfl2_2.6.4-6.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">libfont-afm-perl_1.20-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libfontconfig1_2.13.1-2ubuntu3_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libfreetype6_2.10.1-2ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:36</elem>
+</table>
+<table>
+<elem key="name">libfribidi0_1.0.8-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:09</elem>
+</table>
+<table>
+<elem key="name">libfuse2_2.9.9-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:52</elem>
+</table>
+<table>
+<elem key="name">libfwupd2_1.5.11-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">libfwupdplugin1_1.5.11-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">libgcab-1.0-0_1.4-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:36</elem>
+</table>
+<table>
+<elem key="name">libgcc-s1_10.3.0-1ubuntu1~20.04_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:51</elem>
+</table>
+<table>
+<elem key="name">libgcrypt20_1.8.5-5ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:51</elem>
+</table>
+<table>
+<elem key="name">libgd3_2.2.5-5.2ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:32</elem>
+</table>
+<table>
+<elem key="name">libgdbm-compat4_1.18.1-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:58</elem>
+</table>
+<table>
+<elem key="name">libgdbm6_1.18.1-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:51</elem>
+</table>
+<table>
+<elem key="name">libgeo-ip-perl_1.51-2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:12</elem>
+</table>
+<table>
+<elem key="name">libgeoip1_1.6.12-6build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:12</elem>
+</table>
+<table>
+<elem key="name">libgirepository-1.0-1_1.64.1-1~ubuntu20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:09</elem>
+</table>
+<table>
+<elem key="name">libglib2.0-0_2.64.6-1~ubuntu20.04.4_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">libglib2.0-bin_2.64.6-1~ubuntu20.04.4_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">libglib2.0-data_2.64.6-1~ubuntu20.04.4_all</elem>
+<elem key="install_date">2021-12-07T12:57:16</elem>
+</table>
+<table>
+<elem key="name">libgmp10_2:6.2.0+dfsg-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:34</elem>
+</table>
+<table>
+<elem key="name">libgnutls30_3.6.13-2ubuntu1.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:55</elem>
+</table>
+<table>
+<elem key="name">libgpg-error0_1.37-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:09</elem>
+</table>
+<table>
+<elem key="name">libgpgme11_1.13.1-7ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:39</elem>
+</table>
+<table>
+<elem key="name">libgpm2_1.20.7-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:51</elem>
+</table>
+<table>
+<elem key="name">libgraphite2-3_1.3.13-11build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libgssapi-krb5-2_1.17-6ubuntu4.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:06</elem>
+</table>
+<table>
+<elem key="name">libgssapi3-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:30</elem>
+</table>
+<table>
+<elem key="name">libgstreamer1.0-0_1.16.2-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:52</elem>
+</table>
+<table>
+<elem key="name">libgts-0.7-5_0.7.6+darcs121130-4_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libgts-bin_0.7.6+darcs121130-4_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libgudev-1.0-0_1:233-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:36</elem>
+</table>
+<table>
+<elem key="name">libgusb2_0.3.4-0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:36</elem>
+</table>
+<table>
+<elem key="name">libgvc6_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libgvpr2_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libharfbuzz0b_2.6.4-1ubuntu4_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libhcrypto4-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:29</elem>
+</table>
+<table>
+<elem key="name">libheimbase1-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:28</elem>
+</table>
+<table>
+<elem key="name">libheimntlm0-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:29</elem>
+</table>
+<table>
+<elem key="name">libhogweed5_3.5.1+really3.5.1-2ubuntu0.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:55</elem>
+</table>
+<table>
+<elem key="name">libhtml-form-perl_6.07-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libhtml-format-perl_2.12-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libhtml-parser-perl_3.72-5_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhtml-tagset-perl_3.20-4_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhtml-template-perl_2.97-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libhtml-tree-perl_5.07-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhttp-cookies-perl_6.08-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhttp-daemon-perl_6.06-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libhttp-date-perl_6.05-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhttp-message-perl_6.22-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhttp-negotiate-perl_6.01-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libhx509-5-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:29</elem>
+</table>
+<table>
+<elem key="name">libice6_2:1.0.10-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libicu66_66.1-2ubuntu2.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:06</elem>
+</table>
+<table>
+<elem key="name">libidn2-0_2.2.0-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:35</elem>
+</table>
+<table>
+<elem key="name">libimobiledevice6_1.2.1~git20191129.9f79242-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">libio-html-perl_1.001-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libio-interface-perl_1.09-1build5_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:13</elem>
+</table>
+<table>
+<elem key="name">libio-socket-inet6-perl_2.72-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:12</elem>
+</table>
+<table>
+<elem key="name">libio-socket-multicast-perl_1.12-2build6_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:13</elem>
+</table>
+<table>
+<elem key="name">libio-socket-ssl-perl_2.067-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libip4tc2_1.8.4-3ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:35</elem>
+</table>
+<table>
+<elem key="name">libip6tc2_1.8.4-3ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:09</elem>
+</table>
+<table>
+<elem key="name">libisc-export1105_1:9.11.16+dfsg-3~ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:10</elem>
+</table>
+<table>
+<elem key="name">libisns0_0.97-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:55</elem>
+</table>
+<table>
+<elem key="name">libjansson4_2.12-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:31:27</elem>
+</table>
+<table>
+<elem key="name">libjbig0_2.1-3.1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libjcat1_0.1.3-2~ubuntu20.04.1_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libjpeg8_8c-2ubuntu8_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libjson-c4_0.13.1+dfsg-7ubuntu0.3_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:55</elem>
+</table>
+<table>
+<elem key="name">libjson-glib-1.0-0_1.4.4-2ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">libjson-glib-1.0-common_1.4.4-2ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">libjson-perl_4.02000-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:12</elem>
+</table>
+<table>
+<elem key="name">libjson-xs-perl_4.020-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libk5crypto3_1.17-6ubuntu4.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:05</elem>
+</table>
+<table>
+<elem key="name">libkeyutils1_1.6-6ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:06</elem>
+</table>
+<table>
+<elem key="name">libklibc_2.0.7-1ubuntu5_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:26</elem>
+</table>
+<table>
+<elem key="name">libkmod2_27-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:35</elem>
+</table>
+<table>
+<elem key="name">libkrb5-26-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:29</elem>
+</table>
+<table>
+<elem key="name">libkrb5-3_1.17-6ubuntu4.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:06</elem>
+</table>
+<table>
+<elem key="name">libkrb5support0_1.17-6ubuntu4.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:05</elem>
+</table>
+<table>
+<elem key="name">libksba8_1.3.5-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:32</elem>
+</table>
+<table>
+<elem key="name">liblab-gamut1_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libldap-2.4-2_2.4.49+dfsg-2ubuntu1.8_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">libldap-common_2.4.49+dfsg-2ubuntu1.8_all</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">liblinear4_2.3.0+dfsg-3build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:11</elem>
+</table>
+<table>
+<elem key="name">liblmdb0_0.9.24-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:06</elem>
+</table>
+<table>
+<elem key="name">liblocale-gettext-perl_1.07-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:14</elem>
+</table>
+<table>
+<elem key="name">libltdl7_2.4.6-14_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:50</elem>
+</table>
+<table>
+<elem key="name">liblua5.2-0_5.2.4-1.1build3_amd64</elem>
+<elem key="install_date">2021-06-11T13:31:27</elem>
+</table>
+<table>
+<elem key="name">liblua5.3-0_5.3.3-1.1ubuntu2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:11</elem>
+</table>
+<table>
+<elem key="name">liblvm2cmd2.03_2.03.07-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:33</elem>
+</table>
+<table>
+<elem key="name">liblwp-mediatypes-perl_6.04-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">liblwp-protocol-https-perl_6.07-2ubuntu2_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">liblz4-1_1.9.2-2ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:47:35</elem>
+</table>
+<table>
+<elem key="name">liblzma5_5.2.4-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:47</elem>
+</table>
+<table>
+<elem key="name">liblzo2-2_2.10-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:23</elem>
+</table>
+<table>
+<elem key="name">libmagic-mgc_1:5.38-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:14</elem>
+</table>
+<table>
+<elem key="name">libmagic1_1:5.38-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:15</elem>
+</table>
+<table>
+<elem key="name">libmail-sendmail-perl_0.80-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:13</elem>
+</table>
+<table>
+<elem key="name">libmailtools-perl_2.21-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libmaxminddb0_1.4.2-0ubuntu1.20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:06</elem>
+</table>
+<table>
+<elem key="name">libmnl0_1.0.4-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:15</elem>
+</table>
+<table>
+<elem key="name">libmodule-implementation-perl_0.09-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libmodule-runtime-perl_0.016-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libmount1_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:42</elem>
+</table>
+<table>
+<elem key="name">libmpdec2_2.4.2-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:15</elem>
+</table>
+<table>
+<elem key="name">libmpfr6_4.0.2-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:54</elem>
+</table>
+<table>
+<elem key="name">libmro-compat-perl_0.13-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libmspack0_0.10.1-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:52</elem>
+</table>
+<table>
+<elem key="name">libmysqlclient21_8.0.27-0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:35</elem>
+</table>
+<table>
+<elem key="name">libnamespace-autoclean-perl_0.29-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libnamespace-clean-perl_0.27-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libncurses6_6.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:10</elem>
+</table>
+<table>
+<elem key="name">libncursesw6_6.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:11</elem>
+</table>
+<table>
+<elem key="name">libnet-http-perl_6.19-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libnet-smtp-ssl-perl_1.04-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libnet-ssleay-perl_1.88-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libnet-telnet-perl_3.04-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:12</elem>
+</table>
+<table>
+<elem key="name">libnetaddr-ip-perl_4.079+dfsg-1build4_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libnetfilter-conntrack3_1.0.7-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:10</elem>
+</table>
+<table>
+<elem key="name">libnettle7_3.5.1+really3.5.1-2ubuntu0.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:55</elem>
+</table>
+<table>
+<elem key="name">libnewt0.52_0.52.21-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:15</elem>
+</table>
+<table>
+<elem key="name">libnfnetlink0_1.0.1-3build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:09</elem>
+</table>
+<table>
+<elem key="name">libnftnl11_1.1.5-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:10</elem>
+</table>
+<table>
+<elem key="name">libnghttp2-14_1.40.0-1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:30</elem>
+</table>
+<table>
+<elem key="name">libnl-3-200_3.4.0-1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:36</elem>
+</table>
+<table>
+<elem key="name">libnl-genl-3-200_3.4.0-1_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:36</elem>
+</table>
+<table>
+<elem key="name">libnpth0_1.6-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:32</elem>
+</table>
+<table>
+<elem key="name">libnspr4_2:4.25-1_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libnss-systemd_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:52</elem>
+</table>
+<table>
+<elem key="name">libnss3_2:3.49.1-1ubuntu1.6_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libntfs-3g883_1:2017.3.23AR.3-3ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:03</elem>
+</table>
+<table>
+<elem key="name">libnuma1_2.0.12-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:47</elem>
+</table>
+<table>
+<elem key="name">libogg0_1.3.4-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:50</elem>
+</table>
+<table>
+<elem key="name">libonig5_6.9.4-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libp11-kit0_0.23.20-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:56</elem>
+</table>
+<table>
+<elem key="name">libpackage-stash-perl_0.38-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libpackage-stash-xs-perl_0.29-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libpackagekit-glib2-18_1.1.13-2ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:41</elem>
+</table>
+<table>
+<elem key="name">libpadwalker-perl_2.3-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:15</elem>
+</table>
+<table>
+<elem key="name">libpam-cap_1:2.32-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:16</elem>
+</table>
+<table>
+<elem key="name">libpam-modules-bin_1.3.1-5ubuntu4.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:53</elem>
+</table>
+<table>
+<elem key="name">libpam-modules_1.3.1-5ubuntu4.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:54</elem>
+</table>
+<table>
+<elem key="name">libpam-runtime_1.3.1-5ubuntu4.3_all</elem>
+<elem key="install_date">2021-12-07T12:56:54</elem>
+</table>
+<table>
+<elem key="name">libpam-systemd_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:55</elem>
+</table>
+<table>
+<elem key="name">libpam0g_1.3.1-5ubuntu4.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:53</elem>
+</table>
+<table>
+<elem key="name">libpango-1.0-0_1.44.7-2ubuntu4_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libpangocairo-1.0-0_1.44.7-2ubuntu4_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libpangoft2-1.0-0_1.44.7-2ubuntu4_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libparams-classify-perl_0.015-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libparams-util-perl_1.07-3build5_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libparams-validationcompiler-perl_0.30-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libparted-fs-resize0_3.3-4ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libparted2_3.3-4ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:11</elem>
+</table>
+<table>
+<elem key="name">libpathplan4_2.42.2-3build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libpcap0.8_1.9.1-3_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:11</elem>
+</table>
+<table>
+<elem key="name">libpci3_1:3.6.4-1ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:09</elem>
+</table>
+<table>
+<elem key="name">libpcre2-8-0_10.34-7_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:13</elem>
+</table>
+<table>
+<elem key="name">libpcre3_2:8.39-12build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:13</elem>
+</table>
+<table>
+<elem key="name">libperl5.30_5.30.0-9ubuntu0.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:00</elem>
+</table>
+<table>
+<elem key="name">libpipeline1_1.5.2-2build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:51</elem>
+</table>
+<table>
+<elem key="name">libpixman-1-0_0.38.4-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libplist3_2.1.0-4build2_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">libplymouth5_0.9.4git20200323-0ubuntu6.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:12</elem>
+</table>
+<table>
+<elem key="name">libpng16-16_1.6.37-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:11</elem>
+</table>
+<table>
+<elem key="name">libpolkit-agent-1-0_0.105-26ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:48:24</elem>
+</table>
+<table>
+<elem key="name">libpolkit-gobject-1-0_0.105-26ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:48:24</elem>
+</table>
+<table>
+<elem key="name">libpopt0_1.16-14_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:16</elem>
+</table>
+<table>
+<elem key="name">libprocps8_2:3.3.16-1ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:07</elem>
+</table>
+<table>
+<elem key="name">libproxy1v5_0.4.15-10ubuntu1.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:34</elem>
+</table>
+<table>
+<elem key="name">libpsl5_0.21.0-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:12</elem>
+</table>
+<table>
+<elem key="name">libpython3-stdlib_3.8.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:16</elem>
+</table>
+<table>
+<elem key="name">libpython3.8-minimal_3.8.10-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">libpython3.8-stdlib_3.8.10-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">libpython3.8_3.8.10-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:20</elem>
+</table>
+<table>
+<elem key="name">libreadline5_5.2+dfsg-3build3_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:53</elem>
+</table>
+<table>
+<elem key="name">libreadline8_8.0-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:17</elem>
+</table>
+<table>
+<elem key="name">libreadonly-perl_2.050-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libref-util-perl_0.204-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libref-util-xs-perl_0.117-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libroken18-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:28</elem>
+</table>
+<table>
+<elem key="name">librole-tiny-perl_2.001004-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">librtmp1_2.4+20151223.gitfa8646d.1-2build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:30</elem>
+</table>
+<table>
+<elem key="name">libsasl2-2_2.1.27+dfsg-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:30</elem>
+</table>
+<table>
+<elem key="name">libsasl2-modules-db_2.1.27+dfsg-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:30</elem>
+</table>
+<table>
+<elem key="name">libsasl2-modules_2.1.27+dfsg-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:53</elem>
+</table>
+<table>
+<elem key="name">libseccomp2_2.5.1-1ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">libselinux1_3.0-1build2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:14</elem>
+</table>
+<table>
+<elem key="name">libsemanage-common_3.0-1build2_all</elem>
+<elem key="install_date">2021-02-01T17:21:14</elem>
+</table>
+<table>
+<elem key="name">libsemanage1_3.0-1build2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:14</elem>
+</table>
+<table>
+<elem key="name">libsensors-config_1:3.6.0-2ubuntu1_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libsensors5_1:3.6.0-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libsepol1_3.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:14</elem>
+</table>
+<table>
+<elem key="name">libsgutils2-2_1.44-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:54</elem>
+</table>
+<table>
+<elem key="name">libsigsegv2_2.12-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:54</elem>
+</table>
+<table>
+<elem key="name">libslang2_2.3.2-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:17</elem>
+</table>
+<table>
+<elem key="name">libsm6_2:1.2.3-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libsmartcols1_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:42</elem>
+</table>
+<table>
+<elem key="name">libsmbios-c2_2.4.3-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:39</elem>
+</table>
+<table>
+<elem key="name">libsnappy1v5_1.1.8-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:31</elem>
+</table>
+<table>
+<elem key="name">libsnmp-base_5.8+dfsg-2ubuntu2.3_all</elem>
+<elem key="install_date">2021-06-11T13:30:10</elem>
+</table>
+<table>
+<elem key="name">libsnmp-perl_5.8+dfsg-2ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:13</elem>
+</table>
+<table>
+<elem key="name">libsnmp35_5.8+dfsg-2ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:10</elem>
+</table>
+<table>
+<elem key="name">libsocket6-perl_0.29-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:12</elem>
+</table>
+<table>
+<elem key="name">libsodium23_1.0.18-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:17</elem>
+</table>
+<table>
+<elem key="name">libsoup2.4-1_2.70.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:35</elem>
+</table>
+<table>
+<elem key="name">libspecio-perl_0.45-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libsqlite3-0_3.31.1-4ubuntu0.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:06</elem>
+</table>
+<table>
+<elem key="name">libss2_1.45.5-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:14</elem>
+</table>
+<table>
+<elem key="name">libssh-4_0.9.3-2ubuntu2.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:03</elem>
+</table>
+<table>
+<elem key="name">libssl1.1_1.1.1f-1ubuntu2.10_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:20</elem>
+</table>
+<table>
+<elem key="name">libstdc++6_10.3.0-1ubuntu1~20.04_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:51</elem>
+</table>
+<table>
+<elem key="name">libstemmer0d_0+svn585-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:49</elem>
+</table>
+<table>
+<elem key="name">libsub-exporter-perl_0.987-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libsub-exporter-progressive-perl_0.001013-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:13</elem>
+</table>
+<table>
+<elem key="name">libsub-identify-perl_0.14-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libsub-install-perl_0.928-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libsub-name-perl_0.26-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libsub-quote-perl_2.006006-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libsys-hostname-long-perl_1.5-1_all</elem>
+<elem key="install_date">2021-06-11T13:33:13</elem>
+</table>
+<table>
+<elem key="name">libsystemd0_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:57</elem>
+</table>
+<table>
+<elem key="name">libtasn1-6_4.16.0-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:36</elem>
+</table>
+<table>
+<elem key="name">libtdb1_1.4.3-0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:35</elem>
+</table>
+<table>
+<elem key="name">libterm-readkey-perl_2.38-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libtext-charwidth-perl_0.04-10_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:17</elem>
+</table>
+<table>
+<elem key="name">libtext-iconv-perl_1.7-7_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:17</elem>
+</table>
+<table>
+<elem key="name">libtext-wrapi18n-perl_0.06-9_all</elem>
+<elem key="install_date">2021-02-01T17:22:18</elem>
+</table>
+<table>
+<elem key="name">libthai-data_0.1.28-3_all</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libthai0_0.1.28-3_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libtie-ixhash-perl_1.23-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libtiff5_4.1.0+git191117-2ubuntu0.20.04.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:31</elem>
+</table>
+<table>
+<elem key="name">libtime-format-perl_1.16-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libtimedate-perl_2.3200-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libtinfo6_6.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:15</elem>
+</table>
+<table>
+<elem key="name">libtry-tiny-perl_0.30-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libtss2-esys0_2.3.2-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:40</elem>
+</table>
+<table>
+<elem key="name">libtypes-serialiser-perl_1.0-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:16</elem>
+</table>
+<table>
+<elem key="name">libuchardet0_0.0.6-3build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:50</elem>
+</table>
+<table>
+<elem key="name">libudev1_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:52</elem>
+</table>
+<table>
+<elem key="name">libudisks2-0_2.8.4-1ubuntu2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:30</elem>
+</table>
+<table>
+<elem key="name">libunistring2_0.9.10-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:36</elem>
+</table>
+<table>
+<elem key="name">libunwind8_1.2.1-9build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:16</elem>
+</table>
+<table>
+<elem key="name">libupower-glib3_0.99.11-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">liburcu6_0.11.1-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:16</elem>
+</table>
+<table>
+<elem key="name">liburi-perl_1.76-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">libusb-1.0-0_2:1.0.23-2build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:12</elem>
+</table>
+<table>
+<elem key="name">libusbmuxd6_2.0.1-2_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:37</elem>
+</table>
+<table>
+<elem key="name">libutempter0_1.1.6-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:25</elem>
+</table>
+<table>
+<elem key="name">libuuid1_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:41</elem>
+</table>
+<table>
+<elem key="name">libuv1_1.34.2-1ubuntu1.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">libvariable-magic-perl_0.62-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:14</elem>
+</table>
+<table>
+<elem key="name">libvolume-key1_0.3.12-3.1_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:29</elem>
+</table>
+<table>
+<elem key="name">libvorbis0a_1.3.6-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:50</elem>
+</table>
+<table>
+<elem key="name">libvorbisfile3_1.3.6-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:50</elem>
+</table>
+<table>
+<elem key="name">libwebp6_0.6.1-2ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libwind0-heimdal_7.7.0+dfsg-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:29</elem>
+</table>
+<table>
+<elem key="name">libwrap0_7.6.q-30_amd64</elem>
+<elem key="install_date">2021-06-11T12:45:35</elem>
+</table>
+<table>
+<elem key="name">libwww-perl_6.43-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libwww-robotrules-perl_6.02-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libx11-6_2:1.6.9-2ubuntu1.2_amd64</elem>
+<elem key="install_date">2021-06-11T12:47:06</elem>
+</table>
+<table>
+<elem key="name">libx11-data_2:1.6.9-2ubuntu1.2_all</elem>
+<elem key="install_date">2021-06-11T12:48:31</elem>
+</table>
+<table>
+<elem key="name">libxau6_1:1.0.9-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:12</elem>
+</table>
+<table>
+<elem key="name">libxaw7_2:1.0.13-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:40</elem>
+</table>
+<table>
+<elem key="name">libxcb-render0_1.14-2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libxcb-shm0_1.14-2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libxcb1_1.14-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:12</elem>
+</table>
+<table>
+<elem key="name">libxdmcp6_1:1.1.3-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:12</elem>
+</table>
+<table>
+<elem key="name">libxext6_2:1.3.4-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:13</elem>
+</table>
+<table>
+<elem key="name">libxml-libxml-perl_2.0134+dfsg-1build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libxml-namespacesupport-perl_1.12-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libxml-parser-perl_2.46-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libxml-sax-base-perl_1.09-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libxml-sax-expat-perl_0.51-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libxml-sax-perl_1.02+dfsg-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">libxml-simple-perl_2.25-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libxml-twig-perl_1:3.50-2_all</elem>
+<elem key="install_date">2021-06-11T13:30:09</elem>
+</table>
+<table>
+<elem key="name">libxml-xpathengine-perl_0.14-1_all</elem>
+<elem key="install_date">2021-06-11T13:30:18</elem>
+</table>
+<table>
+<elem key="name">libxml2_2.9.10+dfsg-5ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:06</elem>
+</table>
+<table>
+<elem key="name">libxmlb1_0.1.15-2ubuntu1~20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:12</elem>
+</table>
+<table>
+<elem key="name">libxmlrpc-epi0_0.54.2-1.2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:43</elem>
+</table>
+<table>
+<elem key="name">libxmlsec1-openssl_1.2.28-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:55</elem>
+</table>
+<table>
+<elem key="name">libxmlsec1_1.2.28-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:55</elem>
+</table>
+<table>
+<elem key="name">libxmu6_2:1.1.3-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:40</elem>
+</table>
+<table>
+<elem key="name">libxmuu1_2:1.1.3-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:13</elem>
+</table>
+<table>
+<elem key="name">libxpm4_1:3.5.12-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:37</elem>
+</table>
+<table>
+<elem key="name">libxrender1_1:0.9.10-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:38</elem>
+</table>
+<table>
+<elem key="name">libxslt1.1_1.1.34-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:54</elem>
+</table>
+<table>
+<elem key="name">libxstring-perl_0.002-2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:17</elem>
+</table>
+<table>
+<elem key="name">libxt6_1:1.1.5-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">libxtables12_1.8.4-3ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:18</elem>
+</table>
+<table>
+<elem key="name">libyaml-0-2_0.2.2-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:18</elem>
+</table>
+<table>
+<elem key="name">libzip5_1.5.1-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:41</elem>
+</table>
+<table>
+<elem key="name">libzstd1_1.4.4+dfsg-3ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:49:39</elem>
+</table>
+<table>
+<elem key="name">linux-base_4.5ubuntu3.7_all</elem>
+<elem key="install_date">2021-12-07T12:57:29</elem>
+</table>
+<table>
+<elem key="name">linux-firmware_1.187.23_all</elem>
+<elem key="install_date">2022-01-03T07:47:52</elem>
+</table>
+<table>
+<elem key="name">linux-generic_5.4.0.91.95_amd64</elem>
+<elem key="install_date">2022-01-03T07:48:08</elem>
+</table>
+<table>
+<elem key="name">linux-headers-5.4.0-74-generic_5.4.0-74.83_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:21</elem>
+</table>
+<table>
+<elem key="name">linux-headers-5.4.0-74_5.4.0-74.83_all</elem>
+<elem key="install_date">2021-06-11T12:44:19</elem>
+</table>
+<table>
+<elem key="name">linux-headers-5.4.0-91-generic_5.4.0-91.102_amd64</elem>
+<elem key="install_date">2022-01-03T07:48:17</elem>
+</table>
+<table>
+<elem key="name">linux-headers-5.4.0-91_5.4.0-91.102_all</elem>
+<elem key="install_date">2022-01-03T07:48:15</elem>
+</table>
+<table>
+<elem key="name">linux-headers-generic_5.4.0.91.95_amd64</elem>
+<elem key="install_date">2022-01-03T07:48:17</elem>
+</table>
+<table>
+<elem key="name">linux-image-5.4.0-74-generic_5.4.0-74.83_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:57</elem>
+</table>
+<table>
+<elem key="name">linux-image-5.4.0-91-generic_5.4.0-91.102_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:58</elem>
+</table>
+<table>
+<elem key="name">linux-image-generic_5.4.0.91.95_amd64</elem>
+<elem key="install_date">2022-01-03T07:48:08</elem>
+</table>
+<table>
+<elem key="name">linux-modules-5.4.0-74-generic_5.4.0-74.83_amd64</elem>
+<elem key="install_date">2021-06-11T12:43:56</elem>
+</table>
+<table>
+<elem key="name">linux-modules-5.4.0-91-generic_5.4.0-91.102_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:56</elem>
+</table>
+<table>
+<elem key="name">linux-modules-extra-5.4.0-74-generic_5.4.0-74.83_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:06</elem>
+</table>
+<table>
+<elem key="name">linux-modules-extra-5.4.0-91-generic_5.4.0-91.102_amd64</elem>
+<elem key="install_date">2022-01-03T07:48:08</elem>
+</table>
+<table>
+<elem key="name">locales_2.31-0ubuntu9.2_all</elem>
+<elem key="install_date">2021-02-01T17:23:45</elem>
+</table>
+<table>
+<elem key="name">login_1:4.8.1-1ubuntu5.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:50</elem>
+</table>
+<table>
+<elem key="name">logrotate_3.14.0-4ubuntu3_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:20</elem>
+</table>
+<table>
+<elem key="name">logsave_1.45.5-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:15</elem>
+</table>
+<table>
+<elem key="name">lsb-base_11.1.0ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:21:15</elem>
+</table>
+<table>
+<elem key="name">lsb-release_11.1.0ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:22:20</elem>
+</table>
+<table>
+<elem key="name">lshw_02.18.85-0.3ubuntu2.20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:13</elem>
+</table>
+<table>
+<elem key="name">lsof_4.93.2+dfsg-1ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:13</elem>
+</table>
+<table>
+<elem key="name">ltrace_0.7.3-6.1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:13</elem>
+</table>
+<table>
+<elem key="name">lua-lpeg_1.0.2-1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:11</elem>
+</table>
+<table>
+<elem key="name">lvm2_2.03.07-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:55</elem>
+</table>
+<table>
+<elem key="name">lxd-agent-loader_0.4_all</elem>
+<elem key="install_date">2021-02-01T17:25:55</elem>
+</table>
+<table>
+<elem key="name">lz4_1.9.2-2ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:47:35</elem>
+</table>
+<table>
+<elem key="name">man-db_2.9.1-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:52</elem>
+</table>
+<table>
+<elem key="name">manpages_5.05-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:14</elem>
+</table>
+<table>
+<elem key="name">mariadb-client-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:11</elem>
+</table>
+<table>
+<elem key="name">mariadb-client-core-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:10</elem>
+</table>
+<table>
+<elem key="name">mariadb-common_1:10.3.32-0ubuntu0.20.04.1_all</elem>
+<elem key="install_date">2021-12-07T12:57:07</elem>
+</table>
+<table>
+<elem key="name">mariadb-server-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:14</elem>
+</table>
+<table>
+<elem key="name">mariadb-server-core-10.3_1:10.3.32-0ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:09</elem>
+</table>
+<table>
+<elem key="name">mariadb-server_1:10.3.32-0ubuntu0.20.04.1_all</elem>
+<elem key="install_date">2021-12-07T12:57:58</elem>
+</table>
+<table>
+<elem key="name">mawk_1.3.4.20200120-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:15</elem>
+</table>
+<table>
+<elem key="name">mdadm_4.1-5ubuntu1.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:56</elem>
+</table>
+<table>
+<elem key="name">mime-support_3.64ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:22:20</elem>
+</table>
+<table>
+<elem key="name">motd-news-config_11ubuntu5.4_all</elem>
+<elem key="install_date">2021-12-07T12:56:49</elem>
+</table>
+<table>
+<elem key="name">mount_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:57</elem>
+</table>
+<table>
+<elem key="name">mtr-tiny_0.93-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:14</elem>
+</table>
+<table>
+<elem key="name">multipath-tools_0.8.3-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:17</elem>
+</table>
+<table>
+<elem key="name">mysql-common_5.8+1.0.5ubuntu2_all</elem>
+<elem key="install_date">2021-06-11T13:30:07</elem>
+</table>
+<table>
+<elem key="name">nano_4.8-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:14</elem>
+</table>
+<table>
+<elem key="name">ncurses-base_6.2-0ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:21:16</elem>
+</table>
+<table>
+<elem key="name">ncurses-bin_6.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:16</elem>
+</table>
+<table>
+<elem key="name">ncurses-term_6.2-0ubuntu2_all</elem>
+<elem key="install_date">2021-06-11T12:45:36</elem>
+</table>
+<table>
+<elem key="name">net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-11-23T11:48:05</elem>
+</table>
+<table>
+<elem key="name">netbase_6.1_all</elem>
+<elem key="install_date">2021-02-01T17:22:20</elem>
+</table>
+<table>
+<elem key="name">netcat-openbsd_1.206-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:20</elem>
+</table>
+<table>
+<elem key="name">networkd-dispatcher_2.1-2~ubuntu20.04.1_all</elem>
+<elem key="install_date">2021-12-07T12:57:18</elem>
+</table>
+<table>
+<elem key="name">nmap-common_7.80+dfsg1-2build1_all</elem>
+<elem key="install_date">2021-06-11T13:30:11</elem>
+</table>
+<table>
+<elem key="name">nmap_7.80+dfsg1-2build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:11</elem>
+</table>
+<table>
+<elem key="name">ntfs-3g_1:2017.3.23AR.3-3ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:03</elem>
+</table>
+<table>
+<elem key="name">open-iscsi_2.0.874-7.1ubuntu6.2_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:04</elem>
+</table>
+<table>
+<elem key="name">open-vm-tools_2:11.3.0-2ubuntu0~ubuntu20.04.2_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:18</elem>
+</table>
+<table>
+<elem key="name">openssh-client_1:8.2p1-4ubuntu0.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:25</elem>
+</table>
+<table>
+<elem key="name">openssh-server_1:8.2p1-4ubuntu0.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:23</elem>
+</table>
+<table>
+<elem key="name">openssh-sftp-server_1:8.2p1-4ubuntu0.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:22</elem>
+</table>
+<table>
+<elem key="name">openssl_1.1.1f-1ubuntu2.10_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">os-prober_1.74ubuntu2_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:22</elem>
+</table>
+<table>
+<elem key="name">overlayroot_0.45ubuntu2_all</elem>
+<elem key="install_date">2021-12-07T12:58:00</elem>
+</table>
+<table>
+<elem key="name">packagekit-tools_1.1.13-2ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:57</elem>
+</table>
+<table>
+<elem key="name">packagekit_1.1.13-2ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:57</elem>
+</table>
+<table>
+<elem key="name">packages-microsoft-prod_1.0-ubuntu20.04.1_all</elem>
+<elem key="install_date">2021-06-11T20:06:04</elem>
+</table>
+<table>
+<elem key="name">parted_3.3-4ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:15</elem>
+</table>
+<table>
+<elem key="name">passwd_1:4.8.1-1ubuntu5.20.04.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:11</elem>
+</table>
+<table>
+<elem key="name">pastebinit_1.5.1-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:57</elem>
+</table>
+<table>
+<elem key="name">patch_2.7.6-6_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:02</elem>
+</table>
+<table>
+<elem key="name">pci.ids_0.0~2020.03.20-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:11</elem>
+</table>
+<table>
+<elem key="name">pciutils_1:3.6.4-1ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:09</elem>
+</table>
+<table>
+<elem key="name">perl-base_5.30.0-9ubuntu0.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:40</elem>
+</table>
+<table>
+<elem key="name">perl-modules-5.30_5.30.0-9ubuntu0.2_all</elem>
+<elem key="install_date">2021-02-01T17:24:58</elem>
+</table>
+<table>
+<elem key="name">perl-openssl-defaults_4_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:08</elem>
+</table>
+<table>
+<elem key="name">perl_5.30.0-9ubuntu0.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:01</elem>
+</table>
+<table>
+<elem key="name">php-bcmath_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-cli_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-common_2:75_all</elem>
+<elem key="install_date">2021-06-11T13:33:40</elem>
+</table>
+<table>
+<elem key="name">php-curl_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-db_1.9.3-1build1_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-gd_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-gmp_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-ldap_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-mbstring_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:43</elem>
+</table>
+<table>
+<elem key="name">php-mysql_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:43</elem>
+</table>
+<table>
+<elem key="name">php-pear_1:1.10.9+submodules+notgz-1ubuntu0.20.04.3_all</elem>
+<elem key="install_date">2021-12-07T12:57:58</elem>
+</table>
+<table>
+<elem key="name">php-snmp_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:43</elem>
+</table>
+<table>
+<elem key="name">php-sqlite3_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:43</elem>
+</table>
+<table>
+<elem key="name">php-xml_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">php-xmlrpc_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:43</elem>
+</table>
+<table>
+<elem key="name">php-zip_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:44</elem>
+</table>
+<table>
+<elem key="name">php7.4-bcmath_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:23</elem>
+</table>
+<table>
+<elem key="name">php7.4-cli_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:27</elem>
+</table>
+<table>
+<elem key="name">php7.4-common_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:28</elem>
+</table>
+<table>
+<elem key="name">php7.4-curl_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:26</elem>
+</table>
+<table>
+<elem key="name">php7.4-gd_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:26</elem>
+</table>
+<table>
+<elem key="name">php7.4-gmp_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:25</elem>
+</table>
+<table>
+<elem key="name">php7.4-json_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:25</elem>
+</table>
+<table>
+<elem key="name">php7.4-ldap_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:25</elem>
+</table>
+<table>
+<elem key="name">php7.4-mbstring_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:23</elem>
+</table>
+<table>
+<elem key="name">php7.4-mysql_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:25</elem>
+</table>
+<table>
+<elem key="name">php7.4-opcache_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:25</elem>
+</table>
+<table>
+<elem key="name">php7.4-readline_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:24</elem>
+</table>
+<table>
+<elem key="name">php7.4-snmp_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:24</elem>
+</table>
+<table>
+<elem key="name">php7.4-sqlite3_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:24</elem>
+</table>
+<table>
+<elem key="name">php7.4-xml_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:24</elem>
+</table>
+<table>
+<elem key="name">php7.4-xmlrpc_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:23</elem>
+</table>
+<table>
+<elem key="name">php7.4-zip_7.4.3-4ubuntu2.8_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:23</elem>
+</table>
+<table>
+<elem key="name">php7.4_7.4.3-4ubuntu2.8_all</elem>
+<elem key="install_date">2022-01-03T07:48:17</elem>
+</table>
+<table>
+<elem key="name">php_2:7.4+75_all</elem>
+<elem key="install_date">2021-06-11T13:33:42</elem>
+</table>
+<table>
+<elem key="name">pinentry-curses_1.1.0-3build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:37</elem>
+</table>
+<table>
+<elem key="name">plymouth-theme-ubuntu-text_0.9.4git20200323-0ubuntu6.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:15</elem>
+</table>
+<table>
+<elem key="name">plymouth_0.9.4git20200323-0ubuntu6.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:15</elem>
+</table>
+<table>
+<elem key="name">policykit-1_0.105-26ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:48:24</elem>
+</table>
+<table>
+<elem key="name">pollinate_4.33-3ubuntu1.20.04.1_all</elem>
+<elem key="install_date">2021-06-11T13:05:12</elem>
+</table>
+<table>
+<elem key="name">popularity-contest_1.69ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:24:53</elem>
+</table>
+<table>
+<elem key="name">powermgmt-base_1.36_all</elem>
+<elem key="install_date">2021-02-01T17:25:15</elem>
+</table>
+<table>
+<elem key="name">powershell_7.1.3-1.ubuntu.20.04_amd64</elem>
+<elem key="install_date">2021-06-11T20:25:49</elem>
+</table>
+<table>
+<elem key="name">procps_2:3.3.16-1ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:07</elem>
+</table>
+<table>
+<elem key="name">psmisc_23.3-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:16</elem>
+</table>
+<table>
+<elem key="name">publicsuffix_20200303.0012-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:16</elem>
+</table>
+<table>
+<elem key="name">python-apt-common_2.0.0ubuntu0.20.04.6_all</elem>
+<elem key="install_date">2021-12-07T12:57:14</elem>
+</table>
+<table>
+<elem key="name">python3-apport_2.20.11-0ubuntu27.21_all</elem>
+<elem key="install_date">2021-12-07T12:57:28</elem>
+</table>
+<table>
+<elem key="name">python3-apt_2.0.0ubuntu0.20.04.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:15</elem>
+</table>
+<table>
+<elem key="name">python3-attr_19.3.0-2_all</elem>
+<elem key="install_date">2021-02-01T17:25:45</elem>
+</table>
+<table>
+<elem key="name">python3-automat_0.8.0-1ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:45</elem>
+</table>
+<table>
+<elem key="name">python3-blinker_1.4+dfsg1-0.3ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:22</elem>
+</table>
+<table>
+<elem key="name">python3-certifi_2019.11.28-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:19</elem>
+</table>
+<table>
+<elem key="name">python3-cffi-backend_1.14.0-1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:21</elem>
+</table>
+<table>
+<elem key="name">python3-chardet_3.0.4-4build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:01</elem>
+</table>
+<table>
+<elem key="name">python3-click_7.0-3_all</elem>
+<elem key="install_date">2021-02-01T17:25:58</elem>
+</table>
+<table>
+<elem key="name">python3-colorama_0.4.3-1build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:57</elem>
+</table>
+<table>
+<elem key="name">python3-commandnotfound_20.04.4_all</elem>
+<elem key="install_date">2021-02-01T17:25:08</elem>
+</table>
+<table>
+<elem key="name">python3-configobj_5.0.6-4_all</elem>
+<elem key="install_date">2021-02-01T17:25:48</elem>
+</table>
+<table>
+<elem key="name">python3-constantly_15.1.0-1build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:45</elem>
+</table>
+<table>
+<elem key="name">python3-cryptography_2.8-3ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-dbus_1.2.16-1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:22</elem>
+</table>
+<table>
+<elem key="name">python3-debconf_1.5.73_all</elem>
+<elem key="install_date">2021-02-01T17:25:01</elem>
+</table>
+<table>
+<elem key="name">python3-debian_0.1.36ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:01</elem>
+</table>
+<table>
+<elem key="name">python3-distro-info_0.23ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:02</elem>
+</table>
+<table>
+<elem key="name">python3-distro_1.4.0-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:22</elem>
+</table>
+<table>
+<elem key="name">python3-distupgrade_1:20.04.36_all</elem>
+<elem key="install_date">2021-12-07T12:57:15</elem>
+</table>
+<table>
+<elem key="name">python3-distutils_3.8.10-0ubuntu1~20.04_all</elem>
+<elem key="install_date">2021-06-11T12:47:48</elem>
+</table>
+<table>
+<elem key="name">python3-entrypoints_0.3-2ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-gdbm_3.8.10-0ubuntu1~20.04_amd64</elem>
+<elem key="install_date">2021-06-11T12:46:35</elem>
+</table>
+<table>
+<elem key="name">python3-gi_3.36.0-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:22</elem>
+</table>
+<table>
+<elem key="name">python3-hamcrest_1.9.0-3_all</elem>
+<elem key="install_date">2021-02-01T17:25:47</elem>
+</table>
+<table>
+<elem key="name">python3-httplib2_0.14.0-1ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:19</elem>
+</table>
+<table>
+<elem key="name">python3-hyperlink_19.0.0-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:46</elem>
+</table>
+<table>
+<elem key="name">python3-idna_2.8-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:20</elem>
+</table>
+<table>
+<elem key="name">python3-incremental_16.10.1-3.2_all</elem>
+<elem key="install_date">2021-02-01T17:25:46</elem>
+</table>
+<table>
+<elem key="name">python3-json-pointer_2.0-0ubuntu1_all</elem>
+<elem key="install_date">2021-12-07T13:01:23</elem>
+</table>
+<table>
+<elem key="name">python3-jsonpatch_1.23-3_all</elem>
+<elem key="install_date">2021-12-07T13:01:23</elem>
+</table>
+<table>
+<elem key="name">python3-jsonschema_3.2.0-0ubuntu2_all</elem>
+<elem key="install_date">2021-12-07T13:01:23</elem>
+</table>
+<table>
+<elem key="name">python3-jwt_1.7.1-2ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:25:22</elem>
+</table>
+<table>
+<elem key="name">python3-keyring_18.0.1-2ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-launchpadlib_1.10.13-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:22</elem>
+</table>
+<table>
+<elem key="name">python3-lazr.restfulclient_0.14.2-2build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:22</elem>
+</table>
+<table>
+<elem key="name">python3-lazr.uri_1.0.3-4build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-lib2to3_3.8.10-0ubuntu1~20.04_all</elem>
+<elem key="install_date">2021-06-11T12:47:48</elem>
+</table>
+<table>
+<elem key="name">python3-minimal_3.8.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:56</elem>
+</table>
+<table>
+<elem key="name">python3-nacl_1.3.0-5_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:22</elem>
+</table>
+<table>
+<elem key="name">python3-netifaces_0.10.4-1ubuntu4_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:22</elem>
+</table>
+<table>
+<elem key="name">python3-newt_0.52.21-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:24</elem>
+</table>
+<table>
+<elem key="name">python3-oauthlib_3.1.0-1ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:25:22</elem>
+</table>
+<table>
+<elem key="name">python3-openssl_19.0.0-1build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:46</elem>
+</table>
+<table>
+<elem key="name">python3-pexpect_4.6.0-1build1_all</elem>
+<elem key="install_date">2021-02-01T17:26:01</elem>
+</table>
+<table>
+<elem key="name">python3-pkg-resources_45.2.0-1_all</elem>
+<elem key="install_date">2021-02-01T17:22:22</elem>
+</table>
+<table>
+<elem key="name">python3-problem-report_2.20.11-0ubuntu27.21_all</elem>
+<elem key="install_date">2021-12-07T12:57:27</elem>
+</table>
+<table>
+<elem key="name">python3-ptyprocess_0.6.0-1ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:26:01</elem>
+</table>
+<table>
+<elem key="name">python3-pyasn1-modules_0.2.1-0.2build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:46</elem>
+</table>
+<table>
+<elem key="name">python3-pyasn1_0.4.2-3build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:46</elem>
+</table>
+<table>
+<elem key="name">python3-pymacaroons_0.13.0-3_all</elem>
+<elem key="install_date">2021-02-01T17:22:23</elem>
+</table>
+<table>
+<elem key="name">python3-requests-unixsocket_0.2.0-2_all</elem>
+<elem key="install_date">2021-02-01T17:25:20</elem>
+</table>
+<table>
+<elem key="name">python3-requests_2.22.0-2ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:20</elem>
+</table>
+<table>
+<elem key="name">python3-secretstorage_2.3.1-2ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-serial_3.4-5.1_all</elem>
+<elem key="install_date">2021-02-01T17:26:01</elem>
+</table>
+<table>
+<elem key="name">python3-service-identity_18.1.0-5build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:47</elem>
+</table>
+<table>
+<elem key="name">python3-setuptools_45.2.0-1_all</elem>
+<elem key="install_date">2021-02-01T17:26:00</elem>
+</table>
+<table>
+<elem key="name">python3-simplejson_3.16.0-2ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-six_1.14.0-2_all</elem>
+<elem key="install_date">2021-02-01T17:22:23</elem>
+</table>
+<table>
+<elem key="name">python3-software-properties_0.99.9.8_all</elem>
+<elem key="install_date">2021-12-07T12:57:59</elem>
+</table>
+<table>
+<elem key="name">python3-systemd_234-3build2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:02</elem>
+</table>
+<table>
+<elem key="name">python3-twisted-bin_18.9.0-11ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:09</elem>
+</table>
+<table>
+<elem key="name">python3-twisted_18.9.0-11ubuntu0.20.04.1_all</elem>
+<elem key="install_date">2021-06-11T13:05:11</elem>
+</table>
+<table>
+<elem key="name">python3-update-manager_1:20.04.10.9_all</elem>
+<elem key="install_date">2021-12-07T12:57:15</elem>
+</table>
+<table>
+<elem key="name">python3-urllib3_1.25.8-2ubuntu0.1_all</elem>
+<elem key="install_date">2021-02-01T17:25:20</elem>
+</table>
+<table>
+<elem key="name">python3-wadllib_1.3.3-3build1_all</elem>
+<elem key="install_date">2021-02-01T17:25:21</elem>
+</table>
+<table>
+<elem key="name">python3-yaml_5.3.1-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:48:37</elem>
+</table>
+<table>
+<elem key="name">python3-zope.interface_4.7.1-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:46</elem>
+</table>
+<table>
+<elem key="name">python3.8-minimal_3.8.10-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">python3.8_3.8.10-0ubuntu1~20.04.2_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:20</elem>
+</table>
+<table>
+<elem key="name">python3_3.8.2-0ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:21</elem>
+</table>
+<table>
+<elem key="name">readline-common_8.0-4_all</elem>
+<elem key="install_date">2021-02-01T17:22:24</elem>
+</table>
+<table>
+<elem key="name">rsync_3.1.3-8ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:03</elem>
+</table>
+<table>
+<elem key="name">rsyslog_8.2001.0-1ubuntu1.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:06</elem>
+</table>
+<table>
+<elem key="name">run-one_1.17-0ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:26:02</elem>
+</table>
+<table>
+<elem key="name">sbsigntool_0.9.2-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:02</elem>
+</table>
+<table>
+<elem key="name">screen_4.8.0-1ubuntu0.1_amd64</elem>
+<elem key="install_date">2021-06-11T12:47:28</elem>
+</table>
+<table>
+<elem key="name">secureboot-db_1.5_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:03</elem>
+</table>
+<table>
+<elem key="name">sed_4.7-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:19</elem>
+</table>
+<table>
+<elem key="name">sensible-utils_0.0.12+nmu1_all</elem>
+<elem key="install_date">2021-02-01T17:21:19</elem>
+</table>
+<table>
+<elem key="name">sg3-utils-udev_1.44-1ubuntu2_all</elem>
+<elem key="install_date">2021-02-01T17:26:04</elem>
+</table>
+<table>
+<elem key="name">sg3-utils_1.44-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:03</elem>
+</table>
+<table>
+<elem key="name">shared-mime-info_1.15-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:24</elem>
+</table>
+<table>
+<elem key="name">snmp-mibs-downloader_1.2_all</elem>
+<elem key="install_date">2021-06-11T19:44:19</elem>
+</table>
+<table>
+<elem key="name">snmp_5.8+dfsg-2ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:10</elem>
+</table>
+<table>
+<elem key="name">snmpd_5.8+dfsg-2ubuntu2.3_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:10</elem>
+</table>
+<table>
+<elem key="name">socat_1.7.3.3-2_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:34</elem>
+</table>
+<table>
+<elem key="name">software-properties-common_0.99.9.8_all</elem>
+<elem key="install_date">2021-12-07T12:57:58</elem>
+</table>
+<table>
+<elem key="name">sosreport_4.1-1ubuntu0.20.04.3_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:59</elem>
+</table>
+<table>
+<elem key="name">sound-theme-freedesktop_0.8-2ubuntu1_all</elem>
+<elem key="install_date">2021-02-01T17:25:51</elem>
+</table>
+<table>
+<elem key="name">ssh-import-id_5.10-0ubuntu1_all</elem>
+<elem key="install_date">2021-06-11T19:44:20</elem>
+</table>
+<table>
+<elem key="name">ssl-cert_1.0.39_all</elem>
+<elem key="install_date">2021-06-11T13:31:28</elem>
+</table>
+<table>
+<elem key="name">strace_5.5-3ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:17</elem>
+</table>
+<table>
+<elem key="name">sudo_1.8.31-1ubuntu1.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:12</elem>
+</table>
+<table>
+<elem key="name">systemd-sysv_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:52</elem>
+</table>
+<table>
+<elem key="name">systemd-timesyncd_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:53</elem>
+</table>
+<table>
+<elem key="name">systemd_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:57</elem>
+</table>
+<table>
+<elem key="name">sysvinit-utils_2.96-2.1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:21:20</elem>
+</table>
+<table>
+<elem key="name">tar_1.30+dfsg-7ubuntu0.20.04.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:40</elem>
+</table>
+<table>
+<elem key="name">tcpdump_4.9.3-4_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:17</elem>
+</table>
+<table>
+<elem key="name">telnet_0.17-41.2build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:17</elem>
+</table>
+<table>
+<elem key="name">thermald_1.9.1-1ubuntu0.6_amd64</elem>
+<elem key="install_date">2021-12-07T12:58:00</elem>
+</table>
+<table>
+<elem key="name">thin-provisioning-tools_0.8.5-4build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:16</elem>
+</table>
+<table>
+<elem key="name">time_1.7-25.1build1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:17</elem>
+</table>
+<table>
+<elem key="name">tmux_3.0a-2ubuntu0.3_amd64</elem>
+<elem key="install_date">2021-06-11T13:05:19</elem>
+</table>
+<table>
+<elem key="name">tpm-udev_0.4_all</elem>
+<elem key="install_date">2021-02-01T17:25:39</elem>
+</table>
+<table>
+<elem key="name">traceroute_1:2.1.0-2_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:10</elem>
+</table>
+<table>
+<elem key="name">tzdata_2021e-0ubuntu0.20.04_all</elem>
+<elem key="install_date">2021-12-07T12:57:04</elem>
+</table>
+<table>
+<elem key="name">ubuntu-advantage-tools_27.4.2~20.04.1_amd64</elem>
+<elem key="install_date">2022-01-03T07:47:22</elem>
+</table>
+<table>
+<elem key="name">ubuntu-keyring_2020.02.11.4_all</elem>
+<elem key="install_date">2021-06-11T13:05:03</elem>
+</table>
+<table>
+<elem key="name">ubuntu-release-upgrader-core_1:20.04.36_all</elem>
+<elem key="install_date">2021-12-07T12:57:15</elem>
+</table>
+<table>
+<elem key="name">ubuntu-server_1.450.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:22</elem>
+</table>
+<table>
+<elem key="name">ucf_3.0038+nmu1_all</elem>
+<elem key="install_date">2021-02-01T17:22:27</elem>
+</table>
+<table>
+<elem key="name">udev_245.4-4ubuntu3.13_amd64</elem>
+<elem key="install_date">2021-12-07T12:56:52</elem>
+</table>
+<table>
+<elem key="name">udisks2_2.8.4-1ubuntu2_amd64</elem>
+<elem key="install_date">2022-01-03T07:48:17</elem>
+</table>
+<table>
+<elem key="name">unzip_6.0-25ubuntu1_amd64</elem>
+<elem key="install_date">2021-06-11T13:33:44</elem>
+</table>
+<table>
+<elem key="name">update-manager-core_1:20.04.10.9_all</elem>
+<elem key="install_date">2021-12-07T12:57:15</elem>
+</table>
+<table>
+<elem key="name">update-notifier-common_3.192.30.10_all</elem>
+<elem key="install_date">2022-01-03T07:47:21</elem>
+</table>
+<table>
+<elem key="name">upower_0.99.11-1build2_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:22</elem>
+</table>
+<table>
+<elem key="name">usb.ids_2020.03.19-1_all</elem>
+<elem key="install_date">2021-02-01T17:25:17</elem>
+</table>
+<table>
+<elem key="name">usbmuxd_1.1.1~git20191130.9af2b12-1_amd64</elem>
+<elem key="install_date">2021-06-11T12:44:22</elem>
+</table>
+<table>
+<elem key="name">usbutils_1:012-2_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:17</elem>
+</table>
+<table>
+<elem key="name">util-linux_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:23:43</elem>
+</table>
+<table>
+<elem key="name">uuid-runtime_2.34-0.1ubuntu9.1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:54</elem>
+</table>
+<table>
+<elem key="name">vim-common_2:8.1.2269-1ubuntu5.4_all</elem>
+<elem key="install_date">2021-12-07T12:57:21</elem>
+</table>
+<table>
+<elem key="name">vim-runtime_2:8.1.2269-1ubuntu5.4_all</elem>
+<elem key="install_date">2021-12-07T12:57:21</elem>
+</table>
+<table>
+<elem key="name">vim-tiny_2:8.1.2269-1ubuntu5.4_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:19</elem>
+</table>
+<table>
+<elem key="name">vim_2:8.1.2269-1ubuntu5.4_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:19</elem>
+</table>
+<table>
+<elem key="name">wget_1.20.3-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:25</elem>
+</table>
+<table>
+<elem key="name">whiptail_0.52.21-4ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:28</elem>
+</table>
+<table>
+<elem key="name">wireless-regdb_2021.08.28-0ubuntu1~20.04.1_all</elem>
+<elem key="install_date">2021-12-07T12:58:00</elem>
+</table>
+<table>
+<elem key="name">x11-common_1:7.7+19ubuntu14_all</elem>
+<elem key="install_date">2021-06-11T13:33:39</elem>
+</table>
+<table>
+<elem key="name">xauth_1:1.1-0ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:25:18</elem>
+</table>
+<table>
+<elem key="name">xdg-user-dirs_0.17-2ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:22:29</elem>
+</table>
+<table>
+<elem key="name">xfsprogs_5.3.0-1ubuntu2_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:22</elem>
+</table>
+<table>
+<elem key="name">xkb-data_2.29-2_all</elem>
+<elem key="install_date">2021-02-01T17:22:29</elem>
+</table>
+<table>
+<elem key="name">xprobe_0.3-4build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:30:10</elem>
+</table>
+<table>
+<elem key="name">xxd_2:8.1.2269-1ubuntu5.4_amd64</elem>
+<elem key="install_date">2021-12-07T12:57:18</elem>
+</table>
+<table>
+<elem key="name">xz-utils_5.2.4-1ubuntu1_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:13</elem>
+</table>
+<table>
+<elem key="name">zerofree_1.1.1-1_amd64</elem>
+<elem key="install_date">2021-02-01T17:26:25</elem>
+</table>
+<table>
+<elem key="name">zip_3.0-11build1_amd64</elem>
+<elem key="install_date">2021-06-11T13:55:09</elem>
+</table>
+<table>
+<elem key="name">zlib1g_1:1.2.11.dfsg-2ubuntu1.2_amd64</elem>
+<elem key="install_date">2021-02-01T17:24:00</elem>
+</table>
+</script><script id="snmp-info" output="&#xa;  enterprise: net-snmp&#xa;  engineIDFormat: unknown&#xa;  engineIDData: 48fa95537765c36000000000&#xa;  snmpEngineBoots: 30&#xa;  snmpEngineTime: 5h47m13s"><elem key="enterprise">net-snmp</elem>
+<elem key="engineIDFormat">unknown</elem>
+<elem key="engineIDData">48fa95537765c36000000000</elem>
+<elem key="snmpEngineBoots">30</elem>
+<elem key="snmpEngineTime">5h47m13s</elem>
+</script><script id="snmp-sysdescr" output="Linux pandora 5.4.0-91-generic #102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021 x86_64&#xa;  System uptime: 5h47m13.45s (2083345 timeticks)"/><script id="snmp-netstat" output="&#xa;  TCP  0.0.0.0:22           0.0.0.0:0&#xa;  TCP  10.10.11.136:22      10.10.14.31:44768&#xa;  TCP  10.10.11.136:43112   1.1.1.1:53&#xa;  TCP  127.0.0.1:3306       0.0.0.0:0&#xa;  TCP  127.0.0.53:53        0.0.0.0:0&#xa;  UDP  0.0.0.0:161          *:*&#xa;  UDP  127.0.0.53:53        *:*&#xa;"/><script id="snmp-interfaces" output="&#xa;  lo&#xa;    IP address: 127.0.0.1  Netmask: 255.0.0.0&#xa;    Type: softwareLoopback  Speed: 10 Mbps&#xa;    Traffic stats: 357.23 Mb sent, 357.23 Mb received&#xa;  VMware VMXNET3 Ethernet Controller&#xa;    IP address: 10.10.11.136  Netmask: 255.255.254.0&#xa;    MAC address: 00:50:56:b9:bc:9c (VMware)&#xa;    Type: ethernetCsmacd  Speed: 4 Gbps&#xa;    Traffic stats: 1.40 Gb sent, 414.58 Mb received&#xa;"/></port>
+</ports>
+<times srtt="21531" rttvar="9046" to="100000"/>
+</host>
+<runstats><finished time="1644841315" timestr="Mon Feb 14 20:21:55 2022" summary="Nmap done at Mon Feb 14 20:21:55 2022; 1 IP address (1 host up) scanned in 95.53 seconds" elapsed="95.53" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

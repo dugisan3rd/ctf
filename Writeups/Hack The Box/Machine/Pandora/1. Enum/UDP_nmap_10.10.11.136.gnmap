@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Mon Feb 14 20:20:20 2022 as: nmap -sU -sC -sV -Pn -oA UDP_nmap_10.10.11.136 --top-ports 30 10.10.11.136
+Host: 10.10.11.136 (panda.htb)	Status: Up
+Host: 10.10.11.136 (panda.htb)	Ports: 161/open/udp//snmp//SNMPv1 server; net-snmp SNMPv3 server (public)/	Ignored State: closed (29)
+# Nmap done at Mon Feb 14 20:21:55 2022 -- 1 IP address (1 host up) scanned in 95.53 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Feb 27 12:25:58 2022 as: nmap -sU -sV -sC --top-port 20 -oA UDP_nmap_192.168.71.142 192.168.111.142
+Host: 192.168.111.142 ()	Status: Up
+Host: 192.168.111.142 ()	Ports: 53/closed/udp//domain///, 67/closed/udp//dhcps///, 68/closed/udp//dhcpc///, 69/closed/udp//tftp///, 123/closed/udp//ntp///, 135/closed/udp//msrpc///, 137/closed/udp//netbios-ns///, 138/closed/udp//netbios-dgm///, 139/closed/udp//netbios-ssn///, 161/closed/udp//snmp///, 162/closed/udp//snmptrap///, 445/closed/udp//microsoft-ds///, 500/closed/udp//isakmp///, 514/closed/udp//syslog///, 520/closed/udp//route///, 631/closed/udp//ipp///, 1434/closed/udp//ms-sql-m///, 1900/closed/udp//upnp///, 4500/closed/udp//nat-t-ike///, 49152/closed/udp//unknown///
+# Nmap done at Sun Feb 27 12:26:16 2022 -- 1 IP address (1 host up) scanned in 18.37 seconds

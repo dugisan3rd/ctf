@@ -1,0 +1,28 @@
+# Nmap 7.92 scan initiated Sun Feb 27 12:25:58 2022 as: nmap -sU -sV -sC --top-port 20 -oA UDP_nmap_192.168.71.142 192.168.111.142
+Nmap scan report for 192.168.111.142
+Host is up (0.23s latency).
+
+PORT      STATE  SERVICE      VERSION
+53/udp    closed domain
+67/udp    closed dhcps
+68/udp    closed dhcpc
+69/udp    closed tftp
+123/udp   closed ntp
+135/udp   closed msrpc
+137/udp   closed netbios-ns
+138/udp   closed netbios-dgm
+139/udp   closed netbios-ssn
+161/udp   closed snmp
+162/udp   closed snmptrap
+445/udp   closed microsoft-ds
+500/udp   closed isakmp
+514/udp   closed syslog
+520/udp   closed route
+631/udp   closed ipp
+1434/udp  closed ms-sql-m
+1900/udp  closed upnp
+4500/udp  closed nat-t-ike
+49152/udp closed unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 27 12:26:16 2022 -- 1 IP address (1 host up) scanned in 18.37 seconds

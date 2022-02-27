@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Feb 27 00:15:39 2022 as: /usr/bin/nmap -sC -sV -A -Pn -p22,80 --version-intensity 5 -oA TCP_nmap_192.168.71.142 192.168.71.142
+Host: 192.168.71.142 ()	Status: Up
+Host: 192.168.71.142 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.38 ((Debian))/	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Sun Feb 27 00:16:03 2022 -- 1 IP address (1 host up) scanned in 25.17 seconds

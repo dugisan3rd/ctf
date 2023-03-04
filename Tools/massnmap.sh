@@ -8,14 +8,37 @@ printf "Usage: MassNmap <ip> <iface>\n"
 printf "\n[+] Checking ICMP\n"
 if ping -c 1 $1 &> /dev/null
 then
-	printf "[+] Ping success! Executing MASSCAN\n"
+	# TCP
+	printf "[+] Ping success! Executing MASSCAN (TCP)\n"
 	printf "[+] CMD: sudo masscan -p1-65535 --rate 1000 -e $2 $1\n"
 	sudo /usr/bin/masscan -p1-65535 --rate 1000 -e $2 $1 > TCP_masscan_$1
-	ports=$(cat TCP_masscan_$1 | awk -F " " {'print $4'} | awk -F "/" {'print $1'} | sort -nu | tr "\n" "," | sed s/,$//)
-	printf "\n[+] Ports: $ports\n\n"
-	printf "[+] Executing NMAP\n"
-	printf "[+] CMD: sudo nmap -sC -sV -A -Pn -p$ports --version-intensity 5 -oA TCP_nmap_$1 $1\n\n"
-	sudo /usr/bin/nmap -sC -sV -A -Pn -p$ports --version-intensity 5 -oA TCP_nmap_$1 $1
+	ports_tcp=$(cat TCP_masscan_$1 | awk -F " " {'print $4'} | awk -F "/" {'print $1'} | sort -nu | tr "\n" "," | sed s/,$//)
+	if [ -z $ports_tcp ]
+	then
+		printf "\nNo TCP port is open!\n"
+		/usr/bin/rm TCP_masscan_$1
+	else
+		printf "\n[+] TCP Ports: $ports_tcp\n\n"
+		printf "[+] Executing NMAP (TCP)\n"
+		printf "[+] CMD: sudo nmap -sC -sV -A -Pn -p$ports_tcp --version-intensity 5 --script vuln -oA TCP_nmap_$1 $1\n\n"
+		sudo /usr/bin/nmap -sC -sV -A -Pn -p$ports_tcp --version-intensity 5 --script vuln -oA TCP_nmap_$1 $1
+	fi
+
+	# UDP
+	printf "\n[+] Executing MASSCAN (UDP)\n"
+	printf "[+] CMD: sudo masscan -pU:1-65535 --rate 1000 -e $2 $1\n"
+	sudo /usr/bin/masscan -pU:1-65535 --rate 1000 -e $2 $1 > UDP_masscan_$1
+	ports_udp=$(cat UDP_masscan_$1 | awk -F " " {'print $4'} | awk -F "/" {'print $1'} | sort -nu | tr "\n" "," | sed s/,$//)
+	if [ -z $ports_udp ]
+	then
+		printf "\nNo UDP port is open!\n"
+		/usr/bin/rm UDP_masscan_$1
+	else
+		printf "\n[+] UDP Ports: $ports_udp\n\n"
+		printf "[+] Executing NMAP (UDP)\n"
+		printf "[+] CMD: sudo nmap -sU -sC -sV -A -Pn -p$ports_udp --version-intensity 5 --script vuln -oA UDP_nmap_$1 $1\n\n"
+		sudo /usr/bin/nmap -sU -sC -sV -A -Pn -p$ports_udp --version-intensity 5 --script vuln -oA UDP_nmap_$1 $1
+	fi
 	printf "\n[+] NMAP completed! Happy hacking :)\n"
 else
 	printf "\n[+] Ping unsuccessful. Please check your connection/command!\n"
